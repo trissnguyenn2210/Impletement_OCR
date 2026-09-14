@@ -33,6 +33,10 @@ The project also includes `pyproject.toml` for uv. After setup, Python commands
 can use `./OCR/bin/python` directly. The `run_uv.sh` wrapper
 uses the same `OCR` environment without creating a second `.venv`.
 
+The pretrained and inference checkpoints are stored with Git LFS. Install Git
+LFS before cloning or pulling the repository, then run `git lfs pull` to fetch
+the actual weight files.
+
 ## Dataset
 
 Put or point to a PaddleX `COCODetDataset` directory. See `data/README.md`.
