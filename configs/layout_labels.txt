@@ -1,0 +1,5 @@
+# Replace these labels with the exact category order in your COCO annotations.
+SELLER
+ADDRESS
+TIMESTAMP
+TOTAL_COST

@@ -1,0 +1,40 @@
+Global:
+  model: PP-DocLayout_plus-L
+  mode: train
+  dataset_dir: /home/tntri/data/OCR_dataset_coco
+  device: gpu:0
+  output: ./outputs/layout
+  use_vdl: false
+
+worker_num: 4
+early_stopping_patience: 20
+early_stopping_min_delta: 0.0
+
+CheckDataset:
+  convert:
+    enable: False
+    src_dataset_type: null
+  split:
+    enable: False
+    train_percent: null
+    val_percent: null
+
+Train:
+  num_classes: 10
+  epochs_iters: 100
+  batch_size: 2
+  learning_rate: 0.0001
+  pretrain_weight_path: null
+  warmup_steps: 100
+  resume_path: null
+  log_interval: 10
+  eval_interval: 1
+
+Evaluate:
+  weight_path: null
+  log_interval: 10
+
+Predict:
+  batch_size: 1
+  model_dir: null
+  input: null

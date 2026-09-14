@@ -1,0 +1,1015 @@
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+Warning: Unable to use numba in PP-Tracking, please install numba, for example(python3.7): `pip install numba==0.56.4`
+[09/14 12:13:20] ppdet.utils.checkpoint INFO: Skipping import of the encryption module.
+======================= Modified FLAGS detected =======================
+FLAGS(name='FLAGS_enable_pir_in_executor', current_value=True, default_value=False)
+FLAGS(name='FLAGS_cuda_cccl_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia/cuda_cccl/include/', default_value='')
+FLAGS(name='FLAGS_cublas_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia/cublas/lib', default_value='')
+FLAGS(name='FLAGS_cusolver_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia/cusolver/lib', default_value='')
+FLAGS(name='FLAGS_curand_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia/curand/lib', default_value='')
+FLAGS(name='FLAGS_cudnn_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia/cudnn/lib', default_value='')
+FLAGS(name='FLAGS_cusparse_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia/cusparse/lib', default_value='')
+FLAGS(name='FLAGS_nvidia_package_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia', default_value='')
+FLAGS(name='FLAGS_nccl_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia/nccl/lib', default_value='')
+FLAGS(name='FLAGS_cupti_dir', current_value='/home/tntri/OCR_project/OCR/lib/python3.12/site-packages/paddle/../nvidia/cuda_cupti/lib', default_value='')
+=======================================================================
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+[09/14 12:13:20] ppdet.data.source.coco INFO: Load [923 samples valid, 1 samples invalid] in file /home/tntri/data/OCR_dataset_coco/annotations/instance_train.json.
+W0914 12:13:20.560300 4102632 gpu_resources.cc:114] Please NOTE: device: 0, GPU Compute Capability: 8.0, Driver API Version: 13.0, Runtime API Version: 12.6
+use cuda ms_deformable_attn op!
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [20] in pretrained weight transformer.dec_score_head.0.bias is unmatched with the shape [4] in model transformer.dec_score_head.0.bias. And the weight transformer.dec_score_head.0.bias will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [256, 20] in pretrained weight transformer.dec_score_head.0.weight is unmatched with the shape [256, 4] in model transformer.dec_score_head.0.weight. And the weight transformer.dec_score_head.0.weight will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [20] in pretrained weight transformer.dec_score_head.1.bias is unmatched with the shape [4] in model transformer.dec_score_head.1.bias. And the weight transformer.dec_score_head.1.bias will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [256, 20] in pretrained weight transformer.dec_score_head.1.weight is unmatched with the shape [256, 4] in model transformer.dec_score_head.1.weight. And the weight transformer.dec_score_head.1.weight will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [20] in pretrained weight transformer.dec_score_head.2.bias is unmatched with the shape [4] in model transformer.dec_score_head.2.bias. And the weight transformer.dec_score_head.2.bias will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [256, 20] in pretrained weight transformer.dec_score_head.2.weight is unmatched with the shape [256, 4] in model transformer.dec_score_head.2.weight. And the weight transformer.dec_score_head.2.weight will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [20] in pretrained weight transformer.dec_score_head.3.bias is unmatched with the shape [4] in model transformer.dec_score_head.3.bias. And the weight transformer.dec_score_head.3.bias will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [256, 20] in pretrained weight transformer.dec_score_head.3.weight is unmatched with the shape [256, 4] in model transformer.dec_score_head.3.weight. And the weight transformer.dec_score_head.3.weight will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [20] in pretrained weight transformer.dec_score_head.4.bias is unmatched with the shape [4] in model transformer.dec_score_head.4.bias. And the weight transformer.dec_score_head.4.bias will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [256, 20] in pretrained weight transformer.dec_score_head.4.weight is unmatched with the shape [256, 4] in model transformer.dec_score_head.4.weight. And the weight transformer.dec_score_head.4.weight will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [20] in pretrained weight transformer.dec_score_head.5.bias is unmatched with the shape [4] in model transformer.dec_score_head.5.bias. And the weight transformer.dec_score_head.5.bias will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [256, 20] in pretrained weight transformer.dec_score_head.5.weight is unmatched with the shape [256, 4] in model transformer.dec_score_head.5.weight. And the weight transformer.dec_score_head.5.weight will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [20, 256] in pretrained weight transformer.denoising_class_embed.weight is unmatched with the shape [4, 256] in model transformer.denoising_class_embed.weight. And the weight transformer.denoising_class_embed.weight will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [20] in pretrained weight transformer.enc_score_head.bias is unmatched with the shape [4] in model transformer.enc_score_head.bias. And the weight transformer.enc_score_head.bias will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: The shape [256, 20] in pretrained weight transformer.enc_score_head.weight is unmatched with the shape [256, 4] in model transformer.enc_score_head.weight. And the weight transformer.enc_score_head.weight will not be loaded
+[09/14 12:13:21] ppdet.utils.checkpoint INFO: Finish loading model weights: /home/tntri/OCR_project/models/PP-DocLayout_plus-L_pretrained.pdparams
+[09/14 12:13:24] ppdet.engine.callbacks INFO: Epoch: [0] [  0/115] learning_rate: 0.000000 loss_class: 1.458057 loss_bbox: 0.290456 loss_giou: 1.331111 loss_class_aux: 7.809104 loss_bbox_aux: 1.978127 loss_giou_aux: 8.122675 loss_class_dn: 1.979891 loss_bbox_dn: 0.217927 loss_giou_dn: 0.804427 loss_class_aux_dn: 9.074006 loss_bbox_aux_dn: 1.100668 loss_giou_aux_dn: 4.186108 loss: 38.352554 eta: 8:16:25 batch_cost: 2.5900 data_cost: 1.3770 ips: 3.0888 images/s, max_mem_reserved: 15492 MB, max_mem_allocated: 14513 MB
+[09/14 12:13:27] ppdet.engine.callbacks INFO: Epoch: [0] [ 10/115] learning_rate: 0.000010 loss_class: 1.405674 loss_bbox: 0.387451 loss_giou: 1.225168 loss_class_aux: 7.553658 loss_bbox_aux: 2.548805 loss_giou_aux: 7.719895 loss_class_dn: 1.957843 loss_bbox_dn: 0.256844 loss_giou_dn: 0.808965 loss_class_aux_dn: 8.937918 loss_bbox_aux_dn: 1.272074 loss_giou_aux_dn: 4.211504 loss: 38.265575 eta: 1:39:53 batch_cost: 0.3148 data_cost: 0.0013 ips: 25.4169 images/s, max_mem_reserved: 15492 MB, max_mem_allocated: 14513 MB
+[09/14 12:13:30] ppdet.engine.callbacks INFO: Epoch: [0] [ 20/115] learning_rate: 0.000020 loss_class: 1.786286 loss_bbox: 0.290930 loss_giou: 0.991306 loss_class_aux: 9.469779 loss_bbox_aux: 1.973732 loss_giou_aux: 6.279579 loss_class_dn: 2.143805 loss_bbox_dn: 0.220731 loss_giou_dn: 0.683620 loss_class_aux_dn: 10.198234 loss_bbox_aux_dn: 1.180422 loss_giou_aux_dn: 3.632691 loss: 39.672197 eta: 1:20:52 batch_cost: 0.3139 data_cost: 0.0019 ips: 25.4848 images/s, max_mem_reserved: 15492 MB, max_mem_allocated: 14875 MB
+[09/14 12:13:34] ppdet.engine.callbacks INFO: Epoch: [0] [ 30/115] learning_rate: 0.000030 loss_class: 1.891277 loss_bbox: 0.280590 loss_giou: 0.864448 loss_class_aux: 10.706330 loss_bbox_aux: 1.916875 loss_giou_aux: 5.403886 loss_class_dn: 2.273390 loss_bbox_dn: 0.191595 loss_giou_dn: 0.594496 loss_class_aux_dn: 10.919241 loss_bbox_aux_dn: 1.057985 loss_giou_aux_dn: 3.168509 loss: 39.329887 eta: 1:12:59 batch_cost: 0.2960 data_cost: 0.0012 ips: 27.0304 images/s, max_mem_reserved: 15492 MB, max_mem_allocated: 14875 MB
+[09/14 12:13:38] ppdet.engine.callbacks INFO: Epoch: [0] [ 40/115] learning_rate: 0.000040 loss_class: 1.895290 loss_bbox: 0.247708 loss_giou: 0.812844 loss_class_aux: 10.715426 loss_bbox_aux: 1.675522 loss_giou_aux: 5.243071 loss_class_dn: 2.201566 loss_bbox_dn: 0.129384 loss_giou_dn: 0.469309 loss_class_aux_dn: 10.792333 loss_bbox_aux_dn: 0.678721 loss_giou_aux_dn: 2.588274 loss: 37.605042 eta: 1:11:12 batch_cost: 0.3450 data_cost: 0.0014 ips: 23.1858 images/s, max_mem_reserved: 15492 MB, max_mem_allocated: 14875 MB
+[09/14 12:13:41] ppdet.engine.callbacks INFO: Epoch: [0] [ 50/115] learning_rate: 0.000050 loss_class: 1.529202 loss_bbox: 0.230378 loss_giou: 0.704765 loss_class_aux: 9.909552 loss_bbox_aux: 1.477009 loss_giou_aux: 4.668956 loss_class_dn: 1.686702 loss_bbox_dn: 0.137192 loss_giou_dn: 0.468458 loss_class_aux_dn: 9.240980 loss_bbox_aux_dn: 0.802063 loss_giou_aux_dn: 2.577260 loss: 34.172264 eta: 1:08:51 batch_cost: 0.3115 data_cost: 0.0016 ips: 25.6817 images/s, max_mem_reserved: 16006 MB, max_mem_allocated: 14888 MB
+[09/14 12:13:44] ppdet.engine.callbacks INFO: Epoch: [0] [ 60/115] learning_rate: 0.000060 loss_class: 1.162918 loss_bbox: 0.236101 loss_giou: 0.807019 loss_class_aux: 8.247899 loss_bbox_aux: 1.460502 loss_giou_aux: 5.135358 loss_class_dn: 1.138696 loss_bbox_dn: 0.119464 loss_giou_dn: 0.533259 loss_class_aux_dn: 7.785611 loss_bbox_aux_dn: 0.735848 loss_giou_aux_dn: 2.901033 loss: 30.228699 eta: 1:07:08 batch_cost: 0.3079 data_cost: 0.0016 ips: 25.9794 images/s, max_mem_reserved: 16006 MB, max_mem_allocated: 14888 MB
+[09/14 12:13:48] ppdet.engine.callbacks INFO: Epoch: [0] [ 70/115] learning_rate: 0.000070 loss_class: 1.180016 loss_bbox: 0.171339 loss_giou: 0.703733 loss_class_aux: 8.379724 loss_bbox_aux: 1.121225 loss_giou_aux: 4.473558 loss_class_dn: 0.998621 loss_bbox_dn: 0.112090 loss_giou_dn: 0.483015 loss_class_aux_dn: 6.854342 loss_bbox_aux_dn: 0.657294 loss_giou_aux_dn: 2.576407 loss: 27.277802 eta: 1:06:02 batch_cost: 0.3135 data_cost: 0.0016 ips: 25.5173 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15845 MB
+[09/14 12:13:51] ppdet.engine.callbacks INFO: Epoch: [0] [ 80/115] learning_rate: 0.000080 loss_class: 1.220808 loss_bbox: 0.092054 loss_giou: 0.533767 loss_class_aux: 8.097740 loss_bbox_aux: 0.674411 loss_giou_aux: 3.425838 loss_class_dn: 0.879186 loss_bbox_dn: 0.115242 loss_giou_dn: 0.460170 loss_class_aux_dn: 5.718440 loss_bbox_aux_dn: 0.678753 loss_giou_aux_dn: 2.517150 loss: 24.761569 eta: 1:05:25 batch_cost: 0.3224 data_cost: 0.0016 ips: 24.8142 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15845 MB
+[09/14 12:13:55] ppdet.engine.callbacks INFO: Epoch: [0] [ 90/115] learning_rate: 0.000090 loss_class: 1.100571 loss_bbox: 0.097838 loss_giou: 0.557273 loss_class_aux: 7.288567 loss_bbox_aux: 0.712820 loss_giou_aux: 3.488340 loss_class_dn: 0.757391 loss_bbox_dn: 0.109328 loss_giou_dn: 0.452127 loss_class_aux_dn: 4.867459 loss_bbox_aux_dn: 0.654574 loss_giou_aux_dn: 2.437358 loss: 22.726167 eta: 1:04:42 batch_cost: 0.3126 data_cost: 0.0016 ips: 25.5880 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15845 MB
+[09/14 12:13:58] ppdet.engine.callbacks INFO: Epoch: [0] [100/115] learning_rate: 0.000100 loss_class: 0.878454 loss_bbox: 0.099325 loss_giou: 0.624498 loss_class_aux: 6.531054 loss_bbox_aux: 0.726547 loss_giou_aux: 3.904789 loss_class_dn: 0.650857 loss_bbox_dn: 0.086091 loss_giou_dn: 0.488459 loss_class_aux_dn: 4.251651 loss_bbox_aux_dn: 0.530470 loss_giou_aux_dn: 2.575041 loss: 21.363507 eta: 1:04:01 batch_cost: 0.3068 data_cost: 0.0017 ips: 26.0727 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15845 MB
+[09/14 12:14:01] ppdet.engine.callbacks INFO: Epoch: [0] [110/115] learning_rate: 0.000100 loss_class: 0.866204 loss_bbox: 0.086271 loss_giou: 0.541837 loss_class_aux: 6.274586 loss_bbox_aux: 0.714197 loss_giou_aux: 3.666793 loss_class_dn: 0.607780 loss_bbox_dn: 0.108668 loss_giou_dn: 0.426472 loss_class_aux_dn: 3.823874 loss_bbox_aux_dn: 0.588187 loss_giou_aux_dn: 2.339662 loss: 20.338369 eta: 1:03:25 batch_cost: 0.3052 data_cost: 0.0015 ips: 26.2119 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15845 MB
+[09/14 12:14:04] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/0
+W0914 12:14:06.488488 4102632 eager_utils.cc:3441] Paddle static graph(PIR) not support input out tensor for now!!!!!
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:14:11] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/0/inference/inference.yml
+[09/14 12:14:11] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:14:11] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/0/inference
+[09/14 12:14:11] ppdet.engine.callbacks INFO: Early stopping: epoch 1 loss=30.384663, best=30.384663, patience=0/20
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:14:11] ppdet.data.source.coco INFO: Load [231 samples valid, 0 samples invalid] in file /home/tntri/data/OCR_dataset_coco/annotations/instance_val.json.
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+[09/14 12:14:12] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:14:20] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:14:20] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.49s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.49s).
+Accumulating evaluation results...
+DONE (t=0.35s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.456
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.659
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.558
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.198
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.476
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.448
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.394
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.676
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.754
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.467
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.767
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.759
+[09/14 12:14:24] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 28.35611861192593
+[09/14 12:14:24] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/0
+[09/14 12:14:24] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:14:24] ppdet.engine INFO: Best test bbox ap is 0.456.
+[09/14 12:14:25] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:14:31] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:14:31] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:14:31] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:14:33] ppdet.engine.callbacks INFO: Epoch: [1] [  0/115] learning_rate: 0.000100 loss_class: 0.755309 loss_bbox: 0.104545 loss_giou: 0.565254 loss_class_aux: 5.884228 loss_bbox_aux: 0.669614 loss_giou_aux: 3.400798 loss_class_dn: 0.555408 loss_bbox_dn: 0.098063 loss_giou_dn: 0.413607 loss_class_aux_dn: 3.576287 loss_bbox_aux_dn: 0.572986 loss_giou_aux_dn: 2.329212 loss: 19.538241 eta: 1:04:55 batch_cost: 0.4142 data_cost: 0.1028 ips: 19.3145 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15845 MB
+[09/14 12:14:37] ppdet.engine.callbacks INFO: Epoch: [1] [ 10/115] learning_rate: 0.000100 loss_class: 0.789862 loss_bbox: 0.091195 loss_giou: 0.524969 loss_class_aux: 5.629427 loss_bbox_aux: 0.591181 loss_giou_aux: 3.324841 loss_class_dn: 0.525716 loss_bbox_dn: 0.079387 loss_giou_dn: 0.418307 loss_class_aux_dn: 3.213325 loss_bbox_aux_dn: 0.445117 loss_giou_aux_dn: 2.319535 loss: 18.211346 eta: 1:04:46 batch_cost: 0.3360 data_cost: 0.0107 ips: 23.8080 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15845 MB
+[09/14 12:14:41] ppdet.engine.callbacks INFO: Epoch: [1] [ 20/115] learning_rate: 0.000100 loss_class: 0.693863 loss_bbox: 0.075675 loss_giou: 0.448345 loss_class_aux: 5.240662 loss_bbox_aux: 0.523187 loss_giou_aux: 2.939975 loss_class_dn: 0.452327 loss_bbox_dn: 0.077783 loss_giou_dn: 0.388056 loss_class_aux_dn: 2.844887 loss_bbox_aux_dn: 0.462373 loss_giou_aux_dn: 2.110208 loss: 16.889350 eta: 1:05:10 batch_cost: 0.3740 data_cost: 0.0016 ips: 21.3899 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:14:45] ppdet.engine.callbacks INFO: Epoch: [1] [ 30/115] learning_rate: 0.000100 loss_class: 0.776317 loss_bbox: 0.085272 loss_giou: 0.432573 loss_class_aux: 5.166799 loss_bbox_aux: 0.564480 loss_giou_aux: 2.807550 loss_class_dn: 0.466324 loss_bbox_dn: 0.084331 loss_giou_dn: 0.392409 loss_class_aux_dn: 2.723743 loss_bbox_aux_dn: 0.467943 loss_giou_aux_dn: 2.107853 loss: 16.541055 eta: 1:05:26 batch_cost: 0.3689 data_cost: 0.0020 ips: 21.6858 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:14:48] ppdet.engine.callbacks INFO: Epoch: [1] [ 40/115] learning_rate: 0.000100 loss_class: 0.683031 loss_bbox: 0.093446 loss_giou: 0.462334 loss_class_aux: 4.592321 loss_bbox_aux: 0.589650 loss_giou_aux: 2.999675 loss_class_dn: 0.437160 loss_bbox_dn: 0.073743 loss_giou_dn: 0.402327 loss_class_aux_dn: 2.502343 loss_bbox_aux_dn: 0.452259 loss_giou_aux_dn: 2.214589 loss: 16.109720 eta: 1:05:13 batch_cost: 0.3337 data_cost: 0.0014 ips: 23.9732 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:14:52] ppdet.engine.callbacks INFO: Epoch: [1] [ 50/115] learning_rate: 0.000100 loss_class: 0.654541 loss_bbox: 0.102126 loss_giou: 0.461368 loss_class_aux: 4.384083 loss_bbox_aux: 0.674822 loss_giou_aux: 3.058612 loss_class_dn: 0.417828 loss_bbox_dn: 0.078115 loss_giou_dn: 0.379953 loss_class_aux_dn: 2.324677 loss_bbox_aux_dn: 0.453093 loss_giou_aux_dn: 2.093147 loss: 15.514857 eta: 1:04:41 batch_cost: 0.3024 data_cost: 0.0012 ips: 26.4527 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:14:55] ppdet.engine.callbacks INFO: Epoch: [1] [ 60/115] learning_rate: 0.000100 loss_class: 0.654064 loss_bbox: 0.068225 loss_giou: 0.419985 loss_class_aux: 4.335165 loss_bbox_aux: 0.445796 loss_giou_aux: 2.722957 loss_class_dn: 0.430980 loss_bbox_dn: 0.073025 loss_giou_dn: 0.373857 loss_class_aux_dn: 2.367638 loss_bbox_aux_dn: 0.442848 loss_giou_aux_dn: 2.023686 loss: 14.419297 eta: 1:04:17 batch_cost: 0.3106 data_cost: 0.0013 ips: 25.7594 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:14:58] ppdet.engine.callbacks INFO: Epoch: [1] [ 70/115] learning_rate: 0.000100 loss_class: 0.613332 loss_bbox: 0.071316 loss_giou: 0.401850 loss_class_aux: 4.314110 loss_bbox_aux: 0.485216 loss_giou_aux: 2.663965 loss_class_dn: 0.440140 loss_bbox_dn: 0.066099 loss_giou_dn: 0.348727 loss_class_aux_dn: 2.361191 loss_bbox_aux_dn: 0.391822 loss_giou_aux_dn: 1.963290 loss: 14.413533 eta: 1:03:53 batch_cost: 0.3061 data_cost: 0.0012 ips: 26.1351 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:15:02] ppdet.engine.callbacks INFO: Epoch: [1] [ 80/115] learning_rate: 0.000100 loss_class: 0.638502 loss_bbox: 0.102413 loss_giou: 0.489404 loss_class_aux: 4.512390 loss_bbox_aux: 0.703260 loss_giou_aux: 3.142409 loss_class_dn: 0.450953 loss_bbox_dn: 0.091975 loss_giou_dn: 0.395159 loss_class_aux_dn: 2.335123 loss_bbox_aux_dn: 0.549549 loss_giou_aux_dn: 2.160984 loss: 16.040061 eta: 1:03:31 batch_cost: 0.3078 data_cost: 0.0012 ips: 25.9938 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:15:05] ppdet.engine.callbacks INFO: Epoch: [1] [ 90/115] learning_rate: 0.000100 loss_class: 0.597204 loss_bbox: 0.055786 loss_giou: 0.386309 loss_class_aux: 4.047351 loss_bbox_aux: 0.401869 loss_giou_aux: 2.483021 loss_class_dn: 0.400219 loss_bbox_dn: 0.056499 loss_giou_dn: 0.348658 loss_class_aux_dn: 2.157158 loss_bbox_aux_dn: 0.326189 loss_giou_aux_dn: 1.918723 loss: 13.902518 eta: 1:03:14 batch_cost: 0.3115 data_cost: 0.0017 ips: 25.6846 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:15:09] ppdet.engine.callbacks INFO: Epoch: [1] [100/115] learning_rate: 0.000100 loss_class: 0.613408 loss_bbox: 0.085771 loss_giou: 0.447200 loss_class_aux: 4.027802 loss_bbox_aux: 0.598546 loss_giou_aux: 2.827231 loss_class_dn: 0.431628 loss_bbox_dn: 0.095357 loss_giou_dn: 0.374388 loss_class_aux_dn: 2.358258 loss_bbox_aux_dn: 0.523500 loss_giou_aux_dn: 2.050296 loss: 14.681583 eta: 1:03:00 batch_cost: 0.3153 data_cost: 0.0012 ips: 25.3749 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:15:12] ppdet.engine.callbacks INFO: Epoch: [1] [110/115] learning_rate: 0.000100 loss_class: 0.591682 loss_bbox: 0.069322 loss_giou: 0.428996 loss_class_aux: 3.957691 loss_bbox_aux: 0.480281 loss_giou_aux: 2.737496 loss_class_dn: 0.413852 loss_bbox_dn: 0.074120 loss_giou_dn: 0.385257 loss_class_aux_dn: 2.291284 loss_bbox_aux_dn: 0.442352 loss_giou_aux_dn: 2.091233 loss: 14.350476 eta: 1:02:51 batch_cost: 0.3251 data_cost: 0.0011 ips: 24.6082 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:15:15] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/1
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:15:23] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/1/inference/inference.yml
+[09/14 12:15:23] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:15:24] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/1/inference
+[09/14 12:15:24] ppdet.engine.callbacks INFO: Early stopping: epoch 2 loss=15.566072, best=15.566072, patience=0/20
+[09/14 12:15:25] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:15:33] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:15:33] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.67s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.88s).
+Accumulating evaluation results...
+DONE (t=0.62s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.620
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.887
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.767
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.417
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.635
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.652
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.482
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.740
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.786
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.619
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.797
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.787
+[09/14 12:15:38] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 30.105577682743817
+[09/14 12:15:38] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/1
+[09/14 12:15:38] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:15:38] ppdet.engine INFO: Best test bbox ap is 0.620.
+[09/14 12:15:40] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:15:48] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:15:48] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:15:48] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:15:51] ppdet.engine.callbacks INFO: Epoch: [2] [  0/115] learning_rate: 0.000100 loss_class: 0.572777 loss_bbox: 0.077273 loss_giou: 0.455702 loss_class_aux: 3.768648 loss_bbox_aux: 0.555842 loss_giou_aux: 3.007416 loss_class_dn: 0.420257 loss_bbox_dn: 0.074120 loss_giou_dn: 0.377753 loss_class_aux_dn: 2.213983 loss_bbox_aux_dn: 0.433455 loss_giou_aux_dn: 2.032953 loss: 14.289808 eta: 1:04:35 batch_cost: 0.5506 data_cost: 0.1936 ips: 14.5289 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:15:55] ppdet.engine.callbacks INFO: Epoch: [2] [ 10/115] learning_rate: 0.000100 loss_class: 0.590619 loss_bbox: 0.058618 loss_giou: 0.415626 loss_class_aux: 3.931497 loss_bbox_aux: 0.406650 loss_giou_aux: 2.729876 loss_class_dn: 0.398066 loss_bbox_dn: 0.061404 loss_giou_dn: 0.365372 loss_class_aux_dn: 2.112183 loss_bbox_aux_dn: 0.356749 loss_giou_aux_dn: 2.023718 loss: 13.681952 eta: 1:04:32 batch_cost: 0.3442 data_cost: 0.0013 ips: 23.2434 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:15:59] ppdet.engine.callbacks INFO: Epoch: [2] [ 20/115] learning_rate: 0.000100 loss_class: 0.559452 loss_bbox: 0.076145 loss_giou: 0.418507 loss_class_aux: 3.680488 loss_bbox_aux: 0.524742 loss_giou_aux: 2.683370 loss_class_dn: 0.413713 loss_bbox_dn: 0.070505 loss_giou_dn: 0.368381 loss_class_aux_dn: 2.193049 loss_bbox_aux_dn: 0.409934 loss_giou_aux_dn: 2.013285 loss: 14.450240 eta: 1:04:38 batch_cost: 0.3662 data_cost: 0.0015 ips: 21.8461 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:03] ppdet.engine.callbacks INFO: Epoch: [2] [ 30/115] learning_rate: 0.000100 loss_class: 0.579040 loss_bbox: 0.068772 loss_giou: 0.375756 loss_class_aux: 3.842713 loss_bbox_aux: 0.498518 loss_giou_aux: 2.468614 loss_class_dn: 0.400451 loss_bbox_dn: 0.077920 loss_giou_dn: 0.375497 loss_class_aux_dn: 2.130205 loss_bbox_aux_dn: 0.442174 loss_giou_aux_dn: 2.065860 loss: 13.366563 eta: 1:04:45 batch_cost: 0.3674 data_cost: 0.0013 ips: 21.7769 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:07] ppdet.engine.callbacks INFO: Epoch: [2] [ 40/115] learning_rate: 0.000100 loss_class: 0.617840 loss_bbox: 0.060846 loss_giou: 0.342818 loss_class_aux: 3.982487 loss_bbox_aux: 0.418173 loss_giou_aux: 2.258420 loss_class_dn: 0.382651 loss_bbox_dn: 0.067447 loss_giou_dn: 0.318401 loss_class_aux_dn: 2.045770 loss_bbox_aux_dn: 0.395717 loss_giou_aux_dn: 1.765030 loss: 12.716173 eta: 1:04:48 batch_cost: 0.3624 data_cost: 0.0023 ips: 22.0772 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:11] ppdet.engine.callbacks INFO: Epoch: [2] [ 50/115] learning_rate: 0.000100 loss_class: 0.630820 loss_bbox: 0.072029 loss_giou: 0.371308 loss_class_aux: 3.970367 loss_bbox_aux: 0.458571 loss_giou_aux: 2.445001 loss_class_dn: 0.423911 loss_bbox_dn: 0.072021 loss_giou_dn: 0.354676 loss_class_aux_dn: 2.218695 loss_bbox_aux_dn: 0.417549 loss_giou_aux_dn: 1.953114 loss: 13.509161 eta: 1:04:53 batch_cost: 0.3674 data_cost: 0.0014 ips: 21.7730 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:15] ppdet.engine.callbacks INFO: Epoch: [2] [ 60/115] learning_rate: 0.000100 loss_class: 0.601319 loss_bbox: 0.064447 loss_giou: 0.360830 loss_class_aux: 4.003224 loss_bbox_aux: 0.462066 loss_giou_aux: 2.375719 loss_class_dn: 0.392029 loss_bbox_dn: 0.065028 loss_giou_dn: 0.331508 loss_class_aux_dn: 2.066798 loss_bbox_aux_dn: 0.386366 loss_giou_aux_dn: 1.831391 loss: 13.562500 eta: 1:05:04 batch_cost: 0.3843 data_cost: 0.0014 ips: 20.8161 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:19] ppdet.engine.callbacks INFO: Epoch: [2] [ 70/115] learning_rate: 0.000100 loss_class: 0.635435 loss_bbox: 0.065772 loss_giou: 0.448652 loss_class_aux: 4.436659 loss_bbox_aux: 0.434253 loss_giou_aux: 2.782910 loss_class_dn: 0.422554 loss_bbox_dn: 0.054798 loss_giou_dn: 0.375870 loss_class_aux_dn: 2.210639 loss_bbox_aux_dn: 0.321711 loss_giou_aux_dn: 2.004712 loss: 13.706723 eta: 1:05:06 batch_cost: 0.3637 data_cost: 0.0016 ips: 21.9962 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:23] ppdet.engine.callbacks INFO: Epoch: [2] [ 80/115] learning_rate: 0.000100 loss_class: 0.549817 loss_bbox: 0.069753 loss_giou: 0.378823 loss_class_aux: 3.744201 loss_bbox_aux: 0.451504 loss_giou_aux: 2.427805 loss_class_dn: 0.398948 loss_bbox_dn: 0.067241 loss_giou_dn: 0.348054 loss_class_aux_dn: 2.091539 loss_bbox_aux_dn: 0.385525 loss_giou_aux_dn: 1.885680 loss: 12.651264 eta: 1:05:10 batch_cost: 0.3689 data_cost: 0.0016 ips: 21.6839 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:27] ppdet.engine.callbacks INFO: Epoch: [2] [ 90/115] learning_rate: 0.000100 loss_class: 0.552970 loss_bbox: 0.054074 loss_giou: 0.362697 loss_class_aux: 3.684010 loss_bbox_aux: 0.371693 loss_giou_aux: 2.343737 loss_class_dn: 0.367595 loss_bbox_dn: 0.055264 loss_giou_dn: 0.335418 loss_class_aux_dn: 2.010398 loss_bbox_aux_dn: 0.320528 loss_giou_aux_dn: 1.836331 loss: 12.120312 eta: 1:05:08 batch_cost: 0.3540 data_cost: 0.0018 ips: 22.5995 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:30] ppdet.engine.callbacks INFO: Epoch: [2] [100/115] learning_rate: 0.000100 loss_class: 0.595530 loss_bbox: 0.063552 loss_giou: 0.375829 loss_class_aux: 3.842024 loss_bbox_aux: 0.449443 loss_giou_aux: 2.320126 loss_class_dn: 0.386715 loss_bbox_dn: 0.083130 loss_giou_dn: 0.349638 loss_class_aux_dn: 2.112939 loss_bbox_aux_dn: 0.440783 loss_giou_aux_dn: 1.874134 loss: 13.648894 eta: 1:04:59 batch_cost: 0.3335 data_cost: 0.0013 ips: 23.9898 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:34] ppdet.engine.callbacks INFO: Epoch: [2] [110/115] learning_rate: 0.000100 loss_class: 0.590003 loss_bbox: 0.068898 loss_giou: 0.406114 loss_class_aux: 3.850364 loss_bbox_aux: 0.499848 loss_giou_aux: 2.643571 loss_class_dn: 0.394514 loss_bbox_dn: 0.063945 loss_giou_dn: 0.369291 loss_class_aux_dn: 2.100453 loss_bbox_aux_dn: 0.376235 loss_giou_aux_dn: 1.996095 loss: 13.397883 eta: 1:04:46 batch_cost: 0.3195 data_cost: 0.0012 ips: 25.0427 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:16:38] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/2
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:16:47] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/2/inference/inference.yml
+[09/14 12:16:47] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:16:47] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/2/inference
+[09/14 12:16:48] ppdet.engine.callbacks INFO: Early stopping: epoch 3 loss=13.430156, best=13.430156, patience=0/20
+[09/14 12:16:49] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:16:57] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:16:57] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.74s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.71s).
+Accumulating evaluation results...
+DONE (t=0.60s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.644
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.911
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.801
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.464
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.659
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.652
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.490
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.746
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.788
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.667
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.796
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.765
+[09/14 12:17:02] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 28.610712014364825
+[09/14 12:17:02] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/2
+[09/14 12:17:02] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:17:02] ppdet.engine INFO: Best test bbox ap is 0.644.
+[09/14 12:17:04] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:17:12] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:17:12] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:17:13] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:17:15] ppdet.engine.callbacks INFO: Epoch: [3] [  0/115] learning_rate: 0.000100 loss_class: 0.573559 loss_bbox: 0.058792 loss_giou: 0.399002 loss_class_aux: 3.752511 loss_bbox_aux: 0.396394 loss_giou_aux: 2.602451 loss_class_dn: 0.398949 loss_bbox_dn: 0.058193 loss_giou_dn: 0.343481 loss_class_aux_dn: 2.100453 loss_bbox_aux_dn: 0.334044 loss_giou_aux_dn: 1.857445 loss: 13.115522 eta: 1:05:42 batch_cost: 0.5094 data_cost: 0.1512 ips: 15.7050 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:19] ppdet.engine.callbacks INFO: Epoch: [3] [ 10/115] learning_rate: 0.000100 loss_class: 0.585260 loss_bbox: 0.084654 loss_giou: 0.460236 loss_class_aux: 3.811576 loss_bbox_aux: 0.545304 loss_giou_aux: 2.863414 loss_class_dn: 0.395805 loss_bbox_dn: 0.067261 loss_giou_dn: 0.386649 loss_class_aux_dn: 2.112383 loss_bbox_aux_dn: 0.399773 loss_giou_aux_dn: 2.076711 loss: 13.842816 eta: 1:05:40 batch_cost: 0.3591 data_cost: 0.0019 ips: 22.2770 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:23] ppdet.engine.callbacks INFO: Epoch: [3] [ 20/115] learning_rate: 0.000100 loss_class: 0.554805 loss_bbox: 0.075546 loss_giou: 0.389310 loss_class_aux: 3.702894 loss_bbox_aux: 0.481784 loss_giou_aux: 2.544075 loss_class_dn: 0.386561 loss_bbox_dn: 0.071889 loss_giou_dn: 0.378405 loss_class_aux_dn: 2.055636 loss_bbox_aux_dn: 0.424054 loss_giou_aux_dn: 2.056288 loss: 13.510080 eta: 1:05:43 batch_cost: 0.3732 data_cost: 0.0016 ips: 21.4342 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:27] ppdet.engine.callbacks INFO: Epoch: [3] [ 30/115] learning_rate: 0.000100 loss_class: 0.565215 loss_bbox: 0.060593 loss_giou: 0.379578 loss_class_aux: 3.633556 loss_bbox_aux: 0.414768 loss_giou_aux: 2.418645 loss_class_dn: 0.397179 loss_bbox_dn: 0.056108 loss_giou_dn: 0.351102 loss_class_aux_dn: 2.043691 loss_bbox_aux_dn: 0.316520 loss_giou_aux_dn: 1.895256 loss: 13.091656 eta: 1:05:47 batch_cost: 0.3806 data_cost: 0.0018 ips: 21.0213 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:31] ppdet.engine.callbacks INFO: Epoch: [3] [ 40/115] learning_rate: 0.000100 loss_class: 0.562499 loss_bbox: 0.068430 loss_giou: 0.387745 loss_class_aux: 3.622509 loss_bbox_aux: 0.461295 loss_giou_aux: 2.472148 loss_class_dn: 0.388618 loss_bbox_dn: 0.065274 loss_giou_dn: 0.345473 loss_class_aux_dn: 2.024473 loss_bbox_aux_dn: 0.379585 loss_giou_aux_dn: 1.904631 loss: 13.258447 eta: 1:05:49 batch_cost: 0.3735 data_cost: 0.0014 ips: 21.4179 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:36] ppdet.engine.callbacks INFO: Epoch: [3] [ 50/115] learning_rate: 0.000100 loss_class: 0.518282 loss_bbox: 0.079993 loss_giou: 0.378935 loss_class_aux: 3.427697 loss_bbox_aux: 0.516357 loss_giou_aux: 2.482128 loss_class_dn: 0.382185 loss_bbox_dn: 0.063952 loss_giou_dn: 0.359869 loss_class_aux_dn: 2.025895 loss_bbox_aux_dn: 0.364606 loss_giou_aux_dn: 1.988782 loss: 13.465233 eta: 1:05:49 batch_cost: 0.3694 data_cost: 0.0015 ips: 21.6576 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:40] ppdet.engine.callbacks INFO: Epoch: [3] [ 60/115] learning_rate: 0.000100 loss_class: 0.544125 loss_bbox: 0.060417 loss_giou: 0.354014 loss_class_aux: 3.537953 loss_bbox_aux: 0.428805 loss_giou_aux: 2.324759 loss_class_dn: 0.371910 loss_bbox_dn: 0.054296 loss_giou_dn: 0.339103 loss_class_aux_dn: 1.996719 loss_bbox_aux_dn: 0.318212 loss_giou_aux_dn: 1.856808 loss: 12.477278 eta: 1:05:49 batch_cost: 0.3669 data_cost: 0.0015 ips: 21.8050 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:44] ppdet.engine.callbacks INFO: Epoch: [3] [ 70/115] learning_rate: 0.000100 loss_class: 0.577092 loss_bbox: 0.060295 loss_giou: 0.374355 loss_class_aux: 3.689655 loss_bbox_aux: 0.398378 loss_giou_aux: 2.373440 loss_class_dn: 0.378358 loss_bbox_dn: 0.054796 loss_giou_dn: 0.300954 loss_class_aux_dn: 2.031003 loss_bbox_aux_dn: 0.333091 loss_giou_aux_dn: 1.649094 loss: 12.825521 eta: 1:05:51 batch_cost: 0.3789 data_cost: 0.0014 ips: 21.1148 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:48] ppdet.engine.callbacks INFO: Epoch: [3] [ 80/115] learning_rate: 0.000100 loss_class: 0.602236 loss_bbox: 0.074448 loss_giou: 0.417145 loss_class_aux: 3.954811 loss_bbox_aux: 0.507296 loss_giou_aux: 2.630141 loss_class_dn: 0.386644 loss_bbox_dn: 0.070027 loss_giou_dn: 0.371832 loss_class_aux_dn: 2.064296 loss_bbox_aux_dn: 0.399531 loss_giou_aux_dn: 2.001925 loss: 14.119929 eta: 1:05:48 batch_cost: 0.3580 data_cost: 0.0014 ips: 22.3475 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:51] ppdet.engine.callbacks INFO: Epoch: [3] [ 90/115] learning_rate: 0.000100 loss_class: 0.547151 loss_bbox: 0.061763 loss_giou: 0.359611 loss_class_aux: 3.442314 loss_bbox_aux: 0.401473 loss_giou_aux: 2.251402 loss_class_dn: 0.370141 loss_bbox_dn: 0.054674 loss_giou_dn: 0.329616 loss_class_aux_dn: 1.929813 loss_bbox_aux_dn: 0.329243 loss_giou_aux_dn: 1.759670 loss: 12.022596 eta: 1:05:34 batch_cost: 0.3163 data_cost: 0.0014 ips: 25.2896 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:55] ppdet.engine.callbacks INFO: Epoch: [3] [100/115] learning_rate: 0.000100 loss_class: 0.532553 loss_bbox: 0.049295 loss_giou: 0.366732 loss_class_aux: 3.552226 loss_bbox_aux: 0.332859 loss_giou_aux: 2.228804 loss_class_dn: 0.412607 loss_bbox_dn: 0.045572 loss_giou_dn: 0.338220 loss_class_aux_dn: 2.101179 loss_bbox_aux_dn: 0.268769 loss_giou_aux_dn: 1.868055 loss: 12.488208 eta: 1:05:22 batch_cost: 0.3199 data_cost: 0.0012 ips: 25.0094 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:17:58] ppdet.engine.callbacks INFO: Epoch: [3] [110/115] learning_rate: 0.000100 loss_class: 0.570713 loss_bbox: 0.060723 loss_giou: 0.373756 loss_class_aux: 3.572515 loss_bbox_aux: 0.432531 loss_giou_aux: 2.421849 loss_class_dn: 0.375886 loss_bbox_dn: 0.069248 loss_giou_dn: 0.340281 loss_class_aux_dn: 1.981000 loss_bbox_aux_dn: 0.404932 loss_giou_aux_dn: 1.863078 loss: 12.597178 eta: 1:05:13 batch_cost: 0.3307 data_cost: 0.0011 ips: 24.1938 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:18:02] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/3
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:18:09] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/3/inference/inference.yml
+[09/14 12:18:09] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:18:10] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/3/inference
+[09/14 12:18:10] ppdet.engine.callbacks INFO: Early stopping: epoch 4 loss=13.018301, best=13.018301, patience=0/20
+[09/14 12:18:11] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:18:17] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:18:17] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.63s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.59s).
+Accumulating evaluation results...
+DONE (t=0.46s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.655
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.924
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.811
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.492
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.667
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.675
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.499
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.756
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.793
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.693
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.800
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.780
+[09/14 12:18:21] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 35.52206532148194
+[09/14 12:18:21] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/3
+[09/14 12:18:21] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:18:21] ppdet.engine INFO: Best test bbox ap is 0.655.
+[09/14 12:18:22] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:18:28] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:18:28] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:18:29] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:18:31] ppdet.engine.callbacks INFO: Epoch: [4] [  0/115] learning_rate: 0.000100 loss_class: 0.544683 loss_bbox: 0.061617 loss_giou: 0.371008 loss_class_aux: 3.503142 loss_bbox_aux: 0.450456 loss_giou_aux: 2.354393 loss_class_dn: 0.375396 loss_bbox_dn: 0.074387 loss_giou_dn: 0.349183 loss_class_aux_dn: 1.995090 loss_bbox_aux_dn: 0.450393 loss_giou_aux_dn: 1.937761 loss: 12.454031 eta: 1:05:53 batch_cost: 0.5217 data_cost: 0.1613 ips: 15.3338 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:18:36] ppdet.engine.callbacks INFO: Epoch: [4] [ 10/115] learning_rate: 0.000100 loss_class: 0.572451 loss_bbox: 0.056931 loss_giou: 0.380605 loss_class_aux: 3.611619 loss_bbox_aux: 0.379404 loss_giou_aux: 2.504409 loss_class_dn: 0.382682 loss_bbox_dn: 0.052892 loss_giou_dn: 0.343560 loss_class_aux_dn: 2.045516 loss_bbox_aux_dn: 0.309618 loss_giou_aux_dn: 1.883988 loss: 13.171525 eta: 1:05:57 batch_cost: 0.3900 data_cost: 0.0024 ips: 20.5105 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:18:40] ppdet.engine.callbacks INFO: Epoch: [4] [ 20/115] learning_rate: 0.000100 loss_class: 0.544993 loss_bbox: 0.056217 loss_giou: 0.364617 loss_class_aux: 3.691516 loss_bbox_aux: 0.405121 loss_giou_aux: 2.327266 loss_class_dn: 0.357952 loss_bbox_dn: 0.059088 loss_giou_dn: 0.326477 loss_class_aux_dn: 1.922072 loss_bbox_aux_dn: 0.348122 loss_giou_aux_dn: 1.795928 loss: 12.096852 eta: 1:06:06 batch_cost: 0.4131 data_cost: 0.0017 ips: 19.3649 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:18:44] ppdet.engine.callbacks INFO: Epoch: [4] [ 30/115] learning_rate: 0.000100 loss_class: 0.482365 loss_bbox: 0.074773 loss_giou: 0.353298 loss_class_aux: 3.156634 loss_bbox_aux: 0.485255 loss_giou_aux: 2.222339 loss_class_dn: 0.361408 loss_bbox_dn: 0.059009 loss_giou_dn: 0.326729 loss_class_aux_dn: 1.936018 loss_bbox_aux_dn: 0.373529 loss_giou_aux_dn: 1.781160 loss: 11.574232 eta: 1:06:07 batch_cost: 0.3807 data_cost: 0.0014 ips: 21.0136 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:18:49] ppdet.engine.callbacks INFO: Epoch: [4] [ 40/115] learning_rate: 0.000100 loss_class: 0.532526 loss_bbox: 0.052038 loss_giou: 0.342050 loss_class_aux: 3.505854 loss_bbox_aux: 0.354835 loss_giou_aux: 2.183734 loss_class_dn: 0.367416 loss_bbox_dn: 0.058860 loss_giou_dn: 0.329825 loss_class_aux_dn: 1.925720 loss_bbox_aux_dn: 0.350265 loss_giou_aux_dn: 1.778788 loss: 11.811126 eta: 1:06:15 batch_cost: 0.4146 data_cost: 0.0019 ips: 19.2944 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:18:54] ppdet.engine.callbacks INFO: Epoch: [4] [ 50/115] learning_rate: 0.000100 loss_class: 0.504097 loss_bbox: 0.066259 loss_giou: 0.378225 loss_class_aux: 3.156014 loss_bbox_aux: 0.446781 loss_giou_aux: 2.460790 loss_class_dn: 0.364230 loss_bbox_dn: 0.055813 loss_giou_dn: 0.343945 loss_class_aux_dn: 1.915856 loss_bbox_aux_dn: 0.313474 loss_giou_aux_dn: 1.847524 loss: 12.746445 eta: 1:06:25 batch_cost: 0.4233 data_cost: 0.0018 ips: 18.8991 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:18:58] ppdet.engine.callbacks INFO: Epoch: [4] [ 60/115] learning_rate: 0.000100 loss_class: 0.554200 loss_bbox: 0.065692 loss_giou: 0.387971 loss_class_aux: 3.735208 loss_bbox_aux: 0.437839 loss_giou_aux: 2.513456 loss_class_dn: 0.380400 loss_bbox_dn: 0.077075 loss_giou_dn: 0.369275 loss_class_aux_dn: 1.981072 loss_bbox_aux_dn: 0.415579 loss_giou_aux_dn: 1.984121 loss: 13.100056 eta: 1:06:34 batch_cost: 0.4228 data_cost: 0.0019 ips: 18.9220 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:19:03] ppdet.engine.callbacks INFO: Epoch: [4] [ 70/115] learning_rate: 0.000100 loss_class: 0.577538 loss_bbox: 0.057300 loss_giou: 0.369217 loss_class_aux: 3.561324 loss_bbox_aux: 0.383179 loss_giou_aux: 2.419990 loss_class_dn: 0.364139 loss_bbox_dn: 0.053125 loss_giou_dn: 0.335974 loss_class_aux_dn: 1.939304 loss_bbox_aux_dn: 0.295726 loss_giou_aux_dn: 1.817095 loss: 12.273357 eta: 1:06:40 batch_cost: 0.4126 data_cost: 0.0017 ips: 19.3882 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:19:07] ppdet.engine.callbacks INFO: Epoch: [4] [ 80/115] learning_rate: 0.000100 loss_class: 0.563703 loss_bbox: 0.075575 loss_giou: 0.379312 loss_class_aux: 3.637216 loss_bbox_aux: 0.480492 loss_giou_aux: 2.478886 loss_class_dn: 0.372798 loss_bbox_dn: 0.066649 loss_giou_dn: 0.341676 loss_class_aux_dn: 1.970282 loss_bbox_aux_dn: 0.380432 loss_giou_aux_dn: 1.855750 loss: 12.470668 eta: 1:06:44 batch_cost: 0.4023 data_cost: 0.0017 ips: 19.8837 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:19:12] ppdet.engine.callbacks INFO: Epoch: [4] [ 90/115] learning_rate: 0.000100 loss_class: 0.576036 loss_bbox: 0.075198 loss_giou: 0.352048 loss_class_aux: 3.594552 loss_bbox_aux: 0.477020 loss_giou_aux: 2.314064 loss_class_dn: 0.375536 loss_bbox_dn: 0.053523 loss_giou_dn: 0.334537 loss_class_aux_dn: 1.966329 loss_bbox_aux_dn: 0.302211 loss_giou_aux_dn: 1.830135 loss: 12.466441 eta: 1:06:49 batch_cost: 0.4061 data_cost: 0.0017 ips: 19.7014 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:19:16] ppdet.engine.callbacks INFO: Epoch: [4] [100/115] learning_rate: 0.000100 loss_class: 0.543616 loss_bbox: 0.052159 loss_giou: 0.344990 loss_class_aux: 3.438501 loss_bbox_aux: 0.345795 loss_giou_aux: 2.178135 loss_class_dn: 0.369542 loss_bbox_dn: 0.053326 loss_giou_dn: 0.337129 loss_class_aux_dn: 1.953737 loss_bbox_aux_dn: 0.293081 loss_giou_aux_dn: 1.837644 loss: 11.494800 eta: 1:06:48 batch_cost: 0.3797 data_cost: 0.0016 ips: 21.0670 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:19:21] ppdet.engine.callbacks INFO: Epoch: [4] [110/115] learning_rate: 0.000100 loss_class: 0.534216 loss_bbox: 0.058623 loss_giou: 0.369008 loss_class_aux: 3.480240 loss_bbox_aux: 0.394975 loss_giou_aux: 2.450320 loss_class_dn: 0.373715 loss_bbox_dn: 0.058097 loss_giou_dn: 0.347542 loss_class_aux_dn: 1.993520 loss_bbox_aux_dn: 0.332078 loss_giou_aux_dn: 1.938006 loss: 12.602931 eta: 1:06:58 batch_cost: 0.4400 data_cost: 0.0024 ips: 18.1814 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:19:24] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/4
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:19:33] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/4/inference/inference.yml
+[09/14 12:19:33] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:19:33] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/4/inference
+[09/14 12:19:33] ppdet.engine.callbacks INFO: Early stopping: epoch 5 loss=12.377186, best=12.377186, patience=0/20
+[09/14 12:19:35] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:19:42] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:19:42] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.29s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.20s).
+Accumulating evaluation results...
+DONE (t=0.42s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.674
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.937
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.838
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.560
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.683
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.685
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.514
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.767
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.800
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.691
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.807
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.784
+[09/14 12:19:46] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 28.97396042150577
+[09/14 12:19:46] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/4
+[09/14 12:19:46] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:19:46] ppdet.engine INFO: Best test bbox ap is 0.674.
+[09/14 12:19:48] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:19:54] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:19:54] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:19:54] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:19:57] ppdet.engine.callbacks INFO: Epoch: [5] [  0/115] learning_rate: 0.000100 loss_class: 0.524895 loss_bbox: 0.060408 loss_giou: 0.406937 loss_class_aux: 3.395113 loss_bbox_aux: 0.402990 loss_giou_aux: 2.566191 loss_class_dn: 0.381402 loss_bbox_dn: 0.052353 loss_giou_dn: 0.360637 loss_class_aux_dn: 2.006756 loss_bbox_aux_dn: 0.310774 loss_giou_aux_dn: 1.984033 loss: 12.614541 eta: 1:07:34 batch_cost: 0.5746 data_cost: 0.1798 ips: 13.9232 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:02] ppdet.engine.callbacks INFO: Epoch: [5] [ 10/115] learning_rate: 0.000100 loss_class: 0.562751 loss_bbox: 0.063540 loss_giou: 0.371638 loss_class_aux: 3.530128 loss_bbox_aux: 0.480421 loss_giou_aux: 2.319228 loss_class_dn: 0.383658 loss_bbox_dn: 0.060353 loss_giou_dn: 0.331163 loss_class_aux_dn: 2.016764 loss_bbox_aux_dn: 0.352776 loss_giou_aux_dn: 1.797851 loss: 12.287502 eta: 1:07:43 batch_cost: 0.4408 data_cost: 0.0021 ips: 18.1486 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:07] ppdet.engine.callbacks INFO: Epoch: [5] [ 20/115] learning_rate: 0.000100 loss_class: 0.513151 loss_bbox: 0.055714 loss_giou: 0.356498 loss_class_aux: 3.306010 loss_bbox_aux: 0.444207 loss_giou_aux: 2.328858 loss_class_dn: 0.376488 loss_bbox_dn: 0.065240 loss_giou_dn: 0.336125 loss_class_aux_dn: 1.976110 loss_bbox_aux_dn: 0.400097 loss_giou_aux_dn: 1.869405 loss: 12.390903 eta: 1:07:51 batch_cost: 0.4349 data_cost: 0.0019 ips: 18.3955 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:12] ppdet.engine.callbacks INFO: Epoch: [5] [ 30/115] learning_rate: 0.000100 loss_class: 0.510125 loss_bbox: 0.045658 loss_giou: 0.356240 loss_class_aux: 3.489152 loss_bbox_aux: 0.318855 loss_giou_aux: 2.290137 loss_class_dn: 0.366548 loss_bbox_dn: 0.049724 loss_giou_dn: 0.316475 loss_class_aux_dn: 1.965850 loss_bbox_aux_dn: 0.292615 loss_giou_aux_dn: 1.716983 loss: 11.496625 eta: 1:07:58 batch_cost: 0.4343 data_cost: 0.0019 ips: 18.4185 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:16] ppdet.engine.callbacks INFO: Epoch: [5] [ 40/115] learning_rate: 0.000100 loss_class: 0.467477 loss_bbox: 0.057735 loss_giou: 0.354653 loss_class_aux: 3.154190 loss_bbox_aux: 0.385911 loss_giou_aux: 2.173788 loss_class_dn: 0.357811 loss_bbox_dn: 0.055971 loss_giou_dn: 0.315944 loss_class_aux_dn: 1.908318 loss_bbox_aux_dn: 0.327948 loss_giou_aux_dn: 1.712698 loss: 11.320924 eta: 1:08:06 batch_cost: 0.4368 data_cost: 0.0019 ips: 18.3137 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:21] ppdet.engine.callbacks INFO: Epoch: [5] [ 50/115] learning_rate: 0.000100 loss_class: 0.472769 loss_bbox: 0.051127 loss_giou: 0.383825 loss_class_aux: 3.107098 loss_bbox_aux: 0.360616 loss_giou_aux: 2.453722 loss_class_dn: 0.380692 loss_bbox_dn: 0.051456 loss_giou_dn: 0.362787 loss_class_aux_dn: 1.974376 loss_bbox_aux_dn: 0.306776 loss_giou_aux_dn: 1.974341 loss: 12.373261 eta: 1:08:12 batch_cost: 0.4360 data_cost: 0.0019 ips: 18.3482 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:26] ppdet.engine.callbacks INFO: Epoch: [5] [ 60/115] learning_rate: 0.000100 loss_class: 0.501605 loss_bbox: 0.058598 loss_giou: 0.354217 loss_class_aux: 3.283472 loss_bbox_aux: 0.398201 loss_giou_aux: 2.311486 loss_class_dn: 0.370699 loss_bbox_dn: 0.055858 loss_giou_dn: 0.318158 loss_class_aux_dn: 1.946646 loss_bbox_aux_dn: 0.325124 loss_giou_aux_dn: 1.799543 loss: 12.322722 eta: 1:08:13 batch_cost: 0.4030 data_cost: 0.0017 ips: 19.8489 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:30] ppdet.engine.callbacks INFO: Epoch: [5] [ 70/115] learning_rate: 0.000100 loss_class: 0.495378 loss_bbox: 0.055458 loss_giou: 0.331955 loss_class_aux: 3.203562 loss_bbox_aux: 0.366120 loss_giou_aux: 2.117765 loss_class_dn: 0.349652 loss_bbox_dn: 0.067385 loss_giou_dn: 0.302735 loss_class_aux_dn: 1.841615 loss_bbox_aux_dn: 0.383033 loss_giou_aux_dn: 1.614480 loss: 11.243979 eta: 1:08:08 batch_cost: 0.3683 data_cost: 0.0015 ips: 21.7242 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:34] ppdet.engine.callbacks INFO: Epoch: [5] [ 80/115] learning_rate: 0.000100 loss_class: 0.564710 loss_bbox: 0.056358 loss_giou: 0.337003 loss_class_aux: 3.516105 loss_bbox_aux: 0.372581 loss_giou_aux: 2.203122 loss_class_dn: 0.371086 loss_bbox_dn: 0.054791 loss_giou_dn: 0.319057 loss_class_aux_dn: 1.966213 loss_bbox_aux_dn: 0.311954 loss_giou_aux_dn: 1.761591 loss: 11.709175 eta: 1:08:06 batch_cost: 0.3885 data_cost: 0.0015 ips: 20.5926 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:38] ppdet.engine.callbacks INFO: Epoch: [5] [ 90/115] learning_rate: 0.000100 loss_class: 0.533412 loss_bbox: 0.066825 loss_giou: 0.398204 loss_class_aux: 3.440010 loss_bbox_aux: 0.453584 loss_giou_aux: 2.598619 loss_class_dn: 0.374697 loss_bbox_dn: 0.058556 loss_giou_dn: 0.373908 loss_class_aux_dn: 1.983613 loss_bbox_aux_dn: 0.345201 loss_giou_aux_dn: 2.011673 loss: 12.936318 eta: 1:08:02 batch_cost: 0.3737 data_cost: 0.0016 ips: 21.4079 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:43] ppdet.engine.callbacks INFO: Epoch: [5] [100/115] learning_rate: 0.000100 loss_class: 0.535673 loss_bbox: 0.055211 loss_giou: 0.389068 loss_class_aux: 3.474090 loss_bbox_aux: 0.373478 loss_giou_aux: 2.509683 loss_class_dn: 0.372719 loss_bbox_dn: 0.055094 loss_giou_dn: 0.374924 loss_class_aux_dn: 1.979476 loss_bbox_aux_dn: 0.324425 loss_giou_aux_dn: 2.012355 loss: 12.395452 eta: 1:07:59 batch_cost: 0.3856 data_cost: 0.0014 ips: 20.7443 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:47] ppdet.engine.callbacks INFO: Epoch: [5] [110/115] learning_rate: 0.000100 loss_class: 0.455436 loss_bbox: 0.049294 loss_giou: 0.313633 loss_class_aux: 2.990889 loss_bbox_aux: 0.346365 loss_giou_aux: 2.025987 loss_class_dn: 0.345096 loss_bbox_dn: 0.044695 loss_giou_dn: 0.287144 loss_class_aux_dn: 1.827896 loss_bbox_aux_dn: 0.280158 loss_giou_aux_dn: 1.575487 loss: 11.001241 eta: 1:07:55 batch_cost: 0.3704 data_cost: 0.0015 ips: 21.5982 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:20:50] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/5
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:20:58] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/5/inference/inference.yml
+[09/14 12:20:58] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:20:59] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/5/inference
+[09/14 12:20:59] ppdet.engine.callbacks INFO: Early stopping: epoch 6 loss=12.196348, best=12.196348, patience=0/20
+[09/14 12:21:00] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:21:08] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:21:08] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.36s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.79s).
+Accumulating evaluation results...
+DONE (t=0.61s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.664
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.934
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.819
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.545
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.671
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.685
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.513
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.756
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.790
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.685
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.796
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.786
+[09/14 12:21:13] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 28.85010706485088
+[09/14 12:21:13] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/5
+[09/14 12:21:13] ppdet.engine INFO: Best test bbox ap is 0.674.
+[09/14 12:21:15] ppdet.engine.callbacks INFO: Epoch: [6] [  0/115] learning_rate: 0.000100 loss_class: 0.499404 loss_bbox: 0.056452 loss_giou: 0.373214 loss_class_aux: 3.342932 loss_bbox_aux: 0.381557 loss_giou_aux: 2.337007 loss_class_dn: 0.362504 loss_bbox_dn: 0.052770 loss_giou_dn: 0.331979 loss_class_aux_dn: 1.918360 loss_bbox_aux_dn: 0.318980 loss_giou_aux_dn: 1.823836 loss: 12.158355 eta: 1:08:18 batch_cost: 0.5291 data_cost: 0.1433 ips: 15.1187 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:20] ppdet.engine.callbacks INFO: Epoch: [6] [ 10/115] learning_rate: 0.000100 loss_class: 0.505713 loss_bbox: 0.065525 loss_giou: 0.361473 loss_class_aux: 3.365175 loss_bbox_aux: 0.447712 loss_giou_aux: 2.321528 loss_class_dn: 0.361477 loss_bbox_dn: 0.061164 loss_giou_dn: 0.334605 loss_class_aux_dn: 1.925516 loss_bbox_aux_dn: 0.336654 loss_giou_aux_dn: 1.823613 loss: 12.124225 eta: 1:08:28 batch_cost: 0.4730 data_cost: 0.0021 ips: 16.9134 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:25] ppdet.engine.callbacks INFO: Epoch: [6] [ 20/115] learning_rate: 0.000100 loss_class: 0.480553 loss_bbox: 0.056406 loss_giou: 0.341541 loss_class_aux: 3.116454 loss_bbox_aux: 0.386068 loss_giou_aux: 2.227669 loss_class_dn: 0.348829 loss_bbox_dn: 0.059011 loss_giou_dn: 0.316492 loss_class_aux_dn: 1.860614 loss_bbox_aux_dn: 0.333055 loss_giou_aux_dn: 1.736105 loss: 11.272595 eta: 1:08:35 batch_cost: 0.4487 data_cost: 0.0583 ips: 17.8289 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:29] ppdet.engine.callbacks INFO: Epoch: [6] [ 30/115] learning_rate: 0.000100 loss_class: 0.569584 loss_bbox: 0.065563 loss_giou: 0.331262 loss_class_aux: 3.571370 loss_bbox_aux: 0.463275 loss_giou_aux: 2.127337 loss_class_dn: 0.366876 loss_bbox_dn: 0.055898 loss_giou_dn: 0.292518 loss_class_aux_dn: 1.948929 loss_bbox_aux_dn: 0.334065 loss_giou_aux_dn: 1.634493 loss: 11.514120 eta: 1:08:29 batch_cost: 0.3681 data_cost: 0.0014 ips: 21.7342 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:33] ppdet.engine.callbacks INFO: Epoch: [6] [ 40/115] learning_rate: 0.000100 loss_class: 0.525416 loss_bbox: 0.069863 loss_giou: 0.394042 loss_class_aux: 3.332590 loss_bbox_aux: 0.483880 loss_giou_aux: 2.559088 loss_class_dn: 0.365391 loss_bbox_dn: 0.084080 loss_giou_dn: 0.363690 loss_class_aux_dn: 1.925494 loss_bbox_aux_dn: 0.457370 loss_giou_aux_dn: 1.962518 loss: 12.372885 eta: 1:08:24 batch_cost: 0.3740 data_cost: 0.0015 ips: 21.3906 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:38] ppdet.engine.callbacks INFO: Epoch: [6] [ 50/115] learning_rate: 0.000100 loss_class: 0.518872 loss_bbox: 0.062971 loss_giou: 0.362078 loss_class_aux: 3.246424 loss_bbox_aux: 0.428130 loss_giou_aux: 2.216617 loss_class_dn: 0.370522 loss_bbox_dn: 0.053385 loss_giou_dn: 0.317764 loss_class_aux_dn: 1.952878 loss_bbox_aux_dn: 0.329647 loss_giou_aux_dn: 1.718228 loss: 11.434590 eta: 1:08:19 batch_cost: 0.3737 data_cost: 0.0015 ips: 21.4047 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:42] ppdet.engine.callbacks INFO: Epoch: [6] [ 60/115] learning_rate: 0.000100 loss_class: 0.546869 loss_bbox: 0.056653 loss_giou: 0.357754 loss_class_aux: 3.499365 loss_bbox_aux: 0.383761 loss_giou_aux: 2.316746 loss_class_dn: 0.371853 loss_bbox_dn: 0.055917 loss_giou_dn: 0.346146 loss_class_aux_dn: 1.971618 loss_bbox_aux_dn: 0.342507 loss_giou_aux_dn: 1.905643 loss: 11.904129 eta: 1:08:16 batch_cost: 0.3853 data_cost: 0.0015 ips: 20.7645 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:46] ppdet.engine.callbacks INFO: Epoch: [6] [ 70/115] learning_rate: 0.000100 loss_class: 0.516109 loss_bbox: 0.063808 loss_giou: 0.366894 loss_class_aux: 3.356156 loss_bbox_aux: 0.416198 loss_giou_aux: 2.393575 loss_class_dn: 0.371268 loss_bbox_dn: 0.052941 loss_giou_dn: 0.341124 loss_class_aux_dn: 1.976337 loss_bbox_aux_dn: 0.312958 loss_giou_aux_dn: 1.892428 loss: 11.951324 eta: 1:08:12 batch_cost: 0.3826 data_cost: 0.0015 ips: 20.9083 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:50] ppdet.engine.callbacks INFO: Epoch: [6] [ 80/115] learning_rate: 0.000100 loss_class: 0.571196 loss_bbox: 0.047106 loss_giou: 0.337905 loss_class_aux: 3.657896 loss_bbox_aux: 0.323859 loss_giou_aux: 2.223045 loss_class_dn: 0.362482 loss_bbox_dn: 0.048259 loss_giou_dn: 0.303588 loss_class_aux_dn: 1.921210 loss_bbox_aux_dn: 0.302781 loss_giou_aux_dn: 1.664817 loss: 11.706818 eta: 1:08:10 batch_cost: 0.3899 data_cost: 0.0016 ips: 20.5205 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:55] ppdet.engine.callbacks INFO: Epoch: [6] [ 90/115] learning_rate: 0.000100 loss_class: 0.506219 loss_bbox: 0.045053 loss_giou: 0.355179 loss_class_aux: 3.145076 loss_bbox_aux: 0.329754 loss_giou_aux: 2.286707 loss_class_dn: 0.373612 loss_bbox_dn: 0.048969 loss_giou_dn: 0.312526 loss_class_aux_dn: 1.947930 loss_bbox_aux_dn: 0.281496 loss_giou_aux_dn: 1.691594 loss: 11.495926 eta: 1:08:09 batch_cost: 0.4018 data_cost: 0.0018 ips: 19.9089 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:21:59] ppdet.engine.callbacks INFO: Epoch: [6] [100/115] learning_rate: 0.000100 loss_class: 0.475860 loss_bbox: 0.053969 loss_giou: 0.359598 loss_class_aux: 3.146467 loss_bbox_aux: 0.391384 loss_giou_aux: 2.337568 loss_class_dn: 0.361163 loss_bbox_dn: 0.049274 loss_giou_dn: 0.337529 loss_class_aux_dn: 1.898318 loss_bbox_aux_dn: 0.293175 loss_giou_aux_dn: 1.813649 loss: 11.968575 eta: 1:08:06 batch_cost: 0.3868 data_cost: 0.0014 ips: 20.6816 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:22:03] ppdet.engine.callbacks INFO: Epoch: [6] [110/115] learning_rate: 0.000100 loss_class: 0.501817 loss_bbox: 0.064302 loss_giou: 0.355301 loss_class_aux: 3.266669 loss_bbox_aux: 0.434232 loss_giou_aux: 2.223745 loss_class_dn: 0.360635 loss_bbox_dn: 0.049324 loss_giou_dn: 0.312130 loss_class_aux_dn: 1.901756 loss_bbox_aux_dn: 0.305203 loss_giou_aux_dn: 1.692498 loss: 11.141704 eta: 1:08:01 batch_cost: 0.3733 data_cost: 0.0013 ips: 21.4280 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:22:07] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/6
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:22:15] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/6/inference/inference.yml
+[09/14 12:22:15] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:22:16] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/6/inference
+[09/14 12:22:16] ppdet.engine.callbacks INFO: Early stopping: epoch 7 loss=12.074970, best=12.074970, patience=0/20
+[09/14 12:22:18] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:22:25] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:22:25] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.36s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.88s).
+Accumulating evaluation results...
+DONE (t=0.61s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.663
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.935
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.834
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.512
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.674
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.680
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.506
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.753
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.795
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.718
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.801
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.789
+[09/14 12:22:30] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 29.10662866871461
+[09/14 12:22:30] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/6
+[09/14 12:22:30] ppdet.engine INFO: Best test bbox ap is 0.674.
+[09/14 12:22:33] ppdet.engine.callbacks INFO: Epoch: [7] [  0/115] learning_rate: 0.000100 loss_class: 0.566379 loss_bbox: 0.060823 loss_giou: 0.422788 loss_class_aux: 3.762983 loss_bbox_aux: 0.422069 loss_giou_aux: 2.870006 loss_class_dn: 0.389063 loss_bbox_dn: 0.057467 loss_giou_dn: 0.357206 loss_class_aux_dn: 2.056459 loss_bbox_aux_dn: 0.339110 loss_giou_aux_dn: 1.917145 loss: 13.856991 eta: 1:08:22 batch_cost: 0.5514 data_cost: 0.1549 ips: 14.5094 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:22:37] ppdet.engine.callbacks INFO: Epoch: [7] [ 10/115] learning_rate: 0.000100 loss_class: 0.513260 loss_bbox: 0.057864 loss_giou: 0.362515 loss_class_aux: 3.367363 loss_bbox_aux: 0.381342 loss_giou_aux: 2.291335 loss_class_dn: 0.373860 loss_bbox_dn: 0.057438 loss_giou_dn: 0.320970 loss_class_aux_dn: 1.964140 loss_bbox_aux_dn: 0.326814 loss_giou_aux_dn: 1.787620 loss: 12.086649 eta: 1:08:16 batch_cost: 0.3704 data_cost: 0.0014 ips: 21.6011 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:22:41] ppdet.engine.callbacks INFO: Epoch: [7] [ 20/115] learning_rate: 0.000100 loss_class: 0.561971 loss_bbox: 0.056397 loss_giou: 0.375004 loss_class_aux: 3.587768 loss_bbox_aux: 0.372972 loss_giou_aux: 2.347876 loss_class_dn: 0.366332 loss_bbox_dn: 0.050536 loss_giou_dn: 0.316857 loss_class_aux_dn: 1.924653 loss_bbox_aux_dn: 0.301906 loss_giou_aux_dn: 1.776994 loss: 11.801192 eta: 1:08:10 batch_cost: 0.3648 data_cost: 0.0015 ips: 21.9299 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:22:45] ppdet.engine.callbacks INFO: Epoch: [7] [ 30/115] learning_rate: 0.000100 loss_class: 0.487628 loss_bbox: 0.049902 loss_giou: 0.357510 loss_class_aux: 3.126124 loss_bbox_aux: 0.335860 loss_giou_aux: 2.304570 loss_class_dn: 0.380345 loss_bbox_dn: 0.046169 loss_giou_dn: 0.333214 loss_class_aux_dn: 1.990019 loss_bbox_aux_dn: 0.265474 loss_giou_aux_dn: 1.806340 loss: 11.431582 eta: 1:08:05 batch_cost: 0.3761 data_cost: 0.0014 ips: 21.2698 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:22:49] ppdet.engine.callbacks INFO: Epoch: [7] [ 40/115] learning_rate: 0.000100 loss_class: 0.464432 loss_bbox: 0.050710 loss_giou: 0.342254 loss_class_aux: 2.966801 loss_bbox_aux: 0.332239 loss_giou_aux: 2.131589 loss_class_dn: 0.350908 loss_bbox_dn: 0.048206 loss_giou_dn: 0.294465 loss_class_aux_dn: 1.861539 loss_bbox_aux_dn: 0.298360 loss_giou_aux_dn: 1.630069 loss: 10.761014 eta: 1:08:00 batch_cost: 0.3716 data_cost: 0.0015 ips: 21.5268 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:22:53] ppdet.engine.callbacks INFO: Epoch: [7] [ 50/115] learning_rate: 0.000100 loss_class: 0.513597 loss_bbox: 0.047665 loss_giou: 0.324422 loss_class_aux: 3.295407 loss_bbox_aux: 0.320953 loss_giou_aux: 2.056006 loss_class_dn: 0.357062 loss_bbox_dn: 0.044520 loss_giou_dn: 0.305719 loss_class_aux_dn: 1.873145 loss_bbox_aux_dn: 0.272340 loss_giou_aux_dn: 1.639070 loss: 11.430545 eta: 1:07:52 batch_cost: 0.3513 data_cost: 0.0014 ips: 22.7696 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:22:57] ppdet.engine.callbacks INFO: Epoch: [7] [ 60/115] learning_rate: 0.000100 loss_class: 0.502949 loss_bbox: 0.061080 loss_giou: 0.318019 loss_class_aux: 3.119612 loss_bbox_aux: 0.421950 loss_giou_aux: 2.138708 loss_class_dn: 0.354481 loss_bbox_dn: 0.047703 loss_giou_dn: 0.289066 loss_class_aux_dn: 1.891650 loss_bbox_aux_dn: 0.285719 loss_giou_aux_dn: 1.582370 loss: 11.225520 eta: 1:07:43 batch_cost: 0.3356 data_cost: 0.0012 ips: 23.8377 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:00] ppdet.engine.callbacks INFO: Epoch: [7] [ 70/115] learning_rate: 0.000100 loss_class: 0.501239 loss_bbox: 0.054589 loss_giou: 0.361785 loss_class_aux: 3.326967 loss_bbox_aux: 0.378326 loss_giou_aux: 2.313018 loss_class_dn: 0.354847 loss_bbox_dn: 0.050846 loss_giou_dn: 0.313602 loss_class_aux_dn: 1.881234 loss_bbox_aux_dn: 0.295915 loss_giou_aux_dn: 1.714379 loss: 11.696234 eta: 1:07:34 batch_cost: 0.3392 data_cost: 0.0014 ips: 23.5876 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:04] ppdet.engine.callbacks INFO: Epoch: [7] [ 80/115] learning_rate: 0.000100 loss_class: 0.506485 loss_bbox: 0.064814 loss_giou: 0.392200 loss_class_aux: 3.268246 loss_bbox_aux: 0.450326 loss_giou_aux: 2.522447 loss_class_dn: 0.372813 loss_bbox_dn: 0.070560 loss_giou_dn: 0.355197 loss_class_aux_dn: 1.936481 loss_bbox_aux_dn: 0.383446 loss_giou_aux_dn: 1.914806 loss: 12.178537 eta: 1:07:24 batch_cost: 0.3348 data_cost: 0.0013 ips: 23.8930 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:08] ppdet.engine.callbacks INFO: Epoch: [7] [ 90/115] learning_rate: 0.000100 loss_class: 0.507642 loss_bbox: 0.051431 loss_giou: 0.367790 loss_class_aux: 3.247337 loss_bbox_aux: 0.372989 loss_giou_aux: 2.327791 loss_class_dn: 0.360519 loss_bbox_dn: 0.052915 loss_giou_dn: 0.358006 loss_class_aux_dn: 1.913002 loss_bbox_aux_dn: 0.313754 loss_giou_aux_dn: 1.923121 loss: 12.229842 eta: 1:07:15 batch_cost: 0.3364 data_cost: 0.0012 ips: 23.7836 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:11] ppdet.engine.callbacks INFO: Epoch: [7] [100/115] learning_rate: 0.000100 loss_class: 0.482711 loss_bbox: 0.046171 loss_giou: 0.367128 loss_class_aux: 3.075771 loss_bbox_aux: 0.348087 loss_giou_aux: 2.303379 loss_class_dn: 0.349812 loss_bbox_dn: 0.044187 loss_giou_dn: 0.322558 loss_class_aux_dn: 1.862431 loss_bbox_aux_dn: 0.263357 loss_giou_aux_dn: 1.744867 loss: 11.614180 eta: 1:07:04 batch_cost: 0.3136 data_cost: 0.0014 ips: 25.5061 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:15] ppdet.engine.callbacks INFO: Epoch: [7] [110/115] learning_rate: 0.000100 loss_class: 0.469953 loss_bbox: 0.052059 loss_giou: 0.345557 loss_class_aux: 3.034521 loss_bbox_aux: 0.354973 loss_giou_aux: 2.231426 loss_class_dn: 0.355188 loss_bbox_dn: 0.058259 loss_giou_dn: 0.313900 loss_class_aux_dn: 1.880629 loss_bbox_aux_dn: 0.339221 loss_giou_aux_dn: 1.710612 loss: 11.355188 eta: 1:06:54 batch_cost: 0.3320 data_cost: 0.0011 ips: 24.0945 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:17] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/7
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:23:24] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/7/inference/inference.yml
+[09/14 12:23:24] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:23:24] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/7/inference
+[09/14 12:23:25] ppdet.engine.callbacks INFO: Early stopping: epoch 8 loss=11.777959, best=11.777959, patience=0/20
+[09/14 12:23:26] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:23:33] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:23:33] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.28s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.47s).
+Accumulating evaluation results...
+DONE (t=0.39s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.678
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.943
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.858
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.573
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.687
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.688
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.516
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.763
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.797
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.714
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.802
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.793
+[09/14 12:23:36] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 30.725473052823496
+[09/14 12:23:36] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/7
+[09/14 12:23:36] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:23:36] ppdet.engine INFO: Best test bbox ap is 0.678.
+[09/14 12:23:38] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:23:44] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:23:44] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:23:45] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:23:47] ppdet.engine.callbacks INFO: Epoch: [8] [  0/115] learning_rate: 0.000100 loss_class: 0.505817 loss_bbox: 0.056278 loss_giou: 0.368766 loss_class_aux: 3.217966 loss_bbox_aux: 0.354973 loss_giou_aux: 2.305232 loss_class_dn: 0.356965 loss_bbox_dn: 0.057373 loss_giou_dn: 0.342721 loss_class_aux_dn: 1.886686 loss_bbox_aux_dn: 0.324402 loss_giou_aux_dn: 1.890377 loss: 12.342550 eta: 1:07:08 batch_cost: 0.4888 data_cost: 0.1572 ips: 16.3661 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:51] ppdet.engine.callbacks INFO: Epoch: [8] [ 10/115] learning_rate: 0.000100 loss_class: 0.553949 loss_bbox: 0.052741 loss_giou: 0.325044 loss_class_aux: 3.391953 loss_bbox_aux: 0.363293 loss_giou_aux: 2.086724 loss_class_dn: 0.366033 loss_bbox_dn: 0.058459 loss_giou_dn: 0.330803 loss_class_aux_dn: 1.894243 loss_bbox_aux_dn: 0.328313 loss_giou_aux_dn: 1.803023 loss: 11.726267 eta: 1:06:58 batch_cost: 0.3274 data_cost: 0.0014 ips: 24.4373 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:54] ppdet.engine.callbacks INFO: Epoch: [8] [ 20/115] learning_rate: 0.000100 loss_class: 0.530050 loss_bbox: 0.053026 loss_giou: 0.377998 loss_class_aux: 3.363778 loss_bbox_aux: 0.366878 loss_giou_aux: 2.419497 loss_class_dn: 0.358966 loss_bbox_dn: 0.053310 loss_giou_dn: 0.328763 loss_class_aux_dn: 1.890663 loss_bbox_aux_dn: 0.316723 loss_giou_aux_dn: 1.813806 loss: 11.869610 eta: 1:06:48 batch_cost: 0.3247 data_cost: 0.0012 ips: 24.6419 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:23:59] ppdet.engine.callbacks INFO: Epoch: [8] [ 30/115] learning_rate: 0.000100 loss_class: 0.502484 loss_bbox: 0.053949 loss_giou: 0.336479 loss_class_aux: 3.220258 loss_bbox_aux: 0.349422 loss_giou_aux: 2.145832 loss_class_dn: 0.351497 loss_bbox_dn: 0.045708 loss_giou_dn: 0.311716 loss_class_aux_dn: 1.867056 loss_bbox_aux_dn: 0.261558 loss_giou_aux_dn: 1.697584 loss: 11.275355 eta: 1:06:46 batch_cost: 0.3938 data_cost: 0.0016 ips: 20.3129 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:03] ppdet.engine.callbacks INFO: Epoch: [8] [ 40/115] learning_rate: 0.000100 loss_class: 0.481665 loss_bbox: 0.055215 loss_giou: 0.319566 loss_class_aux: 3.037020 loss_bbox_aux: 0.359508 loss_giou_aux: 2.080611 loss_class_dn: 0.348166 loss_bbox_dn: 0.048259 loss_giou_dn: 0.290366 loss_class_aux_dn: 1.840192 loss_bbox_aux_dn: 0.285281 loss_giou_aux_dn: 1.597734 loss: 10.706751 eta: 1:06:43 batch_cost: 0.3905 data_cost: 0.0016 ips: 20.4876 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:07] ppdet.engine.callbacks INFO: Epoch: [8] [ 50/115] learning_rate: 0.000100 loss_class: 0.513191 loss_bbox: 0.055191 loss_giou: 0.360239 loss_class_aux: 3.254747 loss_bbox_aux: 0.362568 loss_giou_aux: 2.479671 loss_class_dn: 0.366142 loss_bbox_dn: 0.048049 loss_giou_dn: 0.345875 loss_class_aux_dn: 1.912365 loss_bbox_aux_dn: 0.290686 loss_giou_aux_dn: 1.900005 loss: 11.832102 eta: 1:06:40 batch_cost: 0.3804 data_cost: 0.0016 ips: 21.0299 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:11] ppdet.engine.callbacks INFO: Epoch: [8] [ 60/115] learning_rate: 0.000100 loss_class: 0.460729 loss_bbox: 0.058744 loss_giou: 0.334396 loss_class_aux: 2.988836 loss_bbox_aux: 0.377100 loss_giou_aux: 2.160183 loss_class_dn: 0.347233 loss_bbox_dn: 0.045528 loss_giou_dn: 0.304001 loss_class_aux_dn: 1.838032 loss_bbox_aux_dn: 0.259449 loss_giou_aux_dn: 1.678717 loss: 10.963766 eta: 1:06:32 batch_cost: 0.3463 data_cost: 0.0016 ips: 23.1003 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:15] ppdet.engine.callbacks INFO: Epoch: [8] [ 70/115] learning_rate: 0.000100 loss_class: 0.553088 loss_bbox: 0.059609 loss_giou: 0.358742 loss_class_aux: 3.571504 loss_bbox_aux: 0.391348 loss_giou_aux: 2.270720 loss_class_dn: 0.351161 loss_bbox_dn: 0.055957 loss_giou_dn: 0.305187 loss_class_aux_dn: 1.871411 loss_bbox_aux_dn: 0.315910 loss_giou_aux_dn: 1.703962 loss: 11.967226 eta: 1:06:25 batch_cost: 0.3423 data_cost: 0.0015 ips: 23.3713 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:18] ppdet.engine.callbacks INFO: Epoch: [8] [ 80/115] learning_rate: 0.000100 loss_class: 0.522459 loss_bbox: 0.054497 loss_giou: 0.337326 loss_class_aux: 3.321549 loss_bbox_aux: 0.368273 loss_giou_aux: 2.190397 loss_class_dn: 0.353280 loss_bbox_dn: 0.050336 loss_giou_dn: 0.313197 loss_class_aux_dn: 1.849627 loss_bbox_aux_dn: 0.293109 loss_giou_aux_dn: 1.719395 loss: 11.606433 eta: 1:06:15 batch_cost: 0.3223 data_cost: 0.0013 ips: 24.8240 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:22] ppdet.engine.callbacks INFO: Epoch: [8] [ 90/115] learning_rate: 0.000100 loss_class: 0.563588 loss_bbox: 0.055725 loss_giou: 0.383259 loss_class_aux: 3.530611 loss_bbox_aux: 0.379264 loss_giou_aux: 2.426814 loss_class_dn: 0.378823 loss_bbox_dn: 0.060621 loss_giou_dn: 0.350711 loss_class_aux_dn: 1.965251 loss_bbox_aux_dn: 0.330253 loss_giou_aux_dn: 1.871234 loss: 12.682355 eta: 1:06:05 batch_cost: 0.3249 data_cost: 0.0013 ips: 24.6232 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:26] ppdet.engine.callbacks INFO: Epoch: [8] [100/115] learning_rate: 0.000100 loss_class: 0.492336 loss_bbox: 0.052384 loss_giou: 0.384018 loss_class_aux: 3.115834 loss_bbox_aux: 0.361828 loss_giou_aux: 2.372770 loss_class_dn: 0.364399 loss_bbox_dn: 0.058125 loss_giou_dn: 0.332465 loss_class_aux_dn: 1.903102 loss_bbox_aux_dn: 0.332573 loss_giou_aux_dn: 1.795372 loss: 11.820967 eta: 1:05:57 batch_cost: 0.3342 data_cost: 0.0014 ips: 23.9382 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:29] ppdet.engine.callbacks INFO: Epoch: [8] [110/115] learning_rate: 0.000100 loss_class: 0.470323 loss_bbox: 0.061222 loss_giou: 0.336395 loss_class_aux: 2.956625 loss_bbox_aux: 0.411911 loss_giou_aux: 2.153171 loss_class_dn: 0.347498 loss_bbox_dn: 0.062474 loss_giou_dn: 0.300785 loss_class_aux_dn: 1.818681 loss_bbox_aux_dn: 0.344898 loss_giou_aux_dn: 1.617951 loss: 10.889097 eta: 1:05:50 batch_cost: 0.3425 data_cost: 0.0013 ips: 23.3546 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:24:32] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/8
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:24:39] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/8/inference/inference.yml
+[09/14 12:24:39] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:24:39] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/8/inference
+[09/14 12:24:40] ppdet.engine.callbacks INFO: Early stopping: epoch 9 loss=11.719994, best=11.719994, patience=0/20
+[09/14 12:24:41] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:24:48] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:24:48] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.27s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.89s).
+Accumulating evaluation results...
+DONE (t=0.47s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.679
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.946
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.851
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.561
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.690
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.685
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.518
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.760
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.806
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.735
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.813
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.789
+[09/14 12:24:52] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 30.44215950499721
+[09/14 12:24:52] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/8
+[09/14 12:24:52] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:24:52] ppdet.engine INFO: Best test bbox ap is 0.679.
+[09/14 12:24:53] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:25:01] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:25:01] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:25:01] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:25:05] ppdet.engine.callbacks INFO: Epoch: [9] [  0/115] learning_rate: 0.000100 loss_class: 0.513452 loss_bbox: 0.054947 loss_giou: 0.374754 loss_class_aux: 3.197800 loss_bbox_aux: 0.383672 loss_giou_aux: 2.379926 loss_class_dn: 0.355276 loss_bbox_dn: 0.058122 loss_giou_dn: 0.330466 loss_class_aux_dn: 1.849418 loss_bbox_aux_dn: 0.337585 loss_giou_aux_dn: 1.783896 loss: 11.799442 eta: 1:06:15 batch_cost: 0.6201 data_cost: 0.2802 ips: 12.9018 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:09] ppdet.engine.callbacks INFO: Epoch: [9] [ 10/115] learning_rate: 0.000100 loss_class: 0.503902 loss_bbox: 0.054261 loss_giou: 0.334480 loss_class_aux: 3.289817 loss_bbox_aux: 0.383925 loss_giou_aux: 2.090645 loss_class_dn: 0.338973 loss_bbox_dn: 0.056355 loss_giou_dn: 0.307792 loss_class_aux_dn: 1.800820 loss_bbox_aux_dn: 0.340051 loss_giou_aux_dn: 1.657188 loss: 11.112861 eta: 1:06:09 batch_cost: 0.3668 data_cost: 0.0015 ips: 21.8124 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:13] ppdet.engine.callbacks INFO: Epoch: [9] [ 20/115] learning_rate: 0.000100 loss_class: 0.511617 loss_bbox: 0.050802 loss_giou: 0.383370 loss_class_aux: 3.345746 loss_bbox_aux: 0.347416 loss_giou_aux: 2.463495 loss_class_dn: 0.362803 loss_bbox_dn: 0.053504 loss_giou_dn: 0.348726 loss_class_aux_dn: 1.888568 loss_bbox_aux_dn: 0.304697 loss_giou_aux_dn: 1.889594 loss: 12.214840 eta: 1:06:03 batch_cost: 0.3492 data_cost: 0.0014 ips: 22.9070 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:17] ppdet.engine.callbacks INFO: Epoch: [9] [ 30/115] learning_rate: 0.000100 loss_class: 0.470809 loss_bbox: 0.054905 loss_giou: 0.331544 loss_class_aux: 3.024323 loss_bbox_aux: 0.373420 loss_giou_aux: 2.128066 loss_class_dn: 0.344173 loss_bbox_dn: 0.042519 loss_giou_dn: 0.285243 loss_class_aux_dn: 1.813224 loss_bbox_aux_dn: 0.251795 loss_giou_aux_dn: 1.587894 loss: 11.011870 eta: 1:06:01 batch_cost: 0.3977 data_cost: 0.0015 ips: 20.1148 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:21] ppdet.engine.callbacks INFO: Epoch: [9] [ 40/115] learning_rate: 0.000100 loss_class: 0.469760 loss_bbox: 0.045669 loss_giou: 0.311994 loss_class_aux: 3.058248 loss_bbox_aux: 0.349084 loss_giou_aux: 2.033811 loss_class_dn: 0.336920 loss_bbox_dn: 0.049551 loss_giou_dn: 0.311397 loss_class_aux_dn: 1.787422 loss_bbox_aux_dn: 0.307753 loss_giou_aux_dn: 1.767083 loss: 10.933677 eta: 1:05:53 batch_cost: 0.3389 data_cost: 0.0013 ips: 23.6054 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:25] ppdet.engine.callbacks INFO: Epoch: [9] [ 50/115] learning_rate: 0.000100 loss_class: 0.534893 loss_bbox: 0.066899 loss_giou: 0.355179 loss_class_aux: 3.380720 loss_bbox_aux: 0.453069 loss_giou_aux: 2.262943 loss_class_dn: 0.367533 loss_bbox_dn: 0.062418 loss_giou_dn: 0.330588 loss_class_aux_dn: 1.923603 loss_bbox_aux_dn: 0.382977 loss_giou_aux_dn: 1.805362 loss: 12.199268 eta: 1:05:47 batch_cost: 0.3606 data_cost: 0.0013 ips: 22.1836 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:29] ppdet.engine.callbacks INFO: Epoch: [9] [ 60/115] learning_rate: 0.000100 loss_class: 0.480589 loss_bbox: 0.054574 loss_giou: 0.319966 loss_class_aux: 3.088860 loss_bbox_aux: 0.358882 loss_giou_aux: 2.060767 loss_class_dn: 0.353676 loss_bbox_dn: 0.058122 loss_giou_dn: 0.295796 loss_class_aux_dn: 1.881228 loss_bbox_aux_dn: 0.343996 loss_giou_aux_dn: 1.593610 loss: 10.825830 eta: 1:05:41 batch_cost: 0.3476 data_cost: 0.0014 ips: 23.0128 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:33] ppdet.engine.callbacks INFO: Epoch: [9] [ 70/115] learning_rate: 0.000100 loss_class: 0.495534 loss_bbox: 0.046645 loss_giou: 0.416337 loss_class_aux: 3.228198 loss_bbox_aux: 0.308139 loss_giou_aux: 2.565191 loss_class_dn: 0.373956 loss_bbox_dn: 0.046415 loss_giou_dn: 0.356090 loss_class_aux_dn: 1.959455 loss_bbox_aux_dn: 0.265946 loss_giou_aux_dn: 1.950470 loss: 12.225835 eta: 1:05:33 batch_cost: 0.3385 data_cost: 0.0013 ips: 23.6366 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:36] ppdet.engine.callbacks INFO: Epoch: [9] [ 80/115] learning_rate: 0.000100 loss_class: 0.500699 loss_bbox: 0.053728 loss_giou: 0.342479 loss_class_aux: 3.366698 loss_bbox_aux: 0.378391 loss_giou_aux: 2.181429 loss_class_dn: 0.354932 loss_bbox_dn: 0.049023 loss_giou_dn: 0.297425 loss_class_aux_dn: 1.873041 loss_bbox_aux_dn: 0.298076 loss_giou_aux_dn: 1.661907 loss: 11.508235 eta: 1:05:26 batch_cost: 0.3442 data_cost: 0.0013 ips: 23.2447 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:40] ppdet.engine.callbacks INFO: Epoch: [9] [ 90/115] learning_rate: 0.000100 loss_class: 0.541637 loss_bbox: 0.052462 loss_giou: 0.334132 loss_class_aux: 3.405620 loss_bbox_aux: 0.384980 loss_giou_aux: 2.155012 loss_class_dn: 0.370549 loss_bbox_dn: 0.051788 loss_giou_dn: 0.293156 loss_class_aux_dn: 1.944294 loss_bbox_aux_dn: 0.296327 loss_giou_aux_dn: 1.616097 loss: 11.559164 eta: 1:05:20 batch_cost: 0.3543 data_cost: 0.0012 ips: 22.5791 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:44] ppdet.engine.callbacks INFO: Epoch: [9] [100/115] learning_rate: 0.000100 loss_class: 0.546941 loss_bbox: 0.047447 loss_giou: 0.362100 loss_class_aux: 3.343379 loss_bbox_aux: 0.315369 loss_giou_aux: 2.307925 loss_class_dn: 0.362573 loss_bbox_dn: 0.053821 loss_giou_dn: 0.330936 loss_class_aux_dn: 1.907737 loss_bbox_aux_dn: 0.316346 loss_giou_aux_dn: 1.817217 loss: 11.833929 eta: 1:05:14 batch_cost: 0.3529 data_cost: 0.0013 ips: 22.6663 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:48] ppdet.engine.callbacks INFO: Epoch: [9] [110/115] learning_rate: 0.000100 loss_class: 0.544495 loss_bbox: 0.051893 loss_giou: 0.384682 loss_class_aux: 3.592801 loss_bbox_aux: 0.344405 loss_giou_aux: 2.396822 loss_class_dn: 0.372916 loss_bbox_dn: 0.052986 loss_giou_dn: 0.351402 loss_class_aux_dn: 1.941900 loss_bbox_aux_dn: 0.307366 loss_giou_aux_dn: 1.888712 loss: 12.422752 eta: 1:05:07 batch_cost: 0.3406 data_cost: 0.0013 ips: 23.4870 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:25:51] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/9
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:25:58] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/9/inference/inference.yml
+[09/14 12:25:58] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:25:58] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/9/inference
+[09/14 12:25:59] ppdet.engine.callbacks INFO: Early stopping: epoch 10 loss=11.787012, best=11.719994, patience=1/20
+[09/14 12:26:00] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:26:07] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:26:07] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.30s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.96s).
+Accumulating evaluation results...
+DONE (t=0.49s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.686
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.947
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.856
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.554
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.696
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.522
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.764
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.810
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.724
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.817
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.813
+[09/14 12:26:11] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 29.64536764235447
+[09/14 12:26:11] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/9
+[09/14 12:26:11] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:26:11] ppdet.engine INFO: Best test bbox ap is 0.686.
+[09/14 12:26:13] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:26:20] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:26:20] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:26:20] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:26:23] ppdet.engine.callbacks INFO: Epoch: [10] [  0/115] learning_rate: 0.000100 loss_class: 0.523902 loss_bbox: 0.055893 loss_giou: 0.360738 loss_class_aux: 3.425230 loss_bbox_aux: 0.387694 loss_giou_aux: 2.287577 loss_class_dn: 0.371107 loss_bbox_dn: 0.055165 loss_giou_dn: 0.350421 loss_class_aux_dn: 1.950928 loss_bbox_aux_dn: 0.324022 loss_giou_aux_dn: 1.868899 loss: 12.496963 eta: 1:05:22 batch_cost: 0.5436 data_cost: 0.1996 ips: 14.7162 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:27] ppdet.engine.callbacks INFO: Epoch: [10] [ 10/115] learning_rate: 0.000100 loss_class: 0.444686 loss_bbox: 0.050207 loss_giou: 0.308247 loss_class_aux: 2.865494 loss_bbox_aux: 0.335805 loss_giou_aux: 1.945089 loss_class_dn: 0.344398 loss_bbox_dn: 0.051348 loss_giou_dn: 0.287330 loss_class_aux_dn: 1.818184 loss_bbox_aux_dn: 0.304537 loss_giou_aux_dn: 1.544694 loss: 10.594348 eta: 1:05:14 batch_cost: 0.3391 data_cost: 0.0015 ips: 23.5919 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:31] ppdet.engine.callbacks INFO: Epoch: [10] [ 20/115] learning_rate: 0.000100 loss_class: 0.546007 loss_bbox: 0.048714 loss_giou: 0.340419 loss_class_aux: 3.458401 loss_bbox_aux: 0.347815 loss_giou_aux: 2.184894 loss_class_dn: 0.355389 loss_bbox_dn: 0.065888 loss_giou_dn: 0.318282 loss_class_aux_dn: 1.866941 loss_bbox_aux_dn: 0.363291 loss_giou_aux_dn: 1.737446 loss: 11.486282 eta: 1:05:08 batch_cost: 0.3507 data_cost: 0.0013 ips: 22.8106 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:35] ppdet.engine.callbacks INFO: Epoch: [10] [ 30/115] learning_rate: 0.000100 loss_class: 0.452467 loss_bbox: 0.059427 loss_giou: 0.344981 loss_class_aux: 2.909234 loss_bbox_aux: 0.390612 loss_giou_aux: 2.137508 loss_class_dn: 0.349240 loss_bbox_dn: 0.048612 loss_giou_dn: 0.322535 loss_class_aux_dn: 1.840894 loss_bbox_aux_dn: 0.283454 loss_giou_aux_dn: 1.727094 loss: 11.031435 eta: 1:05:02 batch_cost: 0.3516 data_cost: 0.0013 ips: 22.7510 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:39] ppdet.engine.callbacks INFO: Epoch: [10] [ 40/115] learning_rate: 0.000100 loss_class: 0.529365 loss_bbox: 0.066240 loss_giou: 0.367175 loss_class_aux: 3.290820 loss_bbox_aux: 0.444816 loss_giou_aux: 2.421257 loss_class_dn: 0.361139 loss_bbox_dn: 0.061442 loss_giou_dn: 0.318647 loss_class_aux_dn: 1.891874 loss_bbox_aux_dn: 0.347340 loss_giou_aux_dn: 1.728478 loss: 12.261052 eta: 1:04:55 batch_cost: 0.3474 data_cost: 0.0012 ips: 23.0261 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:43] ppdet.engine.callbacks INFO: Epoch: [10] [ 50/115] learning_rate: 0.000100 loss_class: 0.578207 loss_bbox: 0.044423 loss_giou: 0.366198 loss_class_aux: 3.659883 loss_bbox_aux: 0.355532 loss_giou_aux: 2.428030 loss_class_dn: 0.368571 loss_bbox_dn: 0.058077 loss_giou_dn: 0.341559 loss_class_aux_dn: 1.931005 loss_bbox_aux_dn: 0.339151 loss_giou_aux_dn: 1.849375 loss: 11.898256 eta: 1:04:50 batch_cost: 0.3537 data_cost: 0.0012 ips: 22.6200 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:46] ppdet.engine.callbacks INFO: Epoch: [10] [ 60/115] learning_rate: 0.000100 loss_class: 0.537786 loss_bbox: 0.056074 loss_giou: 0.345840 loss_class_aux: 3.422596 loss_bbox_aux: 0.414969 loss_giou_aux: 2.326785 loss_class_dn: 0.354989 loss_bbox_dn: 0.067533 loss_giou_dn: 0.315312 loss_class_aux_dn: 1.862808 loss_bbox_aux_dn: 0.380505 loss_giou_aux_dn: 1.729466 loss: 11.948791 eta: 1:04:44 batch_cost: 0.3522 data_cost: 0.0013 ips: 22.7124 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:50] ppdet.engine.callbacks INFO: Epoch: [10] [ 70/115] learning_rate: 0.000100 loss_class: 0.492346 loss_bbox: 0.053883 loss_giou: 0.328671 loss_class_aux: 3.047174 loss_bbox_aux: 0.393161 loss_giou_aux: 2.166305 loss_class_dn: 0.349601 loss_bbox_dn: 0.052763 loss_giou_dn: 0.289272 loss_class_aux_dn: 1.836376 loss_bbox_aux_dn: 0.325953 loss_giou_aux_dn: 1.590104 loss: 11.330909 eta: 1:04:37 batch_cost: 0.3459 data_cost: 0.0012 ips: 23.1286 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:54] ppdet.engine.callbacks INFO: Epoch: [10] [ 80/115] learning_rate: 0.000100 loss_class: 0.478499 loss_bbox: 0.062968 loss_giou: 0.335764 loss_class_aux: 3.010694 loss_bbox_aux: 0.459222 loss_giou_aux: 2.068017 loss_class_dn: 0.343623 loss_bbox_dn: 0.063741 loss_giou_dn: 0.298353 loss_class_aux_dn: 1.811001 loss_bbox_aux_dn: 0.389710 loss_giou_aux_dn: 1.631419 loss: 10.926988 eta: 1:04:30 batch_cost: 0.3349 data_cost: 0.0012 ips: 23.8863 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:26:58] ppdet.engine.callbacks INFO: Epoch: [10] [ 90/115] learning_rate: 0.000100 loss_class: 0.511336 loss_bbox: 0.061250 loss_giou: 0.367215 loss_class_aux: 3.284574 loss_bbox_aux: 0.414316 loss_giou_aux: 2.343713 loss_class_dn: 0.360850 loss_bbox_dn: 0.059659 loss_giou_dn: 0.337750 loss_class_aux_dn: 1.888492 loss_bbox_aux_dn: 0.350674 loss_giou_aux_dn: 1.845734 loss: 11.800420 eta: 1:04:24 batch_cost: 0.3516 data_cost: 0.0013 ips: 22.7534 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:02] ppdet.engine.callbacks INFO: Epoch: [10] [100/115] learning_rate: 0.000100 loss_class: 0.499091 loss_bbox: 0.051786 loss_giou: 0.342611 loss_class_aux: 3.050351 loss_bbox_aux: 0.336521 loss_giou_aux: 2.114160 loss_class_dn: 0.356746 loss_bbox_dn: 0.048480 loss_giou_dn: 0.307519 loss_class_aux_dn: 1.883735 loss_bbox_aux_dn: 0.274458 loss_giou_aux_dn: 1.662763 loss: 11.266191 eta: 1:04:20 batch_cost: 0.3790 data_cost: 0.0017 ips: 21.1100 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:06] ppdet.engine.callbacks INFO: Epoch: [10] [110/115] learning_rate: 0.000100 loss_class: 0.467399 loss_bbox: 0.045357 loss_giou: 0.305098 loss_class_aux: 2.927143 loss_bbox_aux: 0.323445 loss_giou_aux: 1.954681 loss_class_dn: 0.348556 loss_bbox_dn: 0.049499 loss_giou_dn: 0.297026 loss_class_aux_dn: 1.848202 loss_bbox_aux_dn: 0.313464 loss_giou_aux_dn: 1.663542 loss: 10.573138 eta: 1:04:16 batch_cost: 0.3686 data_cost: 0.0014 ips: 21.7061 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:09] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/10
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:27:15] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/10/inference/inference.yml
+[09/14 12:27:15] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:27:15] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/10/inference
+[09/14 12:27:16] ppdet.engine.callbacks INFO: Early stopping: epoch 11 loss=11.560509, best=11.560509, patience=0/20
+[09/14 12:27:17] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:27:24] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:27:24] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.27s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.53s).
+Accumulating evaluation results...
+DONE (t=0.40s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.684
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.948
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.856
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.569
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.695
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.684
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.517
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.771
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.809
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.743
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.816
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.793
+[09/14 12:27:27] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 32.37614549312807
+[09/14 12:27:27] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/10
+[09/14 12:27:27] ppdet.engine INFO: Best test bbox ap is 0.686.
+[09/14 12:27:30] ppdet.engine.callbacks INFO: Epoch: [11] [  0/115] learning_rate: 0.000100 loss_class: 0.486854 loss_bbox: 0.044738 loss_giou: 0.328359 loss_class_aux: 3.051822 loss_bbox_aux: 0.342966 loss_giou_aux: 2.166983 loss_class_dn: 0.355185 loss_bbox_dn: 0.055811 loss_giou_dn: 0.317574 loss_class_aux_dn: 1.867077 loss_bbox_aux_dn: 0.327612 loss_giou_aux_dn: 1.745243 loss: 11.338187 eta: 1:04:32 batch_cost: 0.5828 data_cost: 0.2240 ips: 13.7258 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:34] ppdet.engine.callbacks INFO: Epoch: [11] [ 10/115] learning_rate: 0.000100 loss_class: 0.528543 loss_bbox: 0.049368 loss_giou: 0.335239 loss_class_aux: 3.286135 loss_bbox_aux: 0.329684 loss_giou_aux: 2.108822 loss_class_dn: 0.347653 loss_bbox_dn: 0.048849 loss_giou_dn: 0.304292 loss_class_aux_dn: 1.834155 loss_bbox_aux_dn: 0.292540 loss_giou_aux_dn: 1.627677 loss: 11.273039 eta: 1:04:30 batch_cost: 0.4009 data_cost: 0.0015 ips: 19.9573 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:39] ppdet.engine.callbacks INFO: Epoch: [11] [ 20/115] learning_rate: 0.000100 loss_class: 0.502988 loss_bbox: 0.054494 loss_giou: 0.350458 loss_class_aux: 3.070649 loss_bbox_aux: 0.344094 loss_giou_aux: 2.268743 loss_class_dn: 0.370984 loss_bbox_dn: 0.054428 loss_giou_dn: 0.347130 loss_class_aux_dn: 1.958839 loss_bbox_aux_dn: 0.305116 loss_giou_aux_dn: 1.895487 loss: 12.039291 eta: 1:04:26 batch_cost: 0.3829 data_cost: 0.0017 ips: 20.8952 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:43] ppdet.engine.callbacks INFO: Epoch: [11] [ 30/115] learning_rate: 0.000100 loss_class: 0.533815 loss_bbox: 0.054793 loss_giou: 0.371535 loss_class_aux: 3.331794 loss_bbox_aux: 0.408687 loss_giou_aux: 2.282482 loss_class_dn: 0.365961 loss_bbox_dn: 0.057190 loss_giou_dn: 0.344716 loss_class_aux_dn: 1.931893 loss_bbox_aux_dn: 0.337311 loss_giou_aux_dn: 1.869280 loss: 12.250244 eta: 1:04:23 batch_cost: 0.3880 data_cost: 0.0016 ips: 20.6161 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:47] ppdet.engine.callbacks INFO: Epoch: [11] [ 40/115] learning_rate: 0.000100 loss_class: 0.448273 loss_bbox: 0.056651 loss_giou: 0.352923 loss_class_aux: 2.891199 loss_bbox_aux: 0.402120 loss_giou_aux: 2.258761 loss_class_dn: 0.354192 loss_bbox_dn: 0.056365 loss_giou_dn: 0.312048 loss_class_aux_dn: 1.859777 loss_bbox_aux_dn: 0.320444 loss_giou_aux_dn: 1.704029 loss: 11.216011 eta: 1:04:19 batch_cost: 0.3678 data_cost: 0.0016 ips: 21.7522 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:51] ppdet.engine.callbacks INFO: Epoch: [11] [ 50/115] learning_rate: 0.000100 loss_class: 0.589939 loss_bbox: 0.054073 loss_giou: 0.341312 loss_class_aux: 3.568140 loss_bbox_aux: 0.380577 loss_giou_aux: 2.199716 loss_class_dn: 0.360335 loss_bbox_dn: 0.062232 loss_giou_dn: 0.320569 loss_class_aux_dn: 1.888449 loss_bbox_aux_dn: 0.371037 loss_giou_aux_dn: 1.753802 loss: 12.120174 eta: 1:04:14 batch_cost: 0.3746 data_cost: 0.0016 ips: 21.3543 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:55] ppdet.engine.callbacks INFO: Epoch: [11] [ 60/115] learning_rate: 0.000100 loss_class: 0.530913 loss_bbox: 0.052068 loss_giou: 0.347118 loss_class_aux: 3.457464 loss_bbox_aux: 0.420186 loss_giou_aux: 2.229573 loss_class_dn: 0.369317 loss_bbox_dn: 0.059818 loss_giou_dn: 0.343303 loss_class_aux_dn: 1.966868 loss_bbox_aux_dn: 0.340442 loss_giou_aux_dn: 1.875742 loss: 11.919307 eta: 1:04:11 batch_cost: 0.3792 data_cost: 0.0014 ips: 21.0976 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:27:59] ppdet.engine.callbacks INFO: Epoch: [11] [ 70/115] learning_rate: 0.000100 loss_class: 0.447400 loss_bbox: 0.040061 loss_giou: 0.325386 loss_class_aux: 2.853535 loss_bbox_aux: 0.267159 loss_giou_aux: 2.092556 loss_class_dn: 0.339210 loss_bbox_dn: 0.039194 loss_giou_dn: 0.292052 loss_class_aux_dn: 1.772772 loss_bbox_aux_dn: 0.225115 loss_giou_aux_dn: 1.568771 loss: 10.068518 eta: 1:04:05 batch_cost: 0.3504 data_cost: 0.0013 ips: 22.8319 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:03] ppdet.engine.callbacks INFO: Epoch: [11] [ 80/115] learning_rate: 0.000100 loss_class: 0.471310 loss_bbox: 0.052934 loss_giou: 0.303100 loss_class_aux: 3.020374 loss_bbox_aux: 0.355276 loss_giou_aux: 1.933904 loss_class_dn: 0.336473 loss_bbox_dn: 0.049269 loss_giou_dn: 0.273421 loss_class_aux_dn: 1.785986 loss_bbox_aux_dn: 0.281645 loss_giou_aux_dn: 1.530841 loss: 10.484098 eta: 1:03:58 batch_cost: 0.3386 data_cost: 0.0013 ips: 23.6235 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:07] ppdet.engine.callbacks INFO: Epoch: [11] [ 90/115] learning_rate: 0.000100 loss_class: 0.490692 loss_bbox: 0.049957 loss_giou: 0.348928 loss_class_aux: 3.013707 loss_bbox_aux: 0.340563 loss_giou_aux: 2.253130 loss_class_dn: 0.348147 loss_bbox_dn: 0.042603 loss_giou_dn: 0.292984 loss_class_aux_dn: 1.837710 loss_bbox_aux_dn: 0.245507 loss_giou_aux_dn: 1.631018 loss: 10.748924 eta: 1:03:53 batch_cost: 0.3564 data_cost: 0.0013 ips: 22.4497 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:10] ppdet.engine.callbacks INFO: Epoch: [11] [100/115] learning_rate: 0.000100 loss_class: 0.530288 loss_bbox: 0.053015 loss_giou: 0.354492 loss_class_aux: 3.347070 loss_bbox_aux: 0.338422 loss_giou_aux: 2.248359 loss_class_dn: 0.359158 loss_bbox_dn: 0.049084 loss_giou_dn: 0.330930 loss_class_aux_dn: 1.880146 loss_bbox_aux_dn: 0.283236 loss_giou_aux_dn: 1.783480 loss: 11.416462 eta: 1:03:46 batch_cost: 0.3443 data_cost: 0.0012 ips: 23.2347 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:14] ppdet.engine.callbacks INFO: Epoch: [11] [110/115] learning_rate: 0.000100 loss_class: 0.459436 loss_bbox: 0.062347 loss_giou: 0.397854 loss_class_aux: 3.071748 loss_bbox_aux: 0.411802 loss_giou_aux: 2.448260 loss_class_dn: 0.375142 loss_bbox_dn: 0.056295 loss_giou_dn: 0.363609 loss_class_aux_dn: 1.941778 loss_bbox_aux_dn: 0.333947 loss_giou_aux_dn: 1.978817 loss: 11.875928 eta: 1:03:41 batch_cost: 0.3510 data_cost: 0.0013 ips: 22.7936 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:17] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/11
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:28:24] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/11/inference/inference.yml
+[09/14 12:28:24] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:28:25] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/11/inference
+[09/14 12:28:26] ppdet.engine.callbacks INFO: Early stopping: epoch 12 loss=11.578073, best=11.560509, patience=1/20
+[09/14 12:28:27] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:28:34] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:28:34] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.29s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.92s).
+Accumulating evaluation results...
+DONE (t=0.47s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.677
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.945
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.838
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.533
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.686
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.693
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.516
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.762
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.808
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.741
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.813
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.791
+[09/14 12:28:37] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 32.62216234081244
+[09/14 12:28:37] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/11
+[09/14 12:28:37] ppdet.engine INFO: Best test bbox ap is 0.686.
+[09/14 12:28:40] ppdet.engine.callbacks INFO: Epoch: [12] [  0/115] learning_rate: 0.000100 loss_class: 0.470504 loss_bbox: 0.058386 loss_giou: 0.377372 loss_class_aux: 2.979500 loss_bbox_aux: 0.407389 loss_giou_aux: 2.413594 loss_class_dn: 0.367910 loss_bbox_dn: 0.053570 loss_giou_dn: 0.345205 loss_class_aux_dn: 1.933744 loss_bbox_aux_dn: 0.311162 loss_giou_aux_dn: 1.852981 loss: 11.688999 eta: 1:03:56 batch_cost: 0.6004 data_cost: 0.2324 ips: 13.3254 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:44] ppdet.engine.callbacks INFO: Epoch: [12] [ 10/115] learning_rate: 0.000100 loss_class: 0.461069 loss_bbox: 0.041312 loss_giou: 0.346263 loss_class_aux: 2.988206 loss_bbox_aux: 0.283696 loss_giou_aux: 2.159154 loss_class_dn: 0.349639 loss_bbox_dn: 0.041369 loss_giou_dn: 0.298464 loss_class_aux_dn: 1.844618 loss_bbox_aux_dn: 0.236872 loss_giou_aux_dn: 1.640517 loss: 10.611927 eta: 1:03:50 batch_cost: 0.3506 data_cost: 0.0013 ips: 22.8160 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:48] ppdet.engine.callbacks INFO: Epoch: [12] [ 20/115] learning_rate: 0.000100 loss_class: 0.518859 loss_bbox: 0.072159 loss_giou: 0.332107 loss_class_aux: 3.464609 loss_bbox_aux: 0.474230 loss_giou_aux: 2.090628 loss_class_dn: 0.355482 loss_bbox_dn: 0.062723 loss_giou_dn: 0.321390 loss_class_aux_dn: 1.877610 loss_bbox_aux_dn: 0.351040 loss_giou_aux_dn: 1.729083 loss: 11.959639 eta: 1:03:44 batch_cost: 0.3455 data_cost: 0.0012 ips: 23.1549 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:52] ppdet.engine.callbacks INFO: Epoch: [12] [ 30/115] learning_rate: 0.000100 loss_class: 0.470615 loss_bbox: 0.050383 loss_giou: 0.326874 loss_class_aux: 3.043217 loss_bbox_aux: 0.371642 loss_giou_aux: 2.122623 loss_class_dn: 0.341676 loss_bbox_dn: 0.051328 loss_giou_dn: 0.301820 loss_class_aux_dn: 1.801743 loss_bbox_aux_dn: 0.313537 loss_giou_aux_dn: 1.675363 loss: 10.819687 eta: 1:03:38 batch_cost: 0.3575 data_cost: 0.0017 ips: 22.3775 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:28:56] ppdet.engine.callbacks INFO: Epoch: [12] [ 40/115] learning_rate: 0.000100 loss_class: 0.495515 loss_bbox: 0.059007 loss_giou: 0.353464 loss_class_aux: 3.165992 loss_bbox_aux: 0.440550 loss_giou_aux: 2.203452 loss_class_dn: 0.350307 loss_bbox_dn: 0.050308 loss_giou_dn: 0.299133 loss_class_aux_dn: 1.866538 loss_bbox_aux_dn: 0.303117 loss_giou_aux_dn: 1.676042 loss: 11.477245 eta: 1:03:32 batch_cost: 0.3431 data_cost: 0.0014 ips: 23.3147 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:00] ppdet.engine.callbacks INFO: Epoch: [12] [ 50/115] learning_rate: 0.000100 loss_class: 0.492874 loss_bbox: 0.053179 loss_giou: 0.337999 loss_class_aux: 3.313589 loss_bbox_aux: 0.358175 loss_giou_aux: 2.171624 loss_class_dn: 0.343040 loss_bbox_dn: 0.049988 loss_giou_dn: 0.295070 loss_class_aux_dn: 1.818073 loss_bbox_aux_dn: 0.300827 loss_giou_aux_dn: 1.616682 loss: 10.900244 eta: 1:03:27 batch_cost: 0.3625 data_cost: 0.0014 ips: 22.0662 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:04] ppdet.engine.callbacks INFO: Epoch: [12] [ 60/115] learning_rate: 0.000100 loss_class: 0.457235 loss_bbox: 0.044665 loss_giou: 0.352786 loss_class_aux: 2.908016 loss_bbox_aux: 0.299548 loss_giou_aux: 2.253006 loss_class_dn: 0.348964 loss_bbox_dn: 0.043866 loss_giou_dn: 0.306356 loss_class_aux_dn: 1.836692 loss_bbox_aux_dn: 0.257663 loss_giou_aux_dn: 1.679120 loss: 10.798368 eta: 1:03:22 batch_cost: 0.3542 data_cost: 0.0019 ips: 22.5856 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:07] ppdet.engine.callbacks INFO: Epoch: [12] [ 70/115] learning_rate: 0.000100 loss_class: 0.535641 loss_bbox: 0.051461 loss_giou: 0.336842 loss_class_aux: 3.369250 loss_bbox_aux: 0.380107 loss_giou_aux: 2.046914 loss_class_dn: 0.347752 loss_bbox_dn: 0.047645 loss_giou_dn: 0.304027 loss_class_aux_dn: 1.830900 loss_bbox_aux_dn: 0.293963 loss_giou_aux_dn: 1.672021 loss: 11.190339 eta: 1:03:17 batch_cost: 0.3588 data_cost: 0.0014 ips: 22.2959 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:11] ppdet.engine.callbacks INFO: Epoch: [12] [ 80/115] learning_rate: 0.000100 loss_class: 0.508603 loss_bbox: 0.053238 loss_giou: 0.336640 loss_class_aux: 3.270796 loss_bbox_aux: 0.385938 loss_giou_aux: 2.161938 loss_class_dn: 0.364613 loss_bbox_dn: 0.051563 loss_giou_dn: 0.309306 loss_class_aux_dn: 1.907943 loss_bbox_aux_dn: 0.306161 loss_giou_aux_dn: 1.664163 loss: 11.631567 eta: 1:03:11 batch_cost: 0.3486 data_cost: 0.0017 ips: 22.9515 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:15] ppdet.engine.callbacks INFO: Epoch: [12] [ 90/115] learning_rate: 0.000100 loss_class: 0.505774 loss_bbox: 0.049060 loss_giou: 0.361027 loss_class_aux: 3.162840 loss_bbox_aux: 0.322185 loss_giou_aux: 2.253020 loss_class_dn: 0.357365 loss_bbox_dn: 0.044891 loss_giou_dn: 0.318001 loss_class_aux_dn: 1.880217 loss_bbox_aux_dn: 0.253796 loss_giou_aux_dn: 1.743645 loss: 11.601126 eta: 1:03:06 batch_cost: 0.3591 data_cost: 0.0014 ips: 22.2778 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:19] ppdet.engine.callbacks INFO: Epoch: [12] [100/115] learning_rate: 0.000100 loss_class: 0.512121 loss_bbox: 0.065702 loss_giou: 0.334564 loss_class_aux: 3.270674 loss_bbox_aux: 0.432509 loss_giou_aux: 2.181668 loss_class_dn: 0.355980 loss_bbox_dn: 0.062441 loss_giou_dn: 0.288574 loss_class_aux_dn: 1.880187 loss_bbox_aux_dn: 0.353089 loss_giou_aux_dn: 1.567468 loss: 11.506911 eta: 1:02:59 batch_cost: 0.3376 data_cost: 0.0012 ips: 23.6966 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:23] ppdet.engine.callbacks INFO: Epoch: [12] [110/115] learning_rate: 0.000100 loss_class: 0.477611 loss_bbox: 0.053642 loss_giou: 0.308577 loss_class_aux: 2.996548 loss_bbox_aux: 0.367945 loss_giou_aux: 1.954617 loss_class_dn: 0.341269 loss_bbox_dn: 0.047783 loss_giou_dn: 0.273725 loss_class_aux_dn: 1.826336 loss_bbox_aux_dn: 0.286298 loss_giou_aux_dn: 1.491843 loss: 10.606327 eta: 1:02:53 batch_cost: 0.3399 data_cost: 0.0011 ips: 23.5346 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:26] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/12
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:29:32] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/12/inference/inference.yml
+[09/14 12:29:32] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:29:32] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/12/inference
+[09/14 12:29:33] ppdet.engine.callbacks INFO: Early stopping: epoch 13 loss=11.448726, best=11.448726, patience=0/20
+[09/14 12:29:34] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:29:40] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:29:40] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.31s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.92s).
+Accumulating evaluation results...
+DONE (t=0.39s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.682
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.946
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.840
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.550
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.689
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.699
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.521
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.766
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.805
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.720
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.810
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.805
+[09/14 12:29:44] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 34.525624976904446
+[09/14 12:29:44] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/12
+[09/14 12:29:44] ppdet.engine INFO: Best test bbox ap is 0.686.
+[09/14 12:29:46] ppdet.engine.callbacks INFO: Epoch: [13] [  0/115] learning_rate: 0.000100 loss_class: 0.501526 loss_bbox: 0.047091 loss_giou: 0.303966 loss_class_aux: 3.216697 loss_bbox_aux: 0.315074 loss_giou_aux: 1.937052 loss_class_dn: 0.341338 loss_bbox_dn: 0.044090 loss_giou_dn: 0.272563 loss_class_aux_dn: 1.828321 loss_bbox_aux_dn: 0.261422 loss_giou_aux_dn: 1.491154 loss: 10.714238 eta: 1:03:00 batch_cost: 0.4914 data_cost: 0.1296 ips: 16.2793 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:50] ppdet.engine.callbacks INFO: Epoch: [13] [ 10/115] learning_rate: 0.000100 loss_class: 0.452434 loss_bbox: 0.046819 loss_giou: 0.324030 loss_class_aux: 2.804655 loss_bbox_aux: 0.316693 loss_giou_aux: 2.037669 loss_class_dn: 0.342094 loss_bbox_dn: 0.044502 loss_giou_dn: 0.294758 loss_class_aux_dn: 1.810086 loss_bbox_aux_dn: 0.252528 loss_giou_aux_dn: 1.645789 loss: 10.630752 eta: 1:02:57 batch_cost: 0.3953 data_cost: 0.0402 ips: 20.2402 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:54] ppdet.engine.callbacks INFO: Epoch: [13] [ 20/115] learning_rate: 0.000100 loss_class: 0.461030 loss_bbox: 0.054426 loss_giou: 0.342198 loss_class_aux: 2.929120 loss_bbox_aux: 0.358884 loss_giou_aux: 2.174565 loss_class_dn: 0.348511 loss_bbox_dn: 0.048976 loss_giou_dn: 0.299205 loss_class_aux_dn: 1.817925 loss_bbox_aux_dn: 0.286894 loss_giou_aux_dn: 1.643771 loss: 10.494828 eta: 1:02:50 batch_cost: 0.3267 data_cost: 0.0014 ips: 24.4856 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:29:58] ppdet.engine.callbacks INFO: Epoch: [13] [ 30/115] learning_rate: 0.000100 loss_class: 0.554712 loss_bbox: 0.047835 loss_giou: 0.395418 loss_class_aux: 3.465430 loss_bbox_aux: 0.345561 loss_giou_aux: 2.494701 loss_class_dn: 0.356630 loss_bbox_dn: 0.043802 loss_giou_dn: 0.347974 loss_class_aux_dn: 1.866495 loss_bbox_aux_dn: 0.251220 loss_giou_aux_dn: 1.879716 loss: 12.214253 eta: 1:02:45 batch_cost: 0.3588 data_cost: 0.0013 ips: 22.2993 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:01] ppdet.engine.callbacks INFO: Epoch: [13] [ 40/115] learning_rate: 0.000100 loss_class: 0.479243 loss_bbox: 0.050377 loss_giou: 0.318896 loss_class_aux: 2.784618 loss_bbox_aux: 0.410154 loss_giou_aux: 1.978548 loss_class_dn: 0.345467 loss_bbox_dn: 0.057312 loss_giou_dn: 0.287354 loss_class_aux_dn: 1.793917 loss_bbox_aux_dn: 0.337644 loss_giou_aux_dn: 1.574406 loss: 11.107023 eta: 1:02:39 batch_cost: 0.3334 data_cost: 0.0014 ips: 23.9951 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:05] ppdet.engine.callbacks INFO: Epoch: [13] [ 50/115] learning_rate: 0.000100 loss_class: 0.493612 loss_bbox: 0.053899 loss_giou: 0.346286 loss_class_aux: 3.141768 loss_bbox_aux: 0.363295 loss_giou_aux: 2.210510 loss_class_dn: 0.355458 loss_bbox_dn: 0.050821 loss_giou_dn: 0.316401 loss_class_aux_dn: 1.861087 loss_bbox_aux_dn: 0.295164 loss_giou_aux_dn: 1.766805 loss: 11.471709 eta: 1:02:32 batch_cost: 0.3412 data_cost: 0.0016 ips: 23.4488 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:09] ppdet.engine.callbacks INFO: Epoch: [13] [ 60/115] learning_rate: 0.000100 loss_class: 0.490742 loss_bbox: 0.042300 loss_giou: 0.310811 loss_class_aux: 3.115295 loss_bbox_aux: 0.271323 loss_giou_aux: 2.027923 loss_class_dn: 0.348747 loss_bbox_dn: 0.040367 loss_giou_dn: 0.299079 loss_class_aux_dn: 1.824860 loss_bbox_aux_dn: 0.243585 loss_giou_aux_dn: 1.659088 loss: 10.642899 eta: 1:02:28 batch_cost: 0.3590 data_cost: 0.0013 ips: 22.2855 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:13] ppdet.engine.callbacks INFO: Epoch: [13] [ 70/115] learning_rate: 0.000100 loss_class: 0.519357 loss_bbox: 0.067870 loss_giou: 0.352540 loss_class_aux: 3.119568 loss_bbox_aux: 0.473785 loss_giou_aux: 2.259194 loss_class_dn: 0.349802 loss_bbox_dn: 0.078392 loss_giou_dn: 0.318228 loss_class_aux_dn: 1.840487 loss_bbox_aux_dn: 0.446000 loss_giou_aux_dn: 1.705902 loss: 11.638217 eta: 1:02:22 batch_cost: 0.3523 data_cost: 0.0014 ips: 22.7063 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:17] ppdet.engine.callbacks INFO: Epoch: [13] [ 80/115] learning_rate: 0.000100 loss_class: 0.509464 loss_bbox: 0.057067 loss_giou: 0.319467 loss_class_aux: 3.120344 loss_bbox_aux: 0.413495 loss_giou_aux: 2.026590 loss_class_dn: 0.339289 loss_bbox_dn: 0.055832 loss_giou_dn: 0.273784 loss_class_aux_dn: 1.792331 loss_bbox_aux_dn: 0.339303 loss_giou_aux_dn: 1.504645 loss: 11.015140 eta: 1:02:17 batch_cost: 0.3481 data_cost: 0.0012 ips: 22.9806 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:21] ppdet.engine.callbacks INFO: Epoch: [13] [ 90/115] learning_rate: 0.000100 loss_class: 0.491908 loss_bbox: 0.066391 loss_giou: 0.348440 loss_class_aux: 3.041650 loss_bbox_aux: 0.461925 loss_giou_aux: 2.181214 loss_class_dn: 0.354041 loss_bbox_dn: 0.053298 loss_giou_dn: 0.304096 loss_class_aux_dn: 1.847434 loss_bbox_aux_dn: 0.327084 loss_giou_aux_dn: 1.689784 loss: 11.207753 eta: 1:02:11 batch_cost: 0.3439 data_cost: 0.0013 ips: 23.2607 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:24] ppdet.engine.callbacks INFO: Epoch: [13] [100/115] learning_rate: 0.000100 loss_class: 0.513480 loss_bbox: 0.052833 loss_giou: 0.352902 loss_class_aux: 3.178275 loss_bbox_aux: 0.357467 loss_giou_aux: 2.293865 loss_class_dn: 0.365906 loss_bbox_dn: 0.054212 loss_giou_dn: 0.321625 loss_class_aux_dn: 1.896895 loss_bbox_aux_dn: 0.307981 loss_giou_aux_dn: 1.776067 loss: 11.998584 eta: 1:02:06 batch_cost: 0.3638 data_cost: 0.0016 ips: 21.9914 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:28] ppdet.engine.callbacks INFO: Epoch: [13] [110/115] learning_rate: 0.000100 loss_class: 0.506935 loss_bbox: 0.058807 loss_giou: 0.348790 loss_class_aux: 3.102877 loss_bbox_aux: 0.374538 loss_giou_aux: 2.302981 loss_class_dn: 0.355721 loss_bbox_dn: 0.058566 loss_giou_dn: 0.318579 loss_class_aux_dn: 1.851898 loss_bbox_aux_dn: 0.352653 loss_giou_aux_dn: 1.741312 loss: 11.559127 eta: 1:01:59 batch_cost: 0.3227 data_cost: 0.0012 ips: 24.7879 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:31] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/13
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:30:38] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/13/inference/inference.yml
+[09/14 12:30:38] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:30:38] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/13/inference
+[09/14 12:30:39] ppdet.engine.callbacks INFO: Early stopping: epoch 14 loss=11.285854, best=11.285854, patience=0/20
+[09/14 12:30:40] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:30:48] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:30:48] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.32s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=3.05s).
+Accumulating evaluation results...
+DONE (t=0.44s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.683
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.948
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.845
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.548
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.691
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.703
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.522
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.766
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.812
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.703
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.820
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.813
+[09/14 12:30:52] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 28.710921004388318
+[09/14 12:30:52] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/13
+[09/14 12:30:52] ppdet.engine INFO: Best test bbox ap is 0.686.
+[09/14 12:30:54] ppdet.engine.callbacks INFO: Epoch: [14] [  0/115] learning_rate: 0.000100 loss_class: 0.478017 loss_bbox: 0.059844 loss_giou: 0.353798 loss_class_aux: 3.061147 loss_bbox_aux: 0.383399 loss_giou_aux: 2.258027 loss_class_dn: 0.357508 loss_bbox_dn: 0.061077 loss_giou_dn: 0.318579 loss_class_aux_dn: 1.852827 loss_bbox_aux_dn: 0.373682 loss_giou_aux_dn: 1.741312 loss: 11.385018 eta: 1:02:08 batch_cost: 0.5246 data_cost: 0.1687 ips: 15.2492 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:30:58] ppdet.engine.callbacks INFO: Epoch: [14] [ 10/115] learning_rate: 0.000100 loss_class: 0.496142 loss_bbox: 0.045876 loss_giou: 0.341642 loss_class_aux: 3.109322 loss_bbox_aux: 0.302800 loss_giou_aux: 2.164682 loss_class_dn: 0.343373 loss_bbox_dn: 0.049479 loss_giou_dn: 0.299911 loss_class_aux_dn: 1.807123 loss_bbox_aux_dn: 0.289729 loss_giou_aux_dn: 1.609182 loss: 11.192400 eta: 1:02:04 batch_cost: 0.3665 data_cost: 0.0213 ips: 21.8284 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:01] ppdet.engine.callbacks INFO: Epoch: [14] [ 20/115] learning_rate: 0.000100 loss_class: 0.515834 loss_bbox: 0.053413 loss_giou: 0.355684 loss_class_aux: 3.320283 loss_bbox_aux: 0.342840 loss_giou_aux: 2.272115 loss_class_dn: 0.358468 loss_bbox_dn: 0.052481 loss_giou_dn: 0.326018 loss_class_aux_dn: 1.884646 loss_bbox_aux_dn: 0.305918 loss_giou_aux_dn: 1.815258 loss: 11.642001 eta: 1:01:57 batch_cost: 0.3298 data_cost: 0.0013 ips: 24.2566 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:05] ppdet.engine.callbacks INFO: Epoch: [14] [ 30/115] learning_rate: 0.000100 loss_class: 0.549191 loss_bbox: 0.051943 loss_giou: 0.362873 loss_class_aux: 3.354530 loss_bbox_aux: 0.414899 loss_giou_aux: 2.291630 loss_class_dn: 0.364460 loss_bbox_dn: 0.055568 loss_giou_dn: 0.313301 loss_class_aux_dn: 1.886703 loss_bbox_aux_dn: 0.330241 loss_giou_aux_dn: 1.714819 loss: 11.835452 eta: 1:01:50 batch_cost: 0.3258 data_cost: 0.0019 ips: 24.5585 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:09] ppdet.engine.callbacks INFO: Epoch: [14] [ 40/115] learning_rate: 0.000100 loss_class: 0.487595 loss_bbox: 0.047264 loss_giou: 0.307447 loss_class_aux: 3.007397 loss_bbox_aux: 0.315162 loss_giou_aux: 1.986529 loss_class_dn: 0.340372 loss_bbox_dn: 0.049031 loss_giou_dn: 0.285091 loss_class_aux_dn: 1.792055 loss_bbox_aux_dn: 0.291585 loss_giou_aux_dn: 1.572666 loss: 10.357631 eta: 1:01:44 batch_cost: 0.3405 data_cost: 0.0014 ips: 23.4936 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:12] ppdet.engine.callbacks INFO: Epoch: [14] [ 50/115] learning_rate: 0.000100 loss_class: 0.470212 loss_bbox: 0.043697 loss_giou: 0.336087 loss_class_aux: 2.988550 loss_bbox_aux: 0.304506 loss_giou_aux: 2.134170 loss_class_dn: 0.342227 loss_bbox_dn: 0.049586 loss_giou_dn: 0.312439 loss_class_aux_dn: 1.785366 loss_bbox_aux_dn: 0.295322 loss_giou_aux_dn: 1.693834 loss: 10.701108 eta: 1:01:39 batch_cost: 0.3458 data_cost: 0.0014 ips: 23.1352 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:16] ppdet.engine.callbacks INFO: Epoch: [14] [ 60/115] learning_rate: 0.000100 loss_class: 0.499982 loss_bbox: 0.047500 loss_giou: 0.299872 loss_class_aux: 3.177503 loss_bbox_aux: 0.361833 loss_giou_aux: 1.930930 loss_class_dn: 0.341221 loss_bbox_dn: 0.050963 loss_giou_dn: 0.284844 loss_class_aux_dn: 1.787798 loss_bbox_aux_dn: 0.308792 loss_giou_aux_dn: 1.531419 loss: 10.958105 eta: 1:01:33 batch_cost: 0.3398 data_cost: 0.0012 ips: 23.5460 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:20] ppdet.engine.callbacks INFO: Epoch: [14] [ 70/115] learning_rate: 0.000100 loss_class: 0.464805 loss_bbox: 0.050650 loss_giou: 0.311064 loss_class_aux: 2.881530 loss_bbox_aux: 0.382882 loss_giou_aux: 2.000291 loss_class_dn: 0.337207 loss_bbox_dn: 0.052183 loss_giou_dn: 0.280629 loss_class_aux_dn: 1.775159 loss_bbox_aux_dn: 0.315217 loss_giou_aux_dn: 1.559629 loss: 10.297420 eta: 1:01:26 batch_cost: 0.3229 data_cost: 0.0014 ips: 24.7736 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:23] ppdet.engine.callbacks INFO: Epoch: [14] [ 80/115] learning_rate: 0.000100 loss_class: 0.554607 loss_bbox: 0.066300 loss_giou: 0.390820 loss_class_aux: 3.499748 loss_bbox_aux: 0.477116 loss_giou_aux: 2.418541 loss_class_dn: 0.364100 loss_bbox_dn: 0.060045 loss_giou_dn: 0.348242 loss_class_aux_dn: 1.918003 loss_bbox_aux_dn: 0.359086 loss_giou_aux_dn: 1.875694 loss: 12.458726 eta: 1:01:19 batch_cost: 0.3226 data_cost: 0.0016 ips: 24.7951 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:27] ppdet.engine.callbacks INFO: Epoch: [14] [ 90/115] learning_rate: 0.000100 loss_class: 0.507732 loss_bbox: 0.043567 loss_giou: 0.348458 loss_class_aux: 3.303327 loss_bbox_aux: 0.310995 loss_giou_aux: 2.242085 loss_class_dn: 0.357901 loss_bbox_dn: 0.044913 loss_giou_dn: 0.307141 loss_class_aux_dn: 1.894784 loss_bbox_aux_dn: 0.272382 loss_giou_aux_dn: 1.733090 loss: 11.456327 eta: 1:01:13 batch_cost: 0.3264 data_cost: 0.0015 ips: 24.5121 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:30] ppdet.engine.callbacks INFO: Epoch: [14] [100/115] learning_rate: 0.000100 loss_class: 0.529338 loss_bbox: 0.049412 loss_giou: 0.355560 loss_class_aux: 3.297038 loss_bbox_aux: 0.356118 loss_giou_aux: 2.297665 loss_class_dn: 0.364612 loss_bbox_dn: 0.050731 loss_giou_dn: 0.315751 loss_class_aux_dn: 1.905606 loss_bbox_aux_dn: 0.300856 loss_giou_aux_dn: 1.740066 loss: 11.539423 eta: 1:01:06 batch_cost: 0.3256 data_cost: 0.0013 ips: 24.5685 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:34] ppdet.engine.callbacks INFO: Epoch: [14] [110/115] learning_rate: 0.000100 loss_class: 0.450491 loss_bbox: 0.048161 loss_giou: 0.323063 loss_class_aux: 2.826491 loss_bbox_aux: 0.315129 loss_giou_aux: 2.101285 loss_class_dn: 0.343268 loss_bbox_dn: 0.042443 loss_giou_dn: 0.281325 loss_class_aux_dn: 1.802052 loss_bbox_aux_dn: 0.259723 loss_giou_aux_dn: 1.560942 loss: 10.796966 eta: 1:01:00 batch_cost: 0.3376 data_cost: 0.0012 ips: 23.6953 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:31:37] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/14
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:31:44] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/14/inference/inference.yml
+[09/14 12:31:44] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:31:44] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/14/inference
+[09/14 12:31:45] ppdet.engine.callbacks INFO: Early stopping: epoch 15 loss=11.166409, best=11.166409, patience=0/20
+[09/14 12:31:46] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:31:54] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:31:54] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.26s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.52s).
+Accumulating evaluation results...
+DONE (t=0.39s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.690
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.949
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.846
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.547
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.698
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.706
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.528
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.774
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.811
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.691
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.817
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.812
+[09/14 12:31:57] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 29.972049162880246
+[09/14 12:31:57] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/14
+[09/14 12:31:57] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/best_model
+[09/14 12:31:57] ppdet.engine INFO: Best test bbox ap is 0.690.
+[09/14 12:31:58] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/best_model
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:32:05] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/best_model/inference/inference.yml
+[09/14 12:32:05] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:32:05] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/best_model/inference
+[09/14 12:32:08] ppdet.engine.callbacks INFO: Epoch: [15] [  0/115] learning_rate: 0.000100 loss_class: 0.467919 loss_bbox: 0.047142 loss_giou: 0.323063 loss_class_aux: 2.909873 loss_bbox_aux: 0.311849 loss_giou_aux: 2.026315 loss_class_dn: 0.344372 loss_bbox_dn: 0.040607 loss_giou_dn: 0.281325 loss_class_aux_dn: 1.790039 loss_bbox_aux_dn: 0.246980 loss_giou_aux_dn: 1.560942 loss: 10.429278 eta: 1:01:06 batch_cost: 0.4994 data_cost: 0.1515 ips: 16.0203 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:12] ppdet.engine.callbacks INFO: Epoch: [15] [ 10/115] learning_rate: 0.000100 loss_class: 0.473204 loss_bbox: 0.062595 loss_giou: 0.345699 loss_class_aux: 3.099826 loss_bbox_aux: 0.422699 loss_giou_aux: 2.231232 loss_class_dn: 0.350962 loss_bbox_dn: 0.059852 loss_giou_dn: 0.313920 loss_class_aux_dn: 1.873715 loss_bbox_aux_dn: 0.351282 loss_giou_aux_dn: 1.714060 loss: 11.716407 eta: 1:01:00 batch_cost: 0.3352 data_cost: 0.0014 ips: 23.8693 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:16] ppdet.engine.callbacks INFO: Epoch: [15] [ 20/115] learning_rate: 0.000100 loss_class: 0.456856 loss_bbox: 0.050348 loss_giou: 0.337272 loss_class_aux: 2.898847 loss_bbox_aux: 0.349019 loss_giou_aux: 2.165777 loss_class_dn: 0.347498 loss_bbox_dn: 0.049638 loss_giou_dn: 0.317309 loss_class_aux_dn: 1.803853 loss_bbox_aux_dn: 0.276368 loss_giou_aux_dn: 1.690447 loss: 10.962620 eta: 1:00:55 batch_cost: 0.3547 data_cost: 0.0013 ips: 22.5519 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:19] ppdet.engine.callbacks INFO: Epoch: [15] [ 30/115] learning_rate: 0.000100 loss_class: 0.476072 loss_bbox: 0.053984 loss_giou: 0.400042 loss_class_aux: 3.046255 loss_bbox_aux: 0.376482 loss_giou_aux: 2.415336 loss_class_dn: 0.356311 loss_bbox_dn: 0.053065 loss_giou_dn: 0.327476 loss_class_aux_dn: 1.874714 loss_bbox_aux_dn: 0.322680 loss_giou_aux_dn: 1.763774 loss: 11.295068 eta: 1:00:50 batch_cost: 0.3387 data_cost: 0.0012 ips: 23.6212 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:23] ppdet.engine.callbacks INFO: Epoch: [15] [ 40/115] learning_rate: 0.000100 loss_class: 0.489746 loss_bbox: 0.050358 loss_giou: 0.317789 loss_class_aux: 3.153422 loss_bbox_aux: 0.334723 loss_giou_aux: 2.069135 loss_class_dn: 0.352086 loss_bbox_dn: 0.049818 loss_giou_dn: 0.294140 loss_class_aux_dn: 1.830316 loss_bbox_aux_dn: 0.287167 loss_giou_aux_dn: 1.595906 loss: 10.969064 eta: 1:00:42 batch_cost: 0.3140 data_cost: 0.0013 ips: 25.4793 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:26] ppdet.engine.callbacks INFO: Epoch: [15] [ 50/115] learning_rate: 0.000100 loss_class: 0.430873 loss_bbox: 0.040057 loss_giou: 0.311090 loss_class_aux: 2.736036 loss_bbox_aux: 0.286090 loss_giou_aux: 2.043821 loss_class_dn: 0.341517 loss_bbox_dn: 0.042856 loss_giou_dn: 0.306761 loss_class_aux_dn: 1.815607 loss_bbox_aux_dn: 0.253388 loss_giou_aux_dn: 1.642066 loss: 10.500844 eta: 1:00:36 batch_cost: 0.3247 data_cost: 0.0012 ips: 24.6364 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:30] ppdet.engine.callbacks INFO: Epoch: [15] [ 60/115] learning_rate: 0.000100 loss_class: 0.559540 loss_bbox: 0.060254 loss_giou: 0.356431 loss_class_aux: 3.540372 loss_bbox_aux: 0.402209 loss_giou_aux: 2.261050 loss_class_dn: 0.353363 loss_bbox_dn: 0.054823 loss_giou_dn: 0.322982 loss_class_aux_dn: 1.888793 loss_bbox_aux_dn: 0.320067 loss_giou_aux_dn: 1.757480 loss: 12.082798 eta: 1:00:29 batch_cost: 0.3153 data_cost: 0.0013 ips: 25.3726 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:34] ppdet.engine.callbacks INFO: Epoch: [15] [ 70/115] learning_rate: 0.000100 loss_class: 0.463499 loss_bbox: 0.047867 loss_giou: 0.341171 loss_class_aux: 2.925079 loss_bbox_aux: 0.346546 loss_giou_aux: 2.105954 loss_class_dn: 0.355519 loss_bbox_dn: 0.050321 loss_giou_dn: 0.312224 loss_class_aux_dn: 1.851781 loss_bbox_aux_dn: 0.317009 loss_giou_aux_dn: 1.685656 loss: 10.823734 eta: 1:00:25 batch_cost: 0.3744 data_cost: 0.0015 ips: 21.3687 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:38] ppdet.engine.callbacks INFO: Epoch: [15] [ 80/115] learning_rate: 0.000100 loss_class: 0.462560 loss_bbox: 0.048196 loss_giou: 0.313958 loss_class_aux: 2.987260 loss_bbox_aux: 0.332481 loss_giou_aux: 2.052117 loss_class_dn: 0.345173 loss_bbox_dn: 0.042698 loss_giou_dn: 0.292547 loss_class_aux_dn: 1.811079 loss_bbox_aux_dn: 0.250535 loss_giou_aux_dn: 1.600388 loss: 10.496912 eta: 1:00:20 batch_cost: 0.3375 data_cost: 0.0013 ips: 23.7047 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:41] ppdet.engine.callbacks INFO: Epoch: [15] [ 90/115] learning_rate: 0.000100 loss_class: 0.490688 loss_bbox: 0.063321 loss_giou: 0.353697 loss_class_aux: 3.085101 loss_bbox_aux: 0.417096 loss_giou_aux: 2.252952 loss_class_dn: 0.347226 loss_bbox_dn: 0.060308 loss_giou_dn: 0.301106 loss_class_aux_dn: 1.826074 loss_bbox_aux_dn: 0.344628 loss_giou_aux_dn: 1.672533 loss: 11.110322 eta: 1:00:14 batch_cost: 0.3337 data_cost: 0.0014 ips: 23.9754 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:45] ppdet.engine.callbacks INFO: Epoch: [15] [100/115] learning_rate: 0.000100 loss_class: 0.510564 loss_bbox: 0.055361 loss_giou: 0.352821 loss_class_aux: 3.153747 loss_bbox_aux: 0.359966 loss_giou_aux: 2.281393 loss_class_dn: 0.361306 loss_bbox_dn: 0.054730 loss_giou_dn: 0.314831 loss_class_aux_dn: 1.892683 loss_bbox_aux_dn: 0.324289 loss_giou_aux_dn: 1.717956 loss: 11.578807 eta: 1:00:08 batch_cost: 0.3345 data_cost: 0.0013 ips: 23.9191 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:49] ppdet.engine.callbacks INFO: Epoch: [15] [110/115] learning_rate: 0.000100 loss_class: 0.464502 loss_bbox: 0.044728 loss_giou: 0.335438 loss_class_aux: 2.906282 loss_bbox_aux: 0.316889 loss_giou_aux: 2.220496 loss_class_dn: 0.349273 loss_bbox_dn: 0.044252 loss_giou_dn: 0.313032 loss_class_aux_dn: 1.834298 loss_bbox_aux_dn: 0.248009 loss_giou_aux_dn: 1.684245 loss: 10.777791 eta: 1:00:02 batch_cost: 0.3356 data_cost: 0.0013 ips: 23.8405 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:32:52] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/15
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:32:58] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/15/inference/inference.yml
+[09/14 12:32:58] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:32:58] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/15/inference
+[09/14 12:32:59] ppdet.engine.callbacks INFO: Early stopping: epoch 16 loss=11.281494, best=11.166409, patience=1/20
+[09/14 12:33:00] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:33:08] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:33:08] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.26s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.61s).
+Accumulating evaluation results...
+DONE (t=0.43s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.684
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.949
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.846
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.556
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.692
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.700
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.523
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.764
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.806
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.704
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.813
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.803
+[09/14 12:33:11] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 30.43520456503461
+[09/14 12:33:11] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/15
+[09/14 12:33:11] ppdet.engine INFO: Best test bbox ap is 0.690.
+[09/14 12:33:14] ppdet.engine.callbacks INFO: Epoch: [16] [  0/115] learning_rate: 0.000100 loss_class: 0.484488 loss_bbox: 0.050684 loss_giou: 0.326669 loss_class_aux: 3.022858 loss_bbox_aux: 0.334962 loss_giou_aux: 2.120949 loss_class_dn: 0.348794 loss_bbox_dn: 0.052151 loss_giou_dn: 0.304734 loss_class_aux_dn: 1.830650 loss_bbox_aux_dn: 0.298656 loss_giou_aux_dn: 1.642969 loss: 10.928458 eta: 1:00:11 batch_cost: 0.5580 data_cost: 0.2207 ips: 14.3364 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:17] ppdet.engine.callbacks INFO: Epoch: [16] [ 10/115] learning_rate: 0.000100 loss_class: 0.521055 loss_bbox: 0.044690 loss_giou: 0.353441 loss_class_aux: 3.216822 loss_bbox_aux: 0.308880 loss_giou_aux: 2.185775 loss_class_dn: 0.353712 loss_bbox_dn: 0.047722 loss_giou_dn: 0.322213 loss_class_aux_dn: 1.850330 loss_bbox_aux_dn: 0.280989 loss_giou_aux_dn: 1.747499 loss: 11.524041 eta: 1:00:05 batch_cost: 0.3328 data_cost: 0.0123 ips: 24.0419 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:21] ppdet.engine.callbacks INFO: Epoch: [16] [ 20/115] learning_rate: 0.000100 loss_class: 0.456442 loss_bbox: 0.045751 loss_giou: 0.347988 loss_class_aux: 2.961075 loss_bbox_aux: 0.302442 loss_giou_aux: 2.225023 loss_class_dn: 0.340357 loss_bbox_dn: 0.045753 loss_giou_dn: 0.311740 loss_class_aux_dn: 1.813869 loss_bbox_aux_dn: 0.273432 loss_giou_aux_dn: 1.679219 loss: 10.804992 eta: 1:00:00 batch_cost: 0.3425 data_cost: 0.0012 ips: 23.3609 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:25] ppdet.engine.callbacks INFO: Epoch: [16] [ 30/115] learning_rate: 0.000100 loss_class: 0.484980 loss_bbox: 0.057500 loss_giou: 0.312197 loss_class_aux: 2.914661 loss_bbox_aux: 0.408021 loss_giou_aux: 2.025335 loss_class_dn: 0.346144 loss_bbox_dn: 0.066392 loss_giou_dn: 0.283018 loss_class_aux_dn: 1.786308 loss_bbox_aux_dn: 0.401575 loss_giou_aux_dn: 1.513646 loss: 10.799304 eta: 0:59:54 batch_cost: 0.3297 data_cost: 0.0012 ips: 24.2628 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:28] ppdet.engine.callbacks INFO: Epoch: [16] [ 40/115] learning_rate: 0.000100 loss_class: 0.495112 loss_bbox: 0.061617 loss_giou: 0.342367 loss_class_aux: 3.243142 loss_bbox_aux: 0.373029 loss_giou_aux: 2.162248 loss_class_dn: 0.356940 loss_bbox_dn: 0.059555 loss_giou_dn: 0.302720 loss_class_aux_dn: 1.868799 loss_bbox_aux_dn: 0.351400 loss_giou_aux_dn: 1.673157 loss: 11.454529 eta: 0:59:48 batch_cost: 0.3346 data_cost: 0.0019 ips: 23.9100 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:32] ppdet.engine.callbacks INFO: Epoch: [16] [ 50/115] learning_rate: 0.000100 loss_class: 0.511394 loss_bbox: 0.048083 loss_giou: 0.343029 loss_class_aux: 3.309252 loss_bbox_aux: 0.310477 loss_giou_aux: 2.169557 loss_class_dn: 0.365700 loss_bbox_dn: 0.057080 loss_giou_dn: 0.317563 loss_class_aux_dn: 1.918470 loss_bbox_aux_dn: 0.338249 loss_giou_aux_dn: 1.727605 loss: 11.437364 eta: 0:59:43 batch_cost: 0.3360 data_cost: 0.0014 ips: 23.8110 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:36] ppdet.engine.callbacks INFO: Epoch: [16] [ 60/115] learning_rate: 0.000100 loss_class: 0.496438 loss_bbox: 0.050030 loss_giou: 0.379362 loss_class_aux: 3.146572 loss_bbox_aux: 0.336130 loss_giou_aux: 2.382839 loss_class_dn: 0.365438 loss_bbox_dn: 0.046404 loss_giou_dn: 0.327888 loss_class_aux_dn: 1.921437 loss_bbox_aux_dn: 0.259976 loss_giou_aux_dn: 1.745489 loss: 11.622691 eta: 0:59:37 batch_cost: 0.3376 data_cost: 0.0013 ips: 23.6994 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:40] ppdet.engine.callbacks INFO: Epoch: [16] [ 70/115] learning_rate: 0.000100 loss_class: 0.446716 loss_bbox: 0.048353 loss_giou: 0.334384 loss_class_aux: 2.845582 loss_bbox_aux: 0.358991 loss_giou_aux: 2.219084 loss_class_dn: 0.344442 loss_bbox_dn: 0.047915 loss_giou_dn: 0.307290 loss_class_aux_dn: 1.811533 loss_bbox_aux_dn: 0.296895 loss_giou_aux_dn: 1.671781 loss: 10.657810 eta: 0:59:32 batch_cost: 0.3393 data_cost: 0.0013 ips: 23.5770 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:43] ppdet.engine.callbacks INFO: Epoch: [16] [ 80/115] learning_rate: 0.000100 loss_class: 0.444687 loss_bbox: 0.040975 loss_giou: 0.324456 loss_class_aux: 2.796152 loss_bbox_aux: 0.266724 loss_giou_aux: 2.145878 loss_class_dn: 0.361337 loss_bbox_dn: 0.037921 loss_giou_dn: 0.307754 loss_class_aux_dn: 1.881943 loss_bbox_aux_dn: 0.227066 loss_giou_aux_dn: 1.695411 loss: 10.845612 eta: 0:59:25 batch_cost: 0.3218 data_cost: 0.0012 ips: 24.8585 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:47] ppdet.engine.callbacks INFO: Epoch: [16] [ 90/115] learning_rate: 0.000100 loss_class: 0.469406 loss_bbox: 0.050776 loss_giou: 0.335640 loss_class_aux: 2.975976 loss_bbox_aux: 0.348260 loss_giou_aux: 2.150225 loss_class_dn: 0.352395 loss_bbox_dn: 0.051052 loss_giou_dn: 0.304371 loss_class_aux_dn: 1.825974 loss_bbox_aux_dn: 0.325151 loss_giou_aux_dn: 1.635099 loss: 10.971714 eta: 0:59:20 batch_cost: 0.3450 data_cost: 0.0018 ips: 23.1888 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:51] ppdet.engine.callbacks INFO: Epoch: [16] [100/115] learning_rate: 0.000100 loss_class: 0.422054 loss_bbox: 0.054306 loss_giou: 0.302883 loss_class_aux: 2.673284 loss_bbox_aux: 0.358426 loss_giou_aux: 1.915083 loss_class_dn: 0.333100 loss_bbox_dn: 0.044549 loss_giou_dn: 0.268535 loss_class_aux_dn: 1.774399 loss_bbox_aux_dn: 0.292562 loss_giou_aux_dn: 1.485117 loss: 10.325846 eta: 0:59:16 batch_cost: 0.3523 data_cost: 0.0015 ips: 22.7078 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:54] ppdet.engine.callbacks INFO: Epoch: [16] [110/115] learning_rate: 0.000100 loss_class: 0.461777 loss_bbox: 0.048358 loss_giou: 0.342792 loss_class_aux: 2.935879 loss_bbox_aux: 0.317798 loss_giou_aux: 2.187812 loss_class_dn: 0.348929 loss_bbox_dn: 0.044593 loss_giou_dn: 0.302101 loss_class_aux_dn: 1.816845 loss_bbox_aux_dn: 0.269882 loss_giou_aux_dn: 1.627415 loss: 10.519935 eta: 0:59:11 batch_cost: 0.3451 data_cost: 0.0013 ips: 23.1788 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:33:57] ppdet.utils.checkpoint INFO: Save checkpoint: /home/tntri/OCR_project/outputs/layout/16
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:34:04] ppdet.engine INFO: Export inference config file to /home/tntri/OCR_project/outputs/layout/16/inference/inference.yml
+[09/14 12:34:04] ppdet.engine INFO: Skipping import of the encryption module.
+[09/14 12:34:04] ppdet.engine INFO: Export model and saved in /home/tntri/OCR_project/outputs/layout/16/inference
+[09/14 12:34:05] ppdet.engine.callbacks INFO: Early stopping: epoch 17 loss=11.153166, best=11.153166, patience=0/20
+[09/14 12:34:06] ppdet.engine.callbacks INFO: Eval iter: 0
+[09/14 12:34:12] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+[09/14 12:34:12] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.28s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=2.57s).
+Accumulating evaluation results...
+DONE (t=0.41s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.687
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.947
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.846
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.548
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.696
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.703
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.525
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.767
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.803
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.718
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.809
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.804
+[09/14 12:34:16] ppdet.engine.callbacks INFO: Total sample number: 231, average FPS: 34.764545183970014
+[09/14 12:34:16] ppdet.utils.checkpoint INFO: Already save model info in /home/tntri/OCR_project/outputs/layout/16
+[09/14 12:34:16] ppdet.engine INFO: Best test bbox ap is 0.690.
+[09/14 12:34:17] ppdet.engine.callbacks INFO: Epoch: [17] [  0/115] learning_rate: 0.000100 loss_class: 0.542781 loss_bbox: 0.057151 loss_giou: 0.326721 loss_class_aux: 3.321223 loss_bbox_aux: 0.410114 loss_giou_aux: 2.018517 loss_class_dn: 0.351635 loss_bbox_dn: 0.051871 loss_giou_dn: 0.289018 loss_class_aux_dn: 1.855971 loss_bbox_aux_dn: 0.293025 loss_giou_aux_dn: 1.586748 loss: 11.428561 eta: 0:59:14 batch_cost: 0.4623 data_cost: 0.1065 ips: 17.3062 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB
+[09/14 12:34:22] ppdet.engine.callbacks INFO: Epoch: [17] [ 10/115] learning_rate: 0.000100 loss_class: 0.496741 loss_bbox: 0.042949 loss_giou: 0.292993 loss_class_aux: 3.128211 loss_bbox_aux: 0.284173 loss_giou_aux: 1.906011 loss_class_dn: 0.332151 loss_bbox_dn: 0.041176 loss_giou_dn: 0.270909 loss_class_aux_dn: 1.739949 loss_bbox_aux_dn: 0.247985 loss_giou_aux_dn: 1.505510 loss: 10.416242 eta: 0:59:11 batch_cost: 0.3913 data_cost: 0.0018 ips: 20.4462 images/s, max_mem_reserved: 18076 MB, max_mem_allocated: 15984 MB

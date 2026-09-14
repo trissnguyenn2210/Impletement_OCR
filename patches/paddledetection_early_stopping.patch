@@ -1,0 +1,104 @@
+diff --git a/ppdet/engine/callbacks.py b/ppdet/engine/callbacks.py
+index 96404be..ff3128b 100644
+--- a/ppdet/engine/callbacks.py
++++ b/ppdet/engine/callbacks.py
+@@ -35,7 +35,7 @@ logger = setup_logger('ppdet.engine')
+ 
+ __all__ = [
+     'Callback', 'ComposeCallback', 'LogPrinter', 'Checkpointer',
+-    'VisualDLWriter', 'SniperProposalsGenerator'
++    'VisualDLWriter', 'SniperProposalsGenerator', 'EarlyStopping'
+ ]
+ 
+ 
+@@ -68,6 +68,60 @@ class Callback(object):
+         pass
+ 
+ 
++class EarlyStopping(Callback):
++    """Stop training when validation bbox mAP@[0.50:0.95] stops improving."""
++
++    def __init__(self, model):
++        super(EarlyStopping, self).__init__(model)
++        self.patience = int(self.model.cfg.get('early_stopping_patience', 0))
++        self.min_delta = float(
++            self.model.cfg.get('early_stopping_min_delta', 0.0))
++        self.best_map = float('-inf')
++        self.bad_evals = 0
++
++    def on_step_end(self, status):
++        pass
++
++    def _validation_map(self):
++        for metric in self.model._metrics:
++            results = metric.get_results()
++            bbox_stats = results.get('bbox') if isinstance(results, dict) else None
++            if bbox_stats is not None and len(bbox_stats) > 0:
++                return float(bbox_stats[0])
++        return None
++
++    def on_epoch_end(self, status):
++        if self.patience <= 0 or status.get('mode') != 'eval':
++            return
++        if dist.get_world_size() > 1 and dist.get_rank() != 0:
++            return
++
++        validation_map = self._validation_map()
++        if validation_map is None:
++            self.logger.warning(
++                'Early stopping skipped: validation bbox mAP was not available for epoch %s.',
++                status.get('epoch_id', '?'))
++            return
++
++        improved = validation_map > self.best_map + self.min_delta
++        if improved:
++            self.best_map = validation_map
++            self.bad_evals = 0
++        else:
++            self.bad_evals += 1
++
++        epoch_number = int(status.get('epoch_id', 0)) + 1
++        self.logger.info(
++            'Early stopping: epoch %s val mAP@[0.50:0.95]=%.6f, best=%.6f, '
++            'patience=%s/%s', epoch_number, validation_map, self.best_map,
++            self.bad_evals, self.patience)
++        if self.bad_evals >= self.patience:
++            status['early_stop'] = True
++            self.logger.info(
++                'Early stopping triggered after %s validations without mAP improvement.',
++                self.patience)
++
++
+ class ComposeCallback(object):
+     def __init__(self, callbacks):
+         callbacks = [c for c in list(callbacks) if c is not None]
+diff --git a/ppdet/engine/trainer.py b/ppdet/engine/trainer.py
+index 0c00b3a..e907949 100644
+--- a/ppdet/engine/trainer.py
++++ b/ppdet/engine/trainer.py
+@@ -53,7 +53,7 @@ from ppdet.modeling.post_process import multiclass_nms
+ from ppdet.modeling.lane_utils import imshow_lanes
+ from ppdet.modeling.mot.utils import write_mot_results, MOTTimer
+ 
+-from .callbacks import Callback, ComposeCallback, LogPrinter, Checkpointer, WiferFaceEval, VisualDLWriter, SniperProposalsGenerator, WandbCallback, SemiCheckpointer, SemiLogPrinter
++from .callbacks import Callback, ComposeCallback, LogPrinter, Checkpointer, WiferFaceEval, VisualDLWriter, SniperProposalsGenerator, WandbCallback, SemiCheckpointer, SemiLogPrinter, EarlyStopping
+ from .export_utils import _dump_infer_config, _prune_input_spec, apply_to_static
+ from .naive_sync_bn import convert_syncbn, convert_bn
+ 
+@@ -274,6 +274,8 @@ class Trainer(object):
+                 self._callbacks = [SemiLogPrinter(self), SemiCheckpointer(self)]
+             else:
+                 self._callbacks = [LogPrinter(self), Checkpointer(self)]
++            if self.cfg.get('early_stopping_patience', 0) > 0:
++                self._callbacks.append(EarlyStopping(self))
+             if self.cfg.get('use_vdl', False):
+                 self._callbacks.append(VisualDLWriter(self))
+@@ -729,6 +731,10 @@ class Trainer(object):
+                 self.model.set_dict(weight)
+                 self.status.pop('weight')
+ 
++            if self.status.get('early_stop', False):
++                logger.info('Training stopped early at epoch %s.', epoch_id + 1)
++                break
++
+         self._compose_callback.on_train_end(self.status)

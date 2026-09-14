@@ -1,0 +1,2 @@
+# Install PaddlePaddle GPU separately using the wheel index for your CUDA/driver.
+paddleocr[doc-parser]==3.5.0

@@ -1,0 +1,11 @@
+PaddleDetection training summary
+Log: /home/tntri/OCR_project/outputs/layout/train.log
+Metric records: 148
+Last progress: epoch 3, iteration 61/461
+Last loss: 13.124390
+Minimum logged loss: 10.651962
+Last learning rate: 0.000100
+Last speed: 8.4395 images/s
+Last GPU reserved: 5607 MB
+Best bbox AP: 0.652000
+PaddleX done_flag: False

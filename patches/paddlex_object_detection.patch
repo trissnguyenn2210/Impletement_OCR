@@ -1,0 +1,23 @@
+diff --git a/paddlex/modules/object_detection/trainer.py b/paddlex/modules/object_detection/trainer.py
+index 0b0f80d..c97188a 100644
+--- a/paddlex/modules/object_detection/trainer.py
++++ b/paddlex/modules/object_detection/trainer.py
+@@ -71,6 +71,10 @@ class DetTrainer(BaseTrainer):
+         if self.global_config.output is not None:
+             self.pdx_config.update_save_dir(self.global_config.output)
+ 
++        for name in ("early_stopping_patience", "early_stopping_min_delta"):
++            if name in self.config:
++                self.pdx_config[name] = self.config[name]
++
+         if "PicoDet" in self.global_config.model:
+             assigner_epochs = max(int(epochs_iters / 10), 1)
+             try:
+@@ -87,6 +91,7 @@ class DetTrainer(BaseTrainer):
+             dict: the arguments of training function.
+         """
+         train_args = {"device": self.get_device()}
++        train_args["use_vdl"] = self.global_config.get("use_vdl", False)
+         if (
+             self.train_config.resume_path is not None
+             and self.train_config.resume_path != ""

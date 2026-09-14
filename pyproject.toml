@@ -1,0 +1,33 @@
+[project]
+name = "ocr-project"
+version = "0.1.0"
+description = "Bill OCR with PaddleOCR and PP-StructureV3"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "paddlepaddle-gpu==3.2.1",
+  "paddleocr[doc-parser]==3.5.0",
+  "paddlex[base,ocr]==3.5.2",
+  "opencv-contrib-python-headless==4.10.0.84",
+  "numpy==1.26.4",
+  "setuptools<81",
+  "visualdl>=2.2.0",
+  "tqdm>=4.66",
+  "terminaltables",
+  "typeguard",
+  "lapx",
+  "motmetrics",
+  "pyclipper",
+]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "paddle-gpu"
+url = "https://www.paddlepaddle.org.cn/packages/stable/cu126/"
+explicit = true
+
+[tool.uv.sources]
+paddlepaddle-gpu = { index = "paddle-gpu" }
+paddlex = { path = "vendor/PaddleX", editable = true }
