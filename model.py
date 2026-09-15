@@ -31,8 +31,13 @@ def _allow_headless_opencv() -> None:
                 module.__dict__.setdefault("cv2", cv2)
 
 
-def build_pipeline(config: Config = CONFIG):
-    """Build the pipeline and use the fine-tuned layout model when available."""
+def build_pipeline(
+    config: Config = CONFIG,
+    *,
+    use_table_recognition: bool = True,
+    use_region_detection: bool = True,
+):
+    """Build the pipeline and use fine-tuned layout/recognition models when available."""
     # BOS is usually easier to reach in server environments than Hugging Face.
     os.environ.setdefault("PADDLE_PDX_MODEL_SOURCE", "bos")
     _allow_headless_opencv()
@@ -40,15 +45,20 @@ def build_pipeline(config: Config = CONFIG):
 
     kwargs = {
         "layout_detection_model_name": config.model_name,
+        "text_recognition_model_name": config.recognition_model_name,
         "device": config.device,
         "use_doc_orientation_classify": config.use_doc_orientation,
         "use_doc_unwarping": config.use_doc_unwarping,
         "use_textline_orientation": config.use_textline_orientation,
+        "use_table_recognition": use_table_recognition,
+        "use_region_detection": use_region_detection,
         "use_formula_recognition": False,
         "use_chart_recognition": False,
     }
 
     if config.finetuned_layout_dir.exists():
         kwargs["layout_detection_model_dir"] = str(config.finetuned_layout_dir)
+    if config.finetuned_recognition_dir.exists():
+        kwargs["text_recognition_model_dir"] = str(config.finetuned_recognition_dir)
 
     return PPStructureV3(**kwargs)

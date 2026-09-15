@@ -31,6 +31,18 @@ outputs/layout/best_model/inference/*
 !outputs/layout/best_model/inference/inference.yml
 !outputs/layout/best_model/inference/inference.pdiparams
 
+!outputs/recognition/
+outputs/recognition/*
+!outputs/recognition/character_dict.txt
+!outputs/recognition/best_accuracy.pdparams
+!outputs/recognition/best_accuracy.pdopt
+!outputs/recognition/best_accuracy.states
+!outputs/recognition/inference/
+outputs/recognition/inference/*
+!outputs/recognition/inference/inference.json
+!outputs/recognition/inference/inference.yml
+!outputs/recognition/inference/inference.pdiparams
+
 logs/*
 !logs/.gitkeep
 

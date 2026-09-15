@@ -22,6 +22,12 @@ def main() -> None:
         default=CONFIG.output_dir,
         help="Directory containing the fine-tuned layout model",
     )
+    parser.add_argument(
+        "--recognition-output-dir",
+        type=Path,
+        default=CONFIG.recognition_output_dir,
+        help="Directory containing the fine-tuned text-recognition model",
+    )
     parser.add_argument("--model-name", default=CONFIG.model_name)
     parser.add_argument("--device", default=CONFIG.device)
     parser.add_argument(
@@ -44,6 +50,7 @@ def main() -> None:
     config = replace(
         CONFIG,
         output_dir=args.layout_output_dir.expanduser().resolve(),
+        recognition_output_dir=args.recognition_output_dir.expanduser().resolve(),
         model_name=args.model_name,
         device=args.device,
         use_doc_orientation=args.doc_orientation,

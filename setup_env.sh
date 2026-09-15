@@ -20,7 +20,8 @@ uv pip install --python "${PYTHON}" -r "${PROJECT_DIR}/requirements.txt"
 
 # The training plugins request GUI OpenCV. Headless OpenCV is enough on servers
 # and avoids the libGL dependency.
-uv pip uninstall --python "${PYTHON}" opencv-contrib-python opencv-python || true
+uv pip uninstall --python "${PYTHON}" \
+  opencv-contrib-python opencv-python opencv-python-headless || true
 uv pip install --python "${PYTHON}" --reinstall --no-deps \
   opencv-contrib-python-headless==4.10.0.84
 uv pip install --python "${PYTHON}" numpy==1.26.4 \
@@ -47,7 +48,8 @@ if git -C "${PPDET_DIR}" apply --recount --check "${PPDET_PATCH}"; then
 fi
 
 # PaddleX extras can reinstall GUI OpenCV. Keep only the headless wheel.
-uv pip uninstall --python "${PYTHON}" opencv-contrib-python opencv-python || true
+uv pip uninstall --python "${PYTHON}" \
+  opencv-contrib-python opencv-python opencv-python-headless || true
 uv pip install --python "${PYTHON}" --reinstall --no-deps \
   opencv-contrib-python-headless==4.10.0.84
 
