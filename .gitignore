@@ -8,6 +8,11 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
+docs/
+datasets/
+datasets.zip
+
+notebooks/
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
