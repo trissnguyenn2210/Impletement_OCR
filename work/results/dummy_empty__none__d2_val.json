@@ -1,0 +1,3820 @@
+{
+ "method": "dummy_empty",
+ "train_on": null,
+ "test_on": "d2_val",
+ "n_images": 300,
+ "parse_fail": 0.0,
+ "seconds_total": 0.04,
+ "fps": 8119.11,
+ "layout_mAP50": null,
+ "layout_mAP50_95": null,
+ "rec_acc": null,
+ "rec_ned": null,
+ "params_M": null,
+ "gflops": null,
+ "vram_mb": null,
+ "agg": {
+  "MFS": 0.0,
+  "per_field": {
+   "address": 0.0,
+   "date": 0.0,
+   "merchant": 0.0,
+   "time": 0.0,
+   "total": 0.0
+  },
+  "n_per_field": {
+   "address": 233,
+   "date": 300,
+   "merchant": 300,
+   "time": 233,
+   "total": 300
+  },
+  "halluc": 0.0,
+  "halluc_n": 0,
+  "halluc_d": 2834,
+  "n_docs": 300
+ },
+ "items": {
+  "item_P": 0.0,
+  "item_R": 0.0,
+  "item_F1": 0.0,
+  "name_anls": 0.0,
+  "qty": 0.0,
+  "price": 0.0,
+  "amount": 0.0,
+  "count_ok": 0.0,
+  "fabricated": 0.0,
+  "n_docs": 300,
+  "n_gt_total": 1210,
+  "n_pred_total": 0
+ },
+ "by_quality": null,
+ "per_image": [
+  {
+   "img_id": "cafe_highlands_val_001.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_002.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_003.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_004.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_005.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_006.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_007.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_008.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_009.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_010.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_011.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_012.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_013.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_014.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_015.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_016.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_017.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_018.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_019.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_020.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_021.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_022.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_023.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_024.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_025.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_026.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_027.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_028.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_029.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_030.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_031.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_032.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_033.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_034.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_035.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_036.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_037.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_038.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_039.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_040.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_041.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_042.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_043.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_044.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_045.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_046.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_047.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_048.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_049.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_050.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_051.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_052.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_053.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_054.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_055.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_056.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_057.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_058.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_059.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_060.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_061.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_062.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_063.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_064.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_065.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_066.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_highlands_val_067.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_001.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_002.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_003.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_004.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_005.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_006.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_007.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_008.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_009.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_010.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_011.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_012.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_013.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_014.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_015.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_016.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_017.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_018.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_019.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_020.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_021.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_022.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_023.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_024.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_025.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_026.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_027.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_028.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_029.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_030.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_031.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_032.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_033.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_034.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_035.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_036.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_037.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_038.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_039.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_040.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_041.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_042.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_043.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_044.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_045.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_046.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_047.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_048.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_049.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_050.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_051.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_052.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_053.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_054.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_055.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_056.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_057.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_058.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_059.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_060.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_061.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_062.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_063.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_064.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_065.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_066.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_phuclong_val_067.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "cafe_starbucks_val_001.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_002.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_003.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_004.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_005.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_006.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_007.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_008.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_009.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_010.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_011.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_012.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_013.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_014.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_015.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_016.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_017.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_018.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_019.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_020.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_021.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_022.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_023.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_024.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_025.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_026.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_027.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_028.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_029.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_030.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_031.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_032.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_033.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_034.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_035.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_036.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_037.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_038.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_039.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_040.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_041.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_042.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_043.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_044.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_045.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_046.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_047.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_048.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_049.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_050.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_051.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_052.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_053.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_054.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_055.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_056.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_057.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_058.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_059.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_060.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_061.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_062.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_063.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_064.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_065.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_066.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "cafe_starbucks_val_067.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_001.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_002.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_003.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_004.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_005.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_006.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_007.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_008.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_009.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_010.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_011.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_012.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_013.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_014.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_015.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_016.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_017.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_018.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_019.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_020.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_021.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_022.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_023.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_024.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_025.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_026.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_027.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_028.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_029.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_030.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_031.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_032.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_033.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_034.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_035.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_036.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_037.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_038.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_039.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_040.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_041.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_042.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_043.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_044.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_045.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_046.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_047.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_048.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_049.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_050.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_051.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_052.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_053.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_054.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_055.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_056.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_057.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_058.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_059.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_060.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_061.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_062.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_063.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_064.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_065.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_066.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_7eleven_val_067.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "convenience_circlek_val_001.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_002.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_003.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_004.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_005.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_006.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_007.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_008.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_009.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_010.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_011.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_012.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_013.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_014.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_015.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_016.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_017.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_018.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_019.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_020.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_021.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_022.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_023.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_024.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_025.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_026.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_027.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_028.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_029.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_030.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_031.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "convenience_circlek_val_032.png",
+   "quality": null,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  }
+ ]
+}

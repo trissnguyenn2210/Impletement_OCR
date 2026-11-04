@@ -1,0 +1,714 @@
+{
+ "method": "dummy_fail",
+ "train_on": null,
+ "test_on": "d1_val",
+ "n_images": 50,
+ "parse_fail": 100.0,
+ "seconds_total": 0.0,
+ "fps": 22839.82,
+ "layout_mAP50": null,
+ "layout_mAP50_95": null,
+ "rec_acc": null,
+ "rec_ned": null,
+ "params_M": null,
+ "gflops": null,
+ "vram_mb": null,
+ "agg": {
+  "MFS": 0.0,
+  "per_field": {
+   "address": 0.0,
+   "date": 0.0,
+   "merchant": 0.0,
+   "time": 0.0,
+   "total": 0.0
+  },
+  "n_per_field": {
+   "address": 47,
+   "date": 44,
+   "merchant": 43,
+   "time": 35,
+   "total": 41
+  },
+  "halluc": 0.0,
+  "halluc_n": 0,
+  "halluc_d": 490,
+  "n_docs": 50
+ },
+ "items": null,
+ "by_quality": {
+  "clear": {
+   "MFS": 0.0,
+   "per_field": {
+    "address": 0.0,
+    "date": 0.0,
+    "merchant": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "n_per_field": {
+    "address": 27,
+    "date": 24,
+    "merchant": 26,
+    "time": 20,
+    "total": 23
+   },
+   "halluc": 0.0,
+   "halluc_n": 0,
+   "halluc_d": 258,
+   "n_docs": 27
+  },
+  "mid": {
+   "MFS": 0.0,
+   "per_field": {
+    "address": 0.0,
+    "date": 0.0,
+    "merchant": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "n_per_field": {
+    "address": 16,
+    "date": 16,
+    "merchant": 13,
+    "time": 12,
+    "total": 13
+   },
+   "halluc": 0.0,
+   "halluc_n": 0,
+   "halluc_d": 168,
+   "n_docs": 17
+  },
+  "blur": {
+   "MFS": 0.0,
+   "per_field": {
+    "address": 0.0,
+    "date": 0.0,
+    "merchant": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "n_per_field": {
+    "address": 4,
+    "date": 4,
+    "merchant": 4,
+    "time": 3,
+    "total": 5
+   },
+   "halluc": 0.0,
+   "halluc_n": 0,
+   "halluc_d": 64,
+   "n_docs": 6
+  }
+ },
+ "per_image": [
+  {
+   "img_id": "mcocr_public_145013ahfqj.jpg",
+   "quality": 0.642843,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013atnil.jpg",
+   "quality": 0.754912,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013avtwc.jpg",
+   "quality": 0.580448,
+   "per_field": {
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 11
+  },
+  {
+   "img_id": "mcocr_public_145013bcovr.jpg",
+   "quality": 0.72161,
+   "per_field": {
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013bdnvs.jpg",
+   "quality": 0.807136,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013bfddt.jpg",
+   "quality": 0.801902,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013bkcgv.jpg",
+   "quality": 0.455879,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013bsywa.jpg",
+   "quality": 0.835642,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013bykuv.jpg",
+   "quality": 0.713181,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013cixex.jpg",
+   "quality": 0.829096,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013ckwpd.jpg",
+   "quality": 0.661847,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013cllbf.jpg",
+   "quality": 0.524167,
+   "per_field": {
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013cnknh.jpg",
+   "quality": 0.784025,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 12
+  },
+  {
+   "img_id": "mcocr_public_145013cxcei.jpg",
+   "quality": 0.764983,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013doybn.jpg",
+   "quality": 0.796748,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 11
+  },
+  {
+   "img_id": "mcocr_public_145013drlui.jpg",
+   "quality": 0.720519,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013dxavh.jpg",
+   "quality": 0.731075,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013dxysa.jpg",
+   "quality": 0.591994,
+   "per_field": {
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013ebiff.jpg",
+   "quality": 0.761653,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 12
+  },
+  {
+   "img_id": "mcocr_public_145013eicdg.jpg",
+   "quality": 0.695545,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 11
+  },
+  {
+   "img_id": "mcocr_public_145013euvfm.jpg",
+   "quality": 0.668107,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013eyjmn.jpg",
+   "quality": 0.551958,
+   "per_field": {
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 11
+  },
+  {
+   "img_id": "mcocr_public_145013gguch.jpg",
+   "quality": 0.569572,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013giwqv.jpg",
+   "quality": 0.134141,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 11
+  },
+  {
+   "img_id": "mcocr_public_145013iblsz.jpg",
+   "quality": 0.735897,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013idjei.jpg",
+   "quality": 0.744136,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013ihpxr.jpg",
+   "quality": 0.620576,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 11
+  },
+  {
+   "img_id": "mcocr_public_145013imbop.jpg",
+   "quality": 0.429344,
+   "per_field": {
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 12
+  },
+  {
+   "img_id": "mcocr_public_145013isfbd.jpg",
+   "quality": 0.542944,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013jechb.jpg",
+   "quality": 0.714937,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013jyghf.jpg",
+   "quality": 0.79143,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013kacze.jpg",
+   "quality": 0.548397,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013kaedt.jpg",
+   "quality": 0.792146,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013kcxya.jpg",
+   "quality": 0.470588,
+   "per_field": {},
+   "halluc_n": 0,
+   "halluc_d": 14
+  },
+  {
+   "img_id": "mcocr_public_145013kzjew.jpg",
+   "quality": 0.701006,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013lozjt.jpg",
+   "quality": 0.720453,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013lxunp.jpg",
+   "quality": 0.753243,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013mqmzy.jpg",
+   "quality": 0.713476,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013nvoah.jpg",
+   "quality": 0.876552,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013nwgha.jpg",
+   "quality": 0.591408,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013pqnzb.jpg",
+   "quality": 0.82933,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013pvwgq.jpg",
+   "quality": 0.49781,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013pzwfd.jpg",
+   "quality": 0.683227,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013qlpau.jpg",
+   "quality": 0.48192,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013rmrji.jpg",
+   "quality": 0.774704,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013satyz.jpg",
+   "quality": 0.678321,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 10
+  },
+  {
+   "img_id": "mcocr_public_145013scuxn.jpg",
+   "quality": 0.602575,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013shpih.jpg",
+   "quality": 0.647803,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013tcvim.jpg",
+   "quality": 0.834089,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  },
+  {
+   "img_id": "mcocr_public_145013tffpu.jpg",
+   "quality": 0.855467,
+   "per_field": {
+    "merchant": 0.0,
+    "address": 0.0,
+    "date": 0.0,
+    "time": 0.0,
+    "total": 0.0
+   },
+   "halluc_n": 0,
+   "halluc_d": 9
+  }
+ ]
+}
