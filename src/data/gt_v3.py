@@ -27,7 +27,7 @@ RE_TIME = re.compile(r"\d{1,2}:\d{2}(?::\d{2})?")
 Y_TOL_RATIO = 0.6          # nguong gom dong = 0.6 x chieu cao trung binh
 
 
-def group_items(anns: list[dict]) -> list[dict]:
+def group_items(anns):
     its = [a for a in anns if str(a.get("label", "")).startswith("ITEM_")
            and a.get("box")]
     if not its:
@@ -66,7 +66,7 @@ def group_items(anns: list[dict]) -> list[dict]:
     return out
 
 
-def label_to_doc(p: Path) -> dict:
+def label_to_doc(p):
     d = json.loads(p.read_text(encoding="utf-8"))
     anns = d.get("annotations") or []
 
@@ -90,7 +90,7 @@ def label_to_doc(p: Path) -> dict:
     }, img_id=img_id)
 
 
-def load_split(split: str) -> tuple[dict[str, dict], dict]:
+def load_split(split):
     """split in {train, val}. Tra ve ({stem: doc}, bao_cao)."""
     d = cfg.D2 / split / "labels"
     files = sorted(d.glob("*.json"))

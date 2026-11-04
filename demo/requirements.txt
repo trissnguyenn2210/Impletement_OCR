@@ -1,0 +1,19 @@
+# Web demo (demo/app.py) cho 4 phuong phap A/B/C/D.
+#
+# Paddle: may co GPU NVIDIA thi cai ban GPU theo huong dan
+#   https://www.paddlepaddle.org.cn/install/quick  (vd. paddlepaddle-gpu==3.3.1 -i .../cu126/)
+# may khong co GPU thi dung ban CPU ben duoi.
+paddlepaddle==3.3.1
+paddleocr==3.7.0
+# Torch: cai ban CUDA neu co GPU, vd.
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
+torch
+torchvision
+transformers>=4.57
+accelerate
+gradio>=5
+pillow
+opencv-contrib-python-headless
+# InternVL3.5 can them:
+# einops
+# timm

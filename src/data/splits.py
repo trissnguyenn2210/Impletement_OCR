@@ -13,7 +13,7 @@ from pathlib import Path
 import cfg
 
 
-def _imgs_from_rec_file(p: Path) -> set[str]:
+def _imgs_from_rec_file(p):
     """mcocr_public_145013snoxg_3.jpg  ->  mcocr_public_145013snoxg"""
     out = set()
     for line in p.read_text(encoding="utf-8").splitlines():
@@ -24,7 +24,7 @@ def _imgs_from_rec_file(p: Path) -> set[str]:
     return out
 
 
-def d1_splits() -> dict[str, list[str]]:
+def d1_splits():
     tr = _imgs_from_rec_file(cfg.D1_REC_TRAIN)
     va = _imgs_from_rec_file(cfg.D1_REC_VAL)
     overlap = tr & va
@@ -35,7 +35,7 @@ def d1_splits() -> dict[str, list[str]]:
     return {"train": sorted(tr), "val": sorted(va), "all": sorted(tr | va)}
 
 
-def d2_splits() -> dict[str, list[str]]:
+def d2_splits():
     """D2 chia theo THU MUC train/ va val/."""
     out = {}
     for sp in ("train", "val"):
@@ -45,7 +45,7 @@ def d2_splits() -> dict[str, list[str]]:
     return out
 
 
-def write_split_files() -> dict[str, int]:
+def write_split_files():
     counts = {}
     for name, spl in (("d1", d1_splits()), ("d2", d2_splits())):
         for sp, ids in spl.items():
@@ -55,7 +55,7 @@ def write_split_files() -> dict[str, int]:
     return counts
 
 
-def load_split(test_set: str) -> list[str]:
+def load_split(test_set):
     if test_set not in cfg.TEST_SETS:
         raise KeyError(f"tap test khong hop le: {test_set!r}. "
                        f"Hop le: {sorted(cfg.TEST_SETS)}")

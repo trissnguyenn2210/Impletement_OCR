@@ -24,10 +24,10 @@ import unicodedata
 try:
     from rapidfuzz.distance import Levenshtein
 
-    def _lev(a: str, b: str) -> int:
+    def _lev(a, b):
         return Levenshtein.distance(a, b)
 except ImportError:                                   # fallback thuan Python
-    def _lev(a: str, b: str) -> int:
+    def _lev(a, b):
         if a == b:
             return 0
         if not a:
@@ -44,7 +44,7 @@ except ImportError:                                   # fallback thuan Python
         return prev[-1]
 
 
-def nfc(s) -> str:
+def nfc(s):
     """BAT BUOC truoc moi phep so sanh.
 
     Ky tu tieng Viet co dau co HAI cach ma hoa Unicode:
@@ -56,7 +56,7 @@ def nfc(s) -> str:
     return unicodedata.normalize("NFC", "" if s is None else str(s)).strip()
 
 
-def anls(pred, gt, thr: float = 0.5) -> float:
+def anls(pred, gt, thr=0.5):
     """Average Normalized Levenshtein Similarity (chuan DocVQA).
     Dung cho TEXT DAI: merchant, address, item name."""
     p, g = nfc(pred).lower(), nfc(gt).lower()
@@ -68,7 +68,7 @@ def anls(pred, gt, thr: float = 0.5) -> float:
     return sim if sim >= thr else 0.0
 
 
-def numeric_match(pred, gt) -> float:
+def numeric_match(pred, gt):
     """So bang GIA TRI sau khi bo moi ky tu khong phai chu so.
     Dung cho TIEN va SO: total, quantity, unit_price, amount."""
     f = lambda s: re.sub(r"[^\d]", "", nfc(s))
@@ -76,7 +76,7 @@ def numeric_match(pred, gt) -> float:
     return float(bool(b) and a == b)
 
 
-def norm_date_em(pred, gt) -> float:
+def norm_date_em(pred, gt):
     """So tap chu so (da sap xep) -> bat duoc 12/03/2021 == 2021-03-12.
     Dung cho NGAY va GIO."""
     f = lambda s: sorted(re.findall(r"\d+", nfc(s)))
@@ -84,6 +84,6 @@ def norm_date_em(pred, gt) -> float:
     return float(bool(gg) and f(pred) == gg)
 
 
-def exact(pred, gt) -> float:
+def exact(pred, gt):
     """So bang tuyet doi sau NFC + lower. Dung cho MA: invoice_no, tax_code."""
     return float(nfc(pred).lower() == nfc(gt).lower())

@@ -1,37 +1,99 @@
 # -*- coding: utf-8 -*-
-"""Duong dan va hang so dung chung. Ghi de bang bien moi truong khi chay tren server:
+"""Duong dan va hang so dung chung.
+
+Co the ghi de bang bien moi truong khi chay tren server:
 
     export VIE_DATA=/data/datasets
     export VIE_WORK=/data/work
+
+Hoac truyen truc tiep vao cac script co argparse:
+
+    python build_gt.py --data-dir /data/datasets --work-dir /data/work
+
+Thu tu uu tien: tham so CLI > bien moi truong > gia tri mac dinh.
 """
+import argparse
 import os
 from pathlib import Path
 
-ROOT = Path(os.environ.get("VIE_ROOT", Path(__file__).resolve().parents[1]))
-DATA = Path(os.environ.get("VIE_DATA", ROOT / "datasets"))
-WORK = Path(os.environ.get("VIE_WORK", ROOT / "work"))
+# ``cfg.py`` lives in ``src/``, so the default project root is its parent.
+_DEFAULT_ROOT = Path(__file__).resolve().parents[1]
+_ENV_ROOT = os.environ.get("VIE_ROOT")
+_ENV_DATA = os.environ.get("VIE_DATA")
+_ENV_WORK = os.environ.get("VIE_WORK")
 
-D1 = DATA / "MC-OCR"                        # anh THAT, 4 nhan
-D2 = DATA / "vietnamese-receipts-v3"        # anh TONG HOP, 8 nhan
 
-# ---------------------------------------------------------------- D1
-D1_CSV = D1 / "mcocr_train_df.csv"
-D1_IMAGES = D1 / "train_images" / "train_images"
-D1_REC_TRAIN = D1 / "text_recognition_train_data.txt"   # dinh nghia split 922
-D1_REC_VAL = D1 / "text_recognition_val_data.txt"       # dinh nghia split 231
+def add_path_args(parser):
+    """Them cac tuy chon duong dan dung chung vao mot parser."""
+    parser.add_argument(
+        "--root-dir",
+        type=Path,
+        default=None,
+        help="goc project (mac dinh: VIE_ROOT hoac thu muc chua cfg.py)",
+    )
+    parser.add_argument(
+        "--data-dir",
+        type=Path,
+        default=None,
+        help="thu muc chua MC-OCR/ va vietnamese-receipts-v3/",
+    )
+    parser.add_argument(
+        "--work-dir",
+        type=Path,
+        default=None,
+        help="thu muc ghi work/gt, work/results, ...",
+    )
+    return parser
 
-# ---------------------------------------------------------------- D2
-D2_META = D2 / "metadata.json"
 
-# ---------------------------------------------------------------- work
-GT_DIR = WORK / "gt"
-SPLIT_DIR = WORK / "splits"
-RESULT_DIR = WORK / "results"
-PRED_DIR = WORK / "pred"
-LOG_DIR = WORK / "logs"
+def configure_paths(args=None):
+    """Resolve lai cac path sau khi argparse doc xong.
 
-for _d in (GT_DIR, SPLIT_DIR, RESULT_DIR, PRED_DIR, LOG_DIR):
-    _d.mkdir(parents=True, exist_ok=True)
+    Cac module data truy cap cfg.D1/cfg.WORK tai thoi diem chay ham, nen co
+    the doi cau hinh sau khi import cfg ma khong can truyen path qua tung ham.
+    """
+    cli_root = getattr(args, "root_dir", None) if args is not None else None
+    cli_data = getattr(args, "data_dir", None) if args is not None else None
+    cli_work = getattr(args, "work_dir", None) if args is not None else None
+
+    root_value = cli_root or _ENV_ROOT or _DEFAULT_ROOT
+    root = Path(root_value).expanduser()
+
+    data_value = cli_data or _ENV_DATA
+    data = Path(data_value).expanduser() if data_value else root / "datasets"
+
+    work_value = cli_work or _ENV_WORK
+    work = Path(work_value).expanduser() if work_value else root / "work"
+
+    global ROOT, DATA, WORK
+    global D1, D2, D1_CSV, D1_IMAGES, D1_REC_TRAIN, D1_REC_VAL, D2_META
+    global GT_DIR, SPLIT_DIR, RESULT_DIR, PRED_DIR, LOG_DIR
+
+    ROOT = root
+    DATA = data
+    WORK = work
+
+    D1 = DATA / "MC-OCR"
+    D2 = DATA / "vietnamese-receipts-v3"
+
+    D1_CSV = D1 / "mcocr_train_df.csv"
+    D1_IMAGES = D1 / "train_images" / "train_images"
+    D1_REC_TRAIN = D1 / "text_recognition_train_data.txt"
+    D1_REC_VAL = D1 / "text_recognition_val_data.txt"
+
+    D2_META = D2 / "metadata.json"
+
+    GT_DIR = WORK / "gt"
+    SPLIT_DIR = WORK / "splits"
+    RESULT_DIR = WORK / "results"
+    PRED_DIR = WORK / "pred"
+    LOG_DIR = WORK / "logs"
+
+    for directory in (GT_DIR, SPLIT_DIR, RESULT_DIR, PRED_DIR, LOG_DIR):
+        directory.mkdir(parents=True, exist_ok=True)
+
+
+configure_paths()
 
 # ---------------------------------------------------------------- schema
 HEADER_FIELDS = ("merchant", "address", "phone", "tax_code",

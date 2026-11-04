@@ -17,7 +17,7 @@ FIELD_METRIC = {
 }
 
 
-def score_doc(pred: dict | None, gt: dict) -> dict:
+def score_doc(pred, gt):
     """Diem tung truong cua MOT anh.
 
     Truong co gt = None  -> KHONG tinh diem, chuyen sang do hallucination.
@@ -36,7 +36,7 @@ def score_doc(pred: dict | None, gt: dict) -> dict:
             "per_field": per, "halluc_n": hn, "halluc_d": hd}
 
 
-def aggregate(docs: list[dict]) -> dict:
+def aggregate(docs):
     """Cong don qua nhieu anh. Tra ve % (0-100)."""
     acc, cnt, hn, hd = {}, {}, 0, 0
     for d in docs:

@@ -3,3 +3,4 @@ outputs/layout/best_model/inference/inference.pdiparams filter=lfs diff=lfs merg
 outputs/recognition/best_accuracy.pdparams filter=lfs diff=lfs merge=lfs -text
 outputs/recognition/best_accuracy.pdopt filter=lfs diff=lfs merge=lfs -text
 outputs/recognition/inference/inference.pdiparams filter=lfs diff=lfs merge=lfs -text
+checkpoints/**/*.pdiparams filter=lfs diff=lfs merge=lfs -text

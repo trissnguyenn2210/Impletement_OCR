@@ -9,7 +9,7 @@ Quy uoc quan trong:
 from cfg import HEADER_FIELDS, PAYMENT_FIELDS, ITEM_FIELDS
 
 
-def empty_doc(img_id: str = "", quality=None) -> dict:
+def empty_doc(img_id="", quality=None):
     return {
         "img_id": img_id,
         "quality": quality,
@@ -19,11 +19,11 @@ def empty_doc(img_id: str = "", quality=None) -> dict:
     }
 
 
-def empty_item() -> dict:
+def empty_item():
     return {k: None for k in ITEM_FIELDS}
 
 
-def normalize_doc(d: dict | None, img_id: str = "", quality=None) -> dict:
+def normalize_doc(d, img_id="", quality=None):
     """Bo sung truong thieu, loai truong la. Dung cho CA gt VA prediction."""
     out = empty_doc(img_id, quality)
     if not isinstance(d, dict):
@@ -54,7 +54,7 @@ def normalize_doc(d: dict | None, img_id: str = "", quality=None) -> dict:
     return out
 
 
-def validate_doc(d: dict) -> list[str]:
+def validate_doc(d):
     """Tra ve danh sach loi. Rong = hop le."""
     errs = []
     if not isinstance(d, dict):

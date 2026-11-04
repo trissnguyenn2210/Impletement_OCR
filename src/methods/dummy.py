@@ -25,7 +25,7 @@ class _GTBacked(Method):
         super().__init__(train_on, **kw)
         self._gt = load_gt(test_on) if test_on else {}
 
-    def _lookup(self, image_path: Path) -> dict | None:
+    def _lookup(self, image_path):
         return self._gt.get(image_path.stem)
 
 

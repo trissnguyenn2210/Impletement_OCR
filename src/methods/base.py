@@ -22,41 +22,63 @@ HOP DONG:
 from abc import ABC, abstractmethod
 from pathlib import Path
 
-_REGISTRY: dict[str, type] = {}
+_REGISTRY = {}
 
 
-def register(name: str):
+def register(name):
     def deco(cls):
         _REGISTRY[name] = cls
         return cls
     return deco
 
 
-def get_method(name: str):
+def get_method(name):
     if name not in _REGISTRY:
         raise KeyError(f"chua dang ky method {name!r}. Da co: {sorted(_REGISTRY)}")
     return _REGISTRY[name]
 
 
-def available() -> list[str]:
+def available():
     return sorted(_REGISTRY)
 
 
 class Method(ABC):
     name = "?"
 
-    def __init__(self, train_on: str | None = None, **kw):
+    def __init__(self, train_on=None, **kw):
         self.train_on = train_on          # 'd1' | 'd2' | None
         self.kw = kw
+        # Optional trace consumed by the evaluator's per-image visualization.
+        # The canonical document remains the only required method output, so
+        # methods are free to leave this empty (Method B intentionally does).
+        self.last_debug = {}
+        self.last_debug_batch = []
 
     @abstractmethod
-    def predict(self, image_path: Path) -> dict | None:
+    def predict(self, image_path):
         ...
 
-    def cost(self) -> dict:
+    def predict_batch(self, image_paths):
+        """Predict a batch, with a safe sequential fallback.
+
+        VLM methods can override this to use one model forward/generation call
+        for several images.  Keeping the fallback here means the evaluator
+        remains compatible with the OCR/LLM methods that only implement
+        ``predict``.
+        """
+        outputs = []
+        debug_batch = []
+        for image_path in image_paths:
+            outputs.append(self.predict(image_path))
+            debug_batch.append(getattr(self, "last_debug", {}) or {})
+        self.last_debug_batch = debug_batch
+        self.last_debug = debug_batch[0] if len(debug_batch) == 1 else {}
+        return outputs
+
+    def cost(self):
         return {"params_M": None, "gflops": None, "vram_mb": None}
 
-    def subtask(self) -> dict:
+    def subtask(self):
         return {"layout_mAP50": None, "layout_mAP50_95": None,
                 "rec_acc": None, "rec_ned": None}
 

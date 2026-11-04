@@ -21,7 +21,7 @@ QUAN TRONG - truong con trong mot mon:
 from .core import anls, numeric_match
 
 
-def _match(pred_items: list[dict], gt_items: list[dict], thr: float):
+def _match(pred_items, gt_items, thr):
     """Greedy: moi mon gt lay mon pred co ANLS(name) cao nhat va >= thr."""
     used, pairs = set(), []
     for g in gt_items:
@@ -38,7 +38,7 @@ def _match(pred_items: list[dict], gt_items: list[dict], thr: float):
     return pairs
 
 
-def item_scores(pred_items, gt_items, thr: float = 0.5) -> dict | None:
+def item_scores(pred_items, gt_items, thr=0.5):
     if gt_items is None:
         return None                            # KHONG CO NHAN -> N/A
     pred_items = pred_items if isinstance(pred_items, list) else []
@@ -84,7 +84,7 @@ def item_scores(pred_items, gt_items, thr: float = 0.5) -> dict | None:
     return out
 
 
-def aggregate_items(per_doc: list[dict | None]) -> dict | None:
+def aggregate_items(per_doc):
     """Cong don. Neu MOI anh deu None (khong co nhan) -> tra None."""
     vals = [d for d in per_doc if d is not None]
     if not vals:

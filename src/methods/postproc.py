@@ -31,7 +31,7 @@ ITEM_LABELS = {"ITEM_NAME": "name", "ITEM_QTY": "quantity",
                "ITEM_PRICE": "unit_price", "ITEM_AMOUNT": "amount"}
 
 
-def clean_timestamp(text: str) -> tuple[str | None, str | None]:
+def clean_timestamp(text):
     """RULE 3 giong GT: bo tien to, tach ngay va gio."""
     t = TS_PREFIX.sub("", (text or "").strip())
     d = RE_DATE.search(t)
@@ -40,7 +40,7 @@ def clean_timestamp(text: str) -> tuple[str | None, str | None]:
             h.group(0) if h else None)
 
 
-def pick_total(texts: list[str]) -> str | None:
+def pick_total(texts):
     """RULE 4 giong GT: trong cac vung TOTAL_COST, lay SO cuoi cung.
 
     Vung TOTAL_COST thuong gom ca chu khoa ('Tong tien:') va gia tri
@@ -52,14 +52,14 @@ def pick_total(texts: list[str]) -> str | None:
     return texts[-1] if texts else None
 
 
-def regions_to_doc(regions: list[dict]) -> dict:
+def regions_to_doc(regions):
     """regions = [{'label','text','box':[x1,y1,x2,y2]}, ...] -> doc tho.
 
     Gom nhieu vung cung nhan: SELLER noi bang space, ADDRESS noi bang ', ',
     giong hệt GT. Thu tu theo y (tren xuong duoi) roi x (trai sang phai).
     """
     regions = sorted(regions, key=lambda r: (r["box"][1], r["box"][0]))
-    bucket: dict[str, list[str]] = {}
+    bucket = {}
     items_raw = []
     for r in regions:
         lab = (r.get("label") or "").upper()
@@ -92,7 +92,7 @@ def regions_to_doc(regions: list[dict]) -> dict:
             "line_items": group_pred_items(items_raw) if items_raw else None}
 
 
-def group_pred_items(regions: list[dict], y_tol_ratio: float = 0.6) -> list[dict]:
+def group_pred_items(regions, y_tol_ratio=0.6):
     """Gom ITEM_* thanh tung mon theo KHOANG Y (giong data/gt_v3.py).
 
     KHONG gom theo chi so, vi so luong nhan moi loai KHONG bang nhau:
@@ -104,7 +104,7 @@ def group_pred_items(regions: list[dict], y_tol_ratio: float = 0.6) -> list[dict
     heights = [r["box"][3] - r["box"][1] for r in regions] or [1]
     tol = max(1.0, (sum(heights) / len(heights)) * y_tol_ratio)
 
-    rows: list[list[dict]] = []
+    rows = []
     for r in sorted(regions, key=lambda r: (r["box"][1] + r["box"][3]) / 2):
         cy = (r["box"][1] + r["box"][3]) / 2
         if rows and abs(cy - rows[-1][0]["_cy"]) <= tol:
@@ -131,7 +131,7 @@ def group_pred_items(regions: list[dict], y_tol_ratio: float = 0.6) -> list[dict
 _FENCE = re.compile(r"```(?:json)?\s*(.*?)\s*```", re.S)
 
 
-def parse_json_loose(text: str) -> dict | None:
+def parse_json_loose(text):
     """Doc JSON tu output VLM/LLM. Tra None neu that bai -> tinh vao parse_fail.
 
     VLM rat hay boc JSON trong ```json ... ``` hoac them mot cau dan nhap.
@@ -156,6 +156,78 @@ def parse_json_loose(text: str) -> dict | None:
     return None
 
 
-def _slice_braces(text: str) -> str | None:
+# PaddleOCR-VL's standalone Transformers checkpoint is trained for the
+# element-level ``OCR:`` task.  Unlike the Qwen/InternVL instruction models it
+# is not trained to emit the invoice JSON schema used by this evaluator.  Keep
+# the conversion deterministic and local so a non-empty OCR response is not
+# incorrectly counted as a JSON parse failure.
+def paddle_ocr_text_to_doc(text, *, has_items=True):
+    """Convert PaddleOCR-VL's plain OCR response to the canonical schema.
+
+    The official standalone checkpoint returns OCR text, not invoice JSON.
+    This is intentionally conservative: it extracts date/time and the most
+    likely total, keeps the first useful line as merchant, and leaves item
+    extraction empty rather than inventing structured rows.
+    """
+    if not isinstance(text, str) or not text.strip():
+        return None
+
+    # Generation output can contain chat delimiters depending on the cached
+    # Transformers revision.  They are not document content.
+    cleaned = re.sub(r"<\|im_(?:start|end)\|>\s*(?:assistant|user)?", "", text)
+    cleaned = re.sub(r"^\s*(?:OCR\s*:|assistant\s*:?)\s*", "", cleaned,
+                     flags=re.I)
+    lines = []
+    for line in cleaned.splitlines():
+        line = re.sub(r"\s+", " ", line).strip(" |\t")
+        if not line or line.lower() in {"assistant", "ocr:"}:
+            continue
+        lines.append(line)
+    if not lines:
+        return None
+
+    joined = "\n".join(lines)
+    md = RE_DATE.search(joined)
+    mt = RE_TIME.search(joined)
+
+    total_keywords = re.compile(
+        r"(?:t[oổ]ng|thanh\s*to[aá]n|total|grand\s*total|amount\s*due)",
+        re.I,
+    )
+    amount_lines = [line for line in lines if _is_amount(line)]
+    keyword_amounts = [line for line in amount_lines if total_keywords.search(line)]
+    total = (keyword_amounts[-1] if keyword_amounts else
+             (amount_lines[-1] if amount_lines else None))
+    if total is not None:
+        # Preserve the original amount string but remove a leading label when
+        # OCR returned e.g. ``Tong tien: 74,000``.
+        nums = re.findall(r"\d[\d., ]*", total)
+        total = nums[-1].strip() if nums else total
+
+    def useful_header_line(line):
+        if RE_DATE.search(line) or RE_TIME.search(line) or _is_amount(line):
+            return False
+        if re.search(r"(?:địa\s*chỉ|address|đt|phone|sđt|tax|mã\s*số)",
+                     line, re.I):
+            return False
+        return bool(re.search(r"[\wÀ-ỹ]", line))
+
+    header_lines = [line for line in lines if useful_header_line(line)]
+    merchant = header_lines[0] if header_lines else None
+    address_lines = header_lines[1:3] if len(header_lines) > 1 else []
+
+    return {
+        "header": {
+            "merchant": merchant,
+            "address": ", ".join(address_lines) or None,
+            "date": md.group(0).replace(" ", "") if md else None,
+            "time": mt.group(0) if mt else None,
+        },
+        "payment": {"total": total},
+        "line_items": [] if has_items else None,
+    }
+
+
+def _slice_braces(text):
     i, j = text.find("{"), text.rfind("}")
     return text[i:j + 1] if 0 <= i < j else None

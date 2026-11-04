@@ -7,19 +7,19 @@ import cfg
 from . import splits
 
 
-def gt_file(test_set: str) -> Path:
+def gt_file(test_set):
     ds, sp = cfg.TEST_SETS[test_set]
     return cfg.GT_DIR / f"{ds}_{sp}.json"
 
 
-def load_gt(test_set: str) -> dict[str, dict]:
+def load_gt(test_set):
     f = gt_file(test_set)
     if not f.exists():
         raise FileNotFoundError(f"chua co {f}. Chay truoc: python build_gt.py")
     return json.loads(f.read_text(encoding="utf-8"))
 
 
-def image_path(test_set: str, stem: str) -> Path:
+def image_path(test_set, stem):
     """Giai duong dan anh. D1 dung .jpg, D2 dung .png (co fallback)."""
     ds, _ = cfg.TEST_SETS[test_set]
     if ds == "d1":

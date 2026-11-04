@@ -28,14 +28,14 @@ RE_TIME = re.compile(r"\d{1,2}:\d{2}(?::\d{2})?")
 MAX_ANNO_NUM = 12
 
 
-def _is_amount(t: str) -> bool:
+def _is_amount(t):
     """Vung TOTAL_COST nao la GIA TRI chu khong phai chu khoa."""
     digits = re.sub(r"[^\d]", "", t)
     letters = re.sub(r"[\d.,\s]", "", t)
     return len(digits) >= 4 and len(letters) <= 2
 
 
-def row_to_doc(row: dict) -> dict | None:
+def row_to_doc(row):
     """Tra ve canonical doc, hoac None neu dong bi loai."""
     try:
         if int(float(row.get("anno_num") or 0)) > MAX_ANNO_NUM:   # RULE 5
@@ -77,7 +77,7 @@ def row_to_doc(row: dict) -> dict | None:
     }, img_id=row["img_id"], quality=q)
 
 
-def load_all() -> tuple[dict[str, dict], dict]:
+def load_all():
     """Tra ve ({stem: doc}, bao_cao)."""
     with open(cfg.D1_CSV, encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f))
