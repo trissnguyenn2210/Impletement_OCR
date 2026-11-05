@@ -289,22 +289,6 @@ def prepare_image(path, max_side):
     return out
 
 
-def fields_rows(doc):
-    import pandas as pd
-
-    rows = [[f"{blk}.{k}", (doc.get(blk) or {}).get(k) or ""] for blk, k in SHOW_FIELDS] if doc else []
-    return pd.DataFrame(rows, columns=["Trường", "Giá trị"])
-
-
-def items_rows(doc):
-    import pandas as pd
-
-    items = (doc or {}).get("line_items") or []
-    rows = [[i + 1, it.get("name") or "", it.get("unit") or "", it.get("quantity") or "",
-             it.get("unit_price") or "", it.get("amount") or ""] for i, it in enumerate(items)]
-    return pd.DataFrame(rows, columns=["#", "name", "unit", "quantity", "unit_price", "amount"])
-
-
 def trace_text(key, debug, method):
     debug = debug or {}
     out = []
@@ -351,54 +335,246 @@ def run_one(key, img_path, vlm_id, llm_id):
     }
 
 
-def summary_table(results):
-    keys = [k for k in "ABCD" if k in results]
-    header = ["Trường"] + [f"{k} · {METHOD_INFO[k][0]}" for k in keys]
+# Truong co nhan trong dataset MC-OCR (4 nhan layout) -> mau giong khung tren anh.
+# TIMESTAMP duoc tach thanh 2 truong date + time.
+DATASET_FIELDS = {
+    "merchant": "SELLER",
+    "address": "ADDRESS",
+    "date": "TIMESTAMP",
+    "time": "TIMESTAMP",
+    "total": "TOTAL_COST",
+}
+
+
+def _esc(value):
+    import html
+
+    return html.escape(str(value)).replace("\n", "<br>")
+
+
+def _field_cell(field):
+    lab = DATASET_FIELDS.get(field)
+    if lab:
+        r, g, b = LABEL_COLORS[lab]
+        return (f'<td class="fname ds" style="color:rgb({r},{g},{b})" '
+                f'title="Có trong dataset (nhãn {lab})">{field}</td>')
+    return f'<td class="fname" title="Không có trong dataset">{field}</td>'
+
+
+def fields_html(doc):
     rows = []
     for blk, f in SHOW_FIELDS:
-        row = [f"{blk}.{f}"]
+        value = ((doc or {}).get(blk) or {}).get(f) or ""
+        cls = ' class="ds"' if f in DATASET_FIELDS else ""
+        rows.append(f"<tr>{_field_cell(f)}<td{cls}>{_esc(value)}</td></tr>")
+    return ('<table class="vie-table"><thead><tr><th>Trường</th><th>Giá trị</th></tr></thead>'
+            f'<tbody>{"".join(rows)}</tbody></table>')
+
+
+def items_html(doc):
+    items = (doc or {}).get("line_items")
+    if items is None:
+        return '<div class="vie-note">Line items: phương pháp này không trích xuất line items.</div>'
+    if not items:
+        return '<div class="vie-note">Line items: không có món nào.</div>'
+    cols = ("name", "unit", "quantity", "unit_price", "amount")
+    head = "".join(f"<th>{c}</th>" for c in ("#",) + cols)
+    body = "".join(
+        "<tr><td>{}</td>{}</tr>".format(i + 1, "".join(f"<td>{_esc(it.get(c) or '')}</td>" for c in cols))
+        for i, it in enumerate(items))
+    return (f'<div class="vie-sub">Line items ({len(items)})</div>'
+            f'<table class="vie-table"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>')
+
+
+def summary_html(results):
+    keys = [k for k in "ABCD" if k in results]
+    if not keys:
+        return '<div class="vie-note">Chưa có kết quả. Tải ảnh lên, chọn phương pháp rồi bấm Chạy.</div>'
+    head = "<th>Trường</th>" + "".join(f"<th>{k} {METHOD_INFO[k][0]}</th>" for k in keys)
+    rows = []
+    for blk, f in SHOW_FIELDS:
+        cells = []
         for k in keys:
             res = results[k]
             if res.get("error"):
-                row.append("⚠ lỗi")
+                cells.append('<td class="bad">⚠ lỗi</td>')
             elif res.get("doc") is None:
-                row.append("✗ parse fail")
+                cells.append('<td class="bad">✗ parse fail</td>')
             else:
-                row.append((res["doc"].get(blk) or {}).get(f) or "")
-        rows.append(row)
-    n_items = ["line_items (số món)"]
-    t_row = ["thời gian dự đoán (s)"]
+                cls = ' class="ds"' if f in DATASET_FIELDS else ""
+                cells.append(f"<td{cls}>{_esc((res['doc'].get(blk) or {}).get(f) or '')}</td>")
+        rows.append(f"<tr>{_field_cell(f)}{''.join(cells)}</tr>")
+    n_items, times = [], []
     for k in keys:
         res = results[k]
-        doc = res.get("doc") or {}
-        items = doc.get("line_items")
-        n_items.append("N/A" if items is None else str(len(items)))
-        t_row.append("" if res.get("error") else f"{res['t_pred']:.1f}")
-    rows += [n_items, t_row]
-    return header, rows
+        items = (res.get("doc") or {}).get("line_items")
+        n_items.append(f"<td>{'N/A' if items is None else len(items)}</td>")
+        times.append(f"<td>{'' if res.get('error') else format(res['t_pred'], '.1f')}</td>")
+    rows.append(f'<tr class="meta"><td class="fname">line_items (số món)</td>{"".join(n_items)}</tr>')
+    rows.append(f'<tr class="meta"><td class="fname">thời gian dự đoán (s)</td>{"".join(times)}</tr>')
+    return (f'<table class="vie-table"><thead><tr>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table>'
+            + LEGEND_HTML)
+
+
+def _legend():
+    pills = "".join(
+        f'<span class="lg-pill" style="border-color:rgb{LABEL_COLORS[lab]}">'
+        f'<span class="lg-sw" style="background:rgb{LABEL_COLORS[lab]}"></span>'
+        f'<b style="color:rgb{LABEL_COLORS[lab]}">{f}</b><span class="lg-lab">{lab}</span></span>'
+        for f, lab in DATASET_FIELDS.items())
+    return ('<div class="vie-legend">'
+            '<div class="lg-title">Chú thích</div>'
+            f'<div class="lg-pills">{pills}</div>'
+            '<div class="lg-row"><b>Chữ đậm, có màu:</b> trường có nhãn trong tập MC-OCR, được dùng để '
+            'đánh giá. Màu trùng với màu khung vùng trên ảnh; TIMESTAMP được tách thành date và time.</div>'
+            '<div class="lg-row"><span class="lg-plain">Chữ thường:</span> trường nằm ngoài tập nhãn của '
+            'dataset, chỉ mang tính tham khảo.</div>'
+            '</div>')
+
+
+LEGEND_HTML = _legend()
+
+
+# --------------------------------------------------------------------- pipeline figures
+# kind: io | paddle (model Paddle) | vlm (VLM/LLM) | rule (xu ly quy tac)
+PIPELINES = {
+    "A": [("io", "Ảnh hoá đơn", ""),
+          ("paddle", "Layout detection", "PP-DocLayout+ · fine-tune"),
+          ("rule", "Crop vùng", "SELLER / ADDRESS / TIMESTAMP / TOTAL_COST"),
+          ("paddle", "Text detection", "PP-OCRv5 det"),
+          ("paddle", "Text recognition", "CTC · PP-OCRv5 rec · fine-tune"),
+          ("rule", "Gán trường", "theo nhãn layout"),
+          ("io", "JSON", "không có line items")],
+    "B": [("io", "Ảnh hoá đơn", "cả trang"),
+          ("vlm", "VLM", "Qwen3-VL / InternVL · zero-shot"),
+          ("rule", "Parse JSON", "prompt theo schema"),
+          ("io", "JSON", "có line items")],
+    "C": [("io", "Ảnh hoá đơn", ""),
+          ("paddle", "Layout detection", "PP-DocLayout+ · fine-tune"),
+          ("rule", "Crop vùng", "SELLER / ADDRESS / TIMESTAMP / TOTAL_COST"),
+          ("vlm", "VLM đọc từng vùng", "thay cho det + CTC rec"),
+          ("rule", "Gán trường", "theo nhãn layout"),
+          ("io", "JSON", "không có line items")],
+    "D": [("io", "Ảnh hoá đơn", "cả trang, không layout"),
+          ("paddle", "Text detection", "PP-OCRv5 det"),
+          ("paddle", "Text recognition", "CTC · PP-OCRv5 rec · fine-tune"),
+          ("rule", "Ghép dòng + toạ độ", "[x, y] text"),
+          ("vlm", "LLM", "Qwen3 · chỉ thấy text"),
+          ("rule", "Parse JSON", ""),
+          ("io", "JSON", "có line items")],
+}
+KIND_NAMES = {"paddle": "Model Paddle", "vlm": "VLM / LLM", "rule": "Xử lý quy tắc", "io": "Vào / ra"}
+
+
+def pipeline_html(key):
+    blocks = []
+    for i, (kind, title, sub) in enumerate(PIPELINES[key]):
+        if i:
+            blocks.append('<div class="pl-arrow">➜</div>')
+        sub_html = f'<div class="pl-s">{sub}</div>' if sub else ""
+        blocks.append(f'<div class="pl-b pl-{kind}"><div class="pl-t">{title}</div>{sub_html}</div>')
+    legend = "".join(f'<span class="pl-key pl-{k}">{v}</span>' for k, v in KIND_NAMES.items())
+    return (f'<div class="pl"><div class="pl-row">{"".join(blocks)}</div>'
+            f'<div class="pl-legend">Pipeline {key}: {legend}</div></div>')
+
+
+CSS = """
+html { zoom: 0.8; }
+.gradio-container { max-width: 100% !important; padding: 6px 16px !important; }
+footer { display: none !important; }
+.gradio-container h1 { margin: 0 0 4px 0; }
+.vie-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.vie-table th, .vie-table td { border: 1px solid var(--border-color-primary); padding: 4px 8px;
+  text-align: left; vertical-align: top; word-break: break-word; }
+.vie-table th { background: var(--background-fill-secondary); font-weight: 600; }
+.vie-table td.fname { white-space: nowrap; font-weight: 400; color: var(--body-text-color-subdued); }
+.vie-table td.fname.ds { font-weight: 700; }
+.vie-table td.ds { font-weight: 700; }
+.vie-table td.bad { color: #c0392b; }
+.vie-table tr.meta td { font-style: italic; }
+.vie-note, .vie-legend { font-size: 13px; color: var(--body-text-color-subdued); margin: 6px 0; }
+.vie-sub { font-weight: 600; margin: 8px 0 4px; }
+.vie-legend { border: 1px solid var(--border-color-primary); border-radius: 8px; padding: 8px 10px;
+  background: var(--background-fill-secondary); }
+.lg-title { font-weight: 700; color: var(--body-text-color); margin-bottom: 6px; }
+.lg-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; }
+.lg-pill { display: inline-flex; align-items: center; gap: 5px; border: 1px solid; border-radius: 999px;
+  padding: 1px 9px; font-size: 12px; }
+.lg-sw { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+.lg-lab { font-size: 11px; opacity: 0.75; font-family: var(--font-mono); }
+.lg-row { margin-top: 2px; line-height: 1.45; }
+.lg-row b { color: var(--body-text-color); }
+.lg-plain { color: var(--body-text-color); font-weight: 400; }
+.vie-scroll { overflow-y: auto; }
+#summary-box { max-height: 108vh; }
+.fields-box { max-height: 82vh; }
+.pl { margin-top: 6px; }
+.ex-gallery, .ex-gallery .grid-wrap { height: auto !important; max-height: none !important; overflow: visible !important; }
+.ex-gallery .thumbnail-item { height: 130px !important; display: flex !important; flex-direction: column !important;
+  overflow: hidden; }
+.ex-gallery .thumbnail-item img { flex: 1 1 auto; min-height: 0; width: 100%; object-fit: cover; cursor: pointer; }
+.ex-gallery .caption-label { position: static !important; transform: none !important; max-width: 100% !important;
+  width: 100%; margin: 0 !important; border-radius: 0 !important; font-size: 11px; line-height: 1.25;
+  white-space: normal !important; text-align: center; padding: 3px 2px !important; }
+.pl-row { display: flex; align-items: stretch; gap: 6px; flex-wrap: wrap; }
+.pl-b { flex: 1 1 0; min-width: 110px; border-radius: 8px; padding: 8px 10px; border: 2px solid;
+  display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.pl-t { font-weight: 700; font-size: 14px; }
+.pl-s { font-size: 12px; opacity: 0.85; margin-top: 2px; }
+.pl-arrow { align-self: center; font-size: 18px; color: var(--body-text-color-subdued); }
+.pl-paddle { border-color: #268bd2; background: rgba(38,139,210,0.12); }
+.pl-vlm { border-color: #9b59b6; background: rgba(155,89,182,0.14); }
+.pl-rule { border-color: #7f8c8d; background: rgba(127,140,141,0.12); border-style: dashed; }
+.pl-io { border-color: #2e9e6b; background: rgba(46,158,107,0.12); }
+.pl-legend { font-size: 12px; color: var(--body-text-color-subdued); margin-top: 6px; }
+.pl-key { border: 1px solid; border-radius: 4px; padding: 0 6px; margin-left: 6px; }
+"""
+
+
+# Anh mau chon tu ket qua danh gia d1_val, da kiem tra lai bang chinh demo (Method A,
+# cham voi ground truth). Anh goc lay tu kie_data/images. Luu y: demo xoay anh theo EXIF
+# nen mot so anh "xoay 90 do" trong file danh gia cu lai cho ket qua dung o day.
+_EX_DIR = ROOT / "datasets" / "MC-OCR" / "kie_data" / "kie_data" / "images"
+# 4 anh dau: ket qua tot (A tren demo 0.95 - 0.99, B/C/D trong danh gia >= 0.97).
+GOOD_EXAMPLES = [
+    (_EX_DIR / "mcocr_public_145013tffpu.jpg", "MINIMART ANAN"),
+    (_EX_DIR / "mcocr_public_145013bfddt.jpg", "VinCommerce"),
+    (_EX_DIR / "mcocr_public_145014yfnqu.jpg", "FamilyMart"),
+    (_EX_DIR / "mcocr_public_145013bykuv.jpg", "THUC COFFEE"),
+]
+# 4 anh sau: ket qua chua tot, moi anh mot van de.
+HARD_EXAMPLES = [
+    # A = 0.00: giay in nhiet phai mau, chu nhoe -> OCR ra chuoi vo nghia.
+    (_EX_DIR / "mcocr_public_145013vbjnr.jpg", "chu in nhiet mo"),
+    # A = 0.22: anh chat luong thap -> doc nham/thieu chu so ("/05/2020", "88:23:04").
+    (_EX_DIR / "mcocr_public_145014bpeci.jpg", "doc nham chu so"),
+    # A = 0.51: layout gan nham nhan, so tien "50.000 D" bi gan TIMESTAMP -> mat total.
+    (_EX_DIR / "mcocr_public_145014ofdxo.jpg", "gan nham nhan layout"),
+    # A = 0.25: ten cua hang nam o 2 vung, ghep sai thu tu -> "5156 VINMART TEN DAI LY".
+    (_EX_DIR / "mcocr_public_145014lijow.jpg", "ghep sai thu tu vung"),
+]
 
 
 # --------------------------------------------------------------------- UI
 def build_ui(args):
     import gradio as gr
 
-    examples = sorted((ROOT / "datasets" / "MC-OCR" / "data0.7" / "data0.7").glob("*.jpg"))[:6]
-    dev_info = (f"Paddle: `{os.environ['VIE_PADDLE_DEVICE']}` · Torch: `{os.environ['VIE_TORCH_DEVICE']}` "
-                f"({os.environ['VIE_TORCH_DTYPE']}) · Layout ckpt: `{os.environ.get('VIE_LAYOUT_DIR', 'gốc')}` · "
-                f"Rec ckpt: `{os.environ.get('VIE_REC_DIR', 'gốc')}`")
+    # 4 anh dau ket qua tot, 4 anh sau moi anh mot van de (xem GOOD/HARD_EXAMPLES).
+    samples = [str(p) for p, _ in GOOD_EXAMPLES + HARD_EXAMPLES if p.is_file()]
 
-    with gr.Blocks(title="Receipt VIE Demo") as ui:
-        gr.Markdown("# 🧾 Receipt VIE — Demo 4 phương pháp\n"
-                    "Tải ảnh hoá đơn lên, chọn phương pháp và bấm **Chạy**. "
-                    "Lần đầu chạy mỗi phương pháp sẽ mất thời gian nạp model (VLM/LLM tải từ HuggingFace).")
-        gr.Markdown(dev_info)
-        with gr.Row():
-            with gr.Column(scale=1):
-                img_in = gr.Image(type="filepath", label="Ảnh hoá đơn", height=420)
-                if examples:
-                    gr.Examples([[str(p)] for p in examples], inputs=[img_in], label="Ảnh mẫu (MC-OCR)")
+    with gr.Blocks(title="Receipt VIE Demo", fill_width=True) as ui:
+        gr.Markdown("# 🧾 Receipt VIE: Demo 4 phương pháp")
+        with gr.Row(equal_height=False):
+            with gr.Column(scale=1, min_width=300):
+                img_in = gr.Image(type="filepath", label="Ảnh hoá đơn", height="42vh")
+                galleries = []
+                if samples:
+                    g = gr.Gallery(samples, label="Ảnh mẫu", show_label=False, columns=4, rows=2,
+                                   height=215, allow_preview=False, object_fit="cover",
+                                   elem_classes="ex-gallery")
+                    galleries.append((g, samples))
                 methods_in = gr.CheckboxGroup(
-                    [(f"{k} — {v[0]}", k) for k, v in METHOD_INFO.items()],
+                    [(f"{k} {v[0]}", k) for k, v in METHOD_INFO.items()],
                     value=["A"], label="Phương pháp")
                 with gr.Accordion("Cấu hình model", open=False):
                     vlm_in = gr.Dropdown(VLM_CHOICES, value=args.vlm, allow_custom_value=True,
@@ -409,29 +585,29 @@ def build_ui(args):
                                             label="Resize cạnh dài tối đa (0 = giữ nguyên)")
                     low_mem_in = gr.Checkbox(value=args.low_mem,
                                              label="Tiết kiệm bộ nhớ: giải phóng model sau mỗi phương pháp")
-                run_btn = gr.Button("▶ Chạy", variant="primary")
                 with gr.Row():
-                    unload_btn = gr.Button("Giải phóng model")
+                    run_btn = gr.Button("▶ Chạy", variant="primary", scale=2)
+                    unload_btn = gr.Button("Giải phóng model", scale=1)
                 status = gr.Markdown(f"Model đang nạp: {BACKENDS.status()}")
-            with gr.Column(scale=2):
+            with gr.Column(scale=4):
                 with gr.Tab("So sánh"):
-                    summary = gr.Dataframe(label="Kết quả các phương pháp", wrap=True)
+                    summary = gr.HTML(summary_html({}), elem_id="summary-box", elem_classes="vie-scroll")
                 tabs = {}
-                for k, (name, desc) in METHOD_INFO.items():
-                    with gr.Tab(f"{k} · {name}"):
-                        gr.Markdown(f"**{k} — {name}:** {desc}")
+                for k, (name, _desc) in METHOD_INFO.items():
+                    with gr.Tab(f"{k} {name}"):
                         info = gr.Markdown()
-                        with gr.Row():
-                            vis = gr.Image(label="Vùng phát hiện", height=520)
-                            with gr.Column():
-                                fields = gr.Dataframe(headers=["Trường", "Giá trị"], label="Trường trích xuất",
-                                                      wrap=True)
-                                items = gr.Dataframe(
-                                    headers=["#", "name", "unit", "quantity", "unit_price", "amount"],
-                                    label="Line items", wrap=True)
+                        with gr.Row(equal_height=False):
+                            vis = gr.Image(label="Vùng phát hiện", height="82vh", scale=3)
+                            with gr.Column(scale=2):
+                                fields = gr.HTML(fields_html(None) + LEGEND_HTML,
+                                                 elem_classes=["vie-scroll", "fields-box"])
+                                items = gr.HTML(items_html(None if k in "AC" else {"line_items": []}),
+                                                elem_classes="vie-scroll")
+                        gr.HTML(pipeline_html(k))
                         with gr.Accordion("JSON & trace", open=False):
-                            js = gr.JSON(label="Canonical JSON")
-                            trace = gr.Code(label="Trace (layout / OCR / raw output)", language=None)
+                            with gr.Row():
+                                js = gr.JSON(label="Canonical JSON")
+                                trace = gr.Code(label="Trace (layout / OCR / raw output)", language=None)
                         tabs[k] = (info, vis, fields, items, js, trace)
 
         outputs = [summary, status] + [c for k in "ABCD" for c in tabs[k]]
@@ -448,27 +624,26 @@ def build_ui(args):
             per = {k: [gr.update()] * 6 for k in "ABCD"}
 
             def pack(msg):
-                import pandas as pd
-
-                head, rows = summary_table(results)
                 flat = [c for k in "ABCD" for c in per[k]]
-                return [pd.DataFrame(rows, columns=head), msg] + flat
+                return [summary_html(results), msg] + flat
 
             for k in [k for k in "ABCD" if k in selected]:
                 per[k][0] = f"⏳ Đang chạy {k}…"
-                yield pack(f"⏳ Đang chạy **{k}** · model đang nạp: {BACKENDS.status()}")
+                yield pack(f"⏳ Đang chạy **{k}**, model đang nạp: {BACKENDS.status()}")
                 try:
                     res = run_one(k, str(path), vlm_id, llm_id)
                     results[k] = res
                     doc = res["doc"]
                     info = (f"✅ Dự đoán **{res['t_pred']:.1f}s** (nạp/khởi tạo {res['t_load']:.1f}s)"
-                            + (" · ⚠ model không trả JSON hợp lệ (parse fail)" if res["parse_fail"] else ""))
-                    per[k] = [info, res["image"], fields_rows(doc), items_rows(doc), doc, res["trace"]]
+                            + ("  ⚠ model không trả JSON hợp lệ (parse fail)" if res["parse_fail"] else ""))
+                    per[k] = [info, res["image"], fields_html(doc) + LEGEND_HTML, items_html(doc),
+                              doc, res["trace"]]
                 except Exception as exc:
                     tb = traceback.format_exc()
                     print(tb, file=sys.stderr)
                     results[k] = {"error": str(exc)}
-                    per[k] = [f"❌ Lỗi: `{exc}`", None, fields_rows(None), items_rows(None), None, tb]
+                    per[k] = [f"❌ Lỗi: `{exc}`", None, fields_html(None) + LEGEND_HTML,
+                              items_html(None), None, tb]
                 if low_mem:
                     BACKENDS.unload()
             yield pack(f"Xong. Model đang nạp: {BACKENDS.status()}")
@@ -476,6 +651,11 @@ def build_ui(args):
         def unload():
             BACKENDS.unload()
             return f"Model đang nạp: {BACKENDS.status()}"
+
+        for g, paths in galleries:
+            def pick(evt: gr.SelectData, paths=paths):
+                return paths[evt.index]
+            g.select(pick, None, img_in)
 
         run_btn.click(run, [img_in, methods_in, vlm_in, llm_in, max_side_in, low_mem_in], outputs)
         unload_btn.click(unload, None, status)
@@ -500,7 +680,8 @@ def main():
           f"dtype={os.environ['VIE_TORCH_DTYPE']}")
     print(f"[demo] layout={os.environ.get('VIE_LAYOUT_DIR')}  rec={os.environ.get('VIE_REC_DIR')}")
     ui = build_ui(args)
-    ui.queue(default_concurrency_limit=1).launch(server_name=args.host, server_port=args.port, share=args.share)
+    ui.queue(default_concurrency_limit=1).launch(
+        server_name=args.host, server_port=args.port, share=args.share, css=CSS)
 
 
 if __name__ == "__main__":
