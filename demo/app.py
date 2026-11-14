@@ -510,6 +510,10 @@ footer { display: none !important; }
 .fields-box { max-height: 82vh; }
 .pl { margin-top: 6px; }
 .ex-gallery, .ex-gallery .grid-wrap { height: auto !important; max-height: none !important; overflow: visible !important; }
+/* Gradio sizes each column at a fixed 100px; four of them overflow the narrow
+   left column, so let the columns share the available width instead. */
+.ex-gallery .grid-container { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; gap: 6px !important; }
+.ex-gallery .thumbnail-item { width: 100% !important; min-width: 0 !important; }
 .ex-gallery .thumbnail-item { height: 130px !important; display: flex !important; flex-direction: column !important;
   overflow: hidden; }
 .ex-gallery .thumbnail-item img { flex: 1 1 auto; min-height: 0; width: 100%; object-fit: cover; cursor: pointer; }
