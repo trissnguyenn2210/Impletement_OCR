@@ -677,7 +677,7 @@ def main():
     ap.add_argument("--share", action="store_true", help="tao link public *.gradio.live")
     ap.add_argument("--device", choices=["auto", "cpu"], default="auto")
     ap.add_argument("--vlm", default=os.environ.get("VIE_VLM", "Qwen/Qwen3-VL-2B-Instruct"))
-    ap.add_argument("--llm", default=os.environ.get("VIE_LLM", "Qwen/Qwen3-4B-Instruct-2507"))
+    ap.add_argument("--llm", default=os.environ.get("VIE_LLM", "Qwen/Qwen2.5-0.5B-Instruct"))
     ap.add_argument("--max-new-tokens", type=int, default=None, help="ghi de VIE_MAX_NEW_TOKENS (mac dinh 768)")
     ap.add_argument("--max-side", type=int, default=2000, help="resize canh dai anh dau vao (0 = giu nguyen)")
     ap.add_argument("--low-mem", action="store_true", help="giai phong model sau moi phuong phap")

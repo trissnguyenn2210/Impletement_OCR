@@ -7,7 +7,7 @@ Giao diện web (Gradio) để chạy **A / B / C / D** trên một ảnh hoá �
 | **A** OCR pipeline | layout → crop → text det → CTC rec → gán trường theo nhãn layout | layout + rec **fine-tune** (`checkpoints/`), det `PP-OCRv5_server_det` (tự tải) |
 | **B** VLM zero-shot | cả trang ảnh → VLM → JSON | VLM chọn trên giao diện (mặc định `Qwen/Qwen3-VL-2B-Instruct`) |
 | **C** Layout + VLM | layout → crop → VLM đọc từng vùng | layout fine-tune + VLM |
-| **D** OCR + LLM | det + rec cả trang → LLM (chỉ thấy text) → JSON | rec fine-tune + LLM (mặc định `Qwen/Qwen3-4B-Instruct-2507`) |
+| **D** OCR + LLM | det + rec cả trang → LLM (chỉ thấy text) → JSON | rec fine-tune + LLM (mặc định `Qwen/Qwen2.5-0.5B-Instruct`; kết quả báo cáo dùng `Qwen/Qwen3-4B-Instruct-2507`) |
 
 Code model nằm ở `src/methods/real.py` (bản đã sửa lỗi). Demo dùng chung backend: A và C dùng chung
 layout, A và D dùng chung OCR, nên mỗi model chỉ nạp một lần.
