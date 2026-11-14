@@ -534,7 +534,11 @@ footer { display: none !important; }
 # Anh mau chon tu ket qua danh gia d1_val, da kiem tra lai bang chinh demo (Method A,
 # cham voi ground truth). Anh goc lay tu kie_data/images. Luu y: demo xoay anh theo EXIF
 # nen mot so anh "xoay 90 do" trong file danh gia cu lai cho ket qua dung o day.
-_EX_DIR = ROOT / "datasets" / "MC-OCR" / "kie_data" / "kie_data" / "images"
+# The 8 images are shipped in demo/examples so a fresh clone has them; the
+# dataset folder (git-ignored) is only a fallback.
+_EX_DIR = Path(__file__).resolve().parent / "examples"
+if not (_EX_DIR / "mcocr_public_145013tffpu.jpg").is_file():
+    _EX_DIR = ROOT / "datasets" / "MC-OCR" / "kie_data" / "kie_data" / "images"
 # 4 anh dau: ket qua tot (A tren demo 0.95 - 0.99, B/C/D trong danh gia >= 0.97).
 GOOD_EXAMPLES = [
     (_EX_DIR / "mcocr_public_145013tffpu.jpg", "MINIMART ANAN"),
